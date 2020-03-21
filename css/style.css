@@ -1300,7 +1300,7 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-footer a:hover {
-  color: #00f;
+  color: #0088b3;
 }
 .article-comment-link i,
 .article-share-link i {
@@ -1633,7 +1633,7 @@ a.article-title:hover {
 #footer {
   background: #33363b;
   margin-top: 60px;
-  color: #5d5d5d;
+  color: #fff;
   line-height: 1.6em;
 }
 #footer a {
