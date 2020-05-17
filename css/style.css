@@ -573,6 +573,10 @@ code {
 }
 #sidebar .sidebar-top {
   background: url("images/sidebar-top.png");
+  -webkit-background-size: auto 100%;
+  -moz-background-size: auto 100%;
+  background-size: auto 100%;
+  position: relative;
   padding: 1px 30px;
 }
 #sidebar .sidebar-top:before,
@@ -1963,7 +1967,11 @@ i.icon:before {
     color: rgba(255,255,255,0.7);
     text-align: center;
     height: 50px;
-    background: #3b8dbd;
+    background: url("images/sidebar-top.png");
+    -webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    background-size: auto 100%;
+    position: relative;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
