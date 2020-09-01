@@ -232,7 +232,7 @@ var _hmt = _hmt || [];
         
         <br>
         <div class="article-entry" itemprop="articleBody">
-            <img src="/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/%E6%8B%BF%E5%A4%AA%E9%98%B3%E5%81%9A%E5%A3%81%E7%BA%B8-%E7%94%A8Python%E7%9A%84astropy%E5%92%8Cmatplotlib%E5%BA%93%E5%A4%84%E7%90%86FITS%E6%96%87%E4%BB%B6/%E5%A4%AA%E9%98%B3%E5%9B%BE%E7%89%87%E5%BE%AE%E5%8D%9A.jpg" class>
+            <img src="/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/%E6%8B%BF%E5%A4%AA%E9%98%B3%E5%81%9A%E5%A3%81%E7%BA%B8-%E7%94%A8Python%E7%9A%84astropy%E5%92%8Cmatplotlib%E5%BA%93%E5%A4%84%E7%90%86FITS%E6%96%87%E4%BB%B6/%E5%A4%AA%E9%98%B3%E5%9B%BE%E7%89%87%E5%BE%AE%E5%8D%9A.jpg" class="">
 <blockquote><p><span style="font-size:24px"><strong>如果你想要</strong></span></p>
 <p><span style="font-size:24px"><strong>请DIY吧</strong></span></p>
 <footer><strong>——苑长</strong></footer></blockquote>
@@ -267,14 +267,18 @@ var _hmt = _hmt || [];
 <p>有了微博的那张图(就是文章开头的那张图啦)作参考，直接搜索引擎就好啦，基本就是先找到新闻源，然后找到这个项目的相关信息，最后下到数据，作图即可。</p>
 <h2><span id="让我们先bing一下️">让我们先Bing一下⌨️</span></h2>
 <p>可以得知是新科学家杂志发表的一篇新闻，那么直接检索<code>新科学家杂志 太阳</code>来看看有没有有用的消息。发现好像并没有太多相关的内容,那毕竟是外网的内容,我们直接英文走起。</p>
-<p>检索<code>新科学家杂志</code>就可以从百度百科里找到它的英文名<code>New Scientist</code>,直接检索<code>New Scientist sun</code>我们就可以看到结果啦。</p>
+<p>检索<code>新科学家杂志</code>就可以从百度百科里找到它的英文名<code>New Scientist</code>(这里建议还是要搜一下的, 毕竟专有名词可能会比较特殊), 直接检索<code>New Scientist sun</code>我们就可以看到结果啦。</p>
 <p><img src="image-20200628123846286.png" alt="New Scientist sun 检索词结果"></p>
 <p>点开后直接就可以看到这篇文章的封面图了，我这就只放个链接吧。</p>
 <p><a href="https://www.newscientist.com/article/mg24632790-200-weird-magnetic-threads-in-suns-corona-seen-for-the-first-time/" target="_blank" rel="noopener">Weird magnetic threads in sun’s corona seen for the first time Read more</a></p>
-<p>文章带的图片清晰度不够，所以还是要尝试自己做。另外可惜的是要订阅才能看到全文，收费的不要，看来得另辟蹊径。不过仔细看了一下图片的来源写着<code>NASA High Resolution Coronal Imager</code>，有了些眉目，这应该就是来源了。直接一个<code>Bing</code>检索这个词，结果非常<code>amazing</code>.</p>
+<p>文章带的图片清晰度不够，所以还是要尝试自己做。另外可惜的是要订阅才能看到全文</p>
+<blockquote>
+<p>收费的不要</p>
+</blockquote>
+<p>看来得另辟蹊径。不过仔细看了一下图片的来源写着<code>NASA High Resolution Coronal Imager</code>，有了些眉目，这应该就是来源了。直接一个<code>Bing</code>检索这个词，结果非常<code>amazing</code>.</p>
 <p><img src="image-20200628125139814.png" alt="NASA High Resolution Coronal Imager"></p>
 <p>基本可以得知这个是缩写为<code>Hi-C</code>项目的成果了,点开<a href="https://www.nasa.gov/topics/solarsystem/features/hic-briefing-materials.html" target="_blank" rel="noopener">右排第一个链接</a>一探究竟.</p>
-<p>一通阅读，可以得知这是一个<code>探空火箭</code>项目🚀 ，通过探空火箭<code>Black Brant IX</code>发射<code>Hi-C</code>太空望远镜，把<code>Hi-C</code>送入亚轨道，进行短暂的<code>弹道飞行(抛物线轨迹考虑了空气阻力的飞行)</code>并在<code>滑行段(无动力阶段)</code>对太阳成像。相当于用火箭把望远镜从地球表面抛起，望远镜达到百公里高度后就脱离浓密大气层了(事实上绝大部分气象发生的范围和主要影响观测的大气成分都集中在地表以上几公里范围内的<code>对流层</code>；100km高度为国际公认的太空界面——<code>卡门线</code>)</p>
+<p>一通阅读，可以得知这是一个<code>探空火箭</code>项目🚀 ，通过探空火箭<code>Black Brant IX</code>发射<code>Hi-C</code>太空望远镜，把<code>Hi-C</code>送入亚轨道，进行短暂的<code>弹道飞行(考虑了空气阻力的抛物线轨迹)</code>并在<code>滑行段(只受引力阶段)</code>对太阳成像。相当于用火箭大力地把望远镜从地球表面<code>抛起</code>，望远镜可以依靠惯性冲到百公里高度。 这个高度已经脱离 <strong>浓密</strong>大气层了(事实上绝大部分气象和主要影响可见光观测的大气成分都集中在地表以上几公里范围内的<code>对流层</code>；100km高度为国际公认的太空界面——<code>卡门线</code>)</p>
 <blockquote>
 <p>The experiment reached a maximum velocity of Mach 7 and max altitude of 264 km. The experiment collected 345 seconds of EUV science images.</p>
 <p>实验达到的最大速度为七马赫(七倍音速)，最大高度264千米，收集了345s的极紫外科学图像</p>
@@ -374,7 +378,7 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
 <hr>
 <p>我们取上文的<code>黑白着色</code>和<code>默认着色</code>的两张导出图片，来尝试自己做壁纸。</p>
 <p><code>黑白着色</code>可见保留了相当多的中间亮度的细节。</p>
-<p><code>默认着色</code>则保留了暗部和两步的一些细节。</p>
+<p><code>默认着色</code>则保留了暗部和亮部的一些细节。</p>
 <p>通过将<code>黑白着色</code>叠在<code>默认着色</code>的上面，然后<code>黑白着色</code>采用<code>叠加</code>作为图层的模式，就可以较好的保留两者的细节。之后再调节<code>明度曲线</code>、<code>色相</code>、<code>曝光</code>，优化得到的最后结果啦。</p>
 <p><img src="image-20200628183650999.png" alt="GIMP处理图片"></p>
 <h1><span id="后记">后记</span></h1>
@@ -492,7 +496,7 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
 如果你想要
 请DIY吧
 ——苑长",
-        "wordCount": 2315
+        "wordCount": 2319
     }
 </script>
 
