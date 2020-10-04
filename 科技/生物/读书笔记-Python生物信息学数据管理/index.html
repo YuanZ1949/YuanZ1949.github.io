@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>读书笔记-Python生物信息学数据管理 | 苑长的Index</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Python,数据处理" />
+    
+    <meta name="description" content="当生物与Python交织之时 故事将就此展开">
+<meta property="og:type" content="article">
+<meta property="og:title" content="读书笔记-Python生物信息学数据管理">
+<meta property="og:url" content="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-Python%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/index.html">
+<meta property="og:site_name" content="苑长的Index">
+<meta property="og:description" content="当生物与Python交织之时 故事将就此展开">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-04T10:00:05.000Z">
+<meta property="article:modified_time" content="2020-10-04T10:00:05.000Z">
+<meta property="article:author" content="苑长">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="数据处理">
+<meta name="twitter:card" content="summary">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="苑长的Index" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/all.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?67fc4a038906ef55e9307dac98a80fe2";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Life &amp; Science &amp; Technology</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E8%AE%A4%E7%9F%A5/">认知</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E5%B8%B8%E7%94%A8%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">常用索引</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/Blog%E5%92%95%E5%92%95%E5%92%95/">Blog咕咕咕</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/%E7%94%9F%E6%B4%BB/about/">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-读书笔记-Python生物信息学数据管理" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        读书笔记-Python生物信息学数据管理
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-Python%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/" class="article-date">
+         <time datetime="2020-10-04T10:00:05.000Z" itemprop="datePublished">2020-10-04</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Python/" rel="tag">Python</a>, <a class="tag-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" rel="tag">数据处理</a>
+    </div>
+
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">6.5k</span>
+      <i class="fa fa-clock"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">26 分钟 </span>
+   </div>
+
+
+            </div>
+        
+        
+        <br>
+        <div class="article-entry" itemprop="articleBody">
+            <blockquote><p><span style="font-size:24px"><strong>当生物与Python交织之时</strong></span></p>
+<p><span style="font-size:24px"><strong>故事将就此展开</strong></span></p>
+</blockquote>
+<a id="more"></a>
+<!-- toc -->
+<ul>
+<li><a href="#%E4%B9%A6%E7%B1%8D%E7%AE%80%E4%BB%8B-books">书籍简介 📚</a></li>
+<li><a href="#%E8%AF%B4%E5%9C%A8%E5%89%8D%E9%9D%A2">说在前面 ✍</a></li>
+<li><a href="#%E6%95%85%E4%BA%8B%E5%B0%B1%E6%AD%A4%E5%B1%95%E5%BC%80-book">故事就此展开 📖</a>
+<ul>
+<li><a href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E5%85%A5%E9%97%A8">第一部分 入门</a>
+<ul>
+<li><a href="#%E7%AC%AC1%E7%AB%A0-python-shell">第1章 Python shell</a>
+<ul>
+<li><a href="#11-%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">1.1 本章知识点 *</a></li>
+<li><a href="#12-%E6%A1%88%E4%BE%8B-%E8%AE%A1%E7%AE%97atp%E6%B0%B4%E8%A7%A3%E7%9A%84%CE%B4g">1.2 案例： 计算ATP水解的ΔG</a></li>
+<li><a href="#121-%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">1.2.1 问题描述</a></li>
+<li><a href="#122-python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">1.2.2 Python会话示例</a></li>
+<li><a href="#13-%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">1.3 命令的含义</a></li>
+<li><a href="#131-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E8%BF%90%E8%A1%8C%E8%BF%99%E4%B8%AA%E4%BE%8B%E5%AD%90">1.3.1 如何在电脑上运行这个例子</a></li>
+<li><a href="#132-%E5%8F%98%E9%87%8F">1.3.2 变量 *</a></li>
+<li><a href="#133-%E5%AF%BC%E5%85%A5%E6%A8%A1%E5%9D%97">1.3.3 导入模块 *</a></li>
+<li><a href="#134-%E8%AE%A1%E7%AE%97">1.3.4 计算</a></li>
+<li><a href="#14-%E7%A4%BA%E4%BE%8B">1.4 示例 *</a></li>
+<li><a href="#15-%E8%87%AA%E6%B5%8B%E9%A2%98">1.5 自测题 *</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC2%E7%AB%A0-%E7%AC%AC%E4%B8%80%E4%B8%AApython%E7%A8%8B%E5%BA%8F">第2章 第一个Python程序</a>
+<ul>
+<li><a href="#21%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">2.1本章知识点</a></li>
+<li><a href="#22%E6%A1%88%E4%BE%8B-%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E8%83%B0%E5%B2%9B%E7%B4%A0%E5%BA%8F%E5%88%97%E4%B8%AD%E7%9A%84%E6%B0%A8%E5%9F%BA%E9%85%B8%E9%A2%91%E7%8E%87">2.2案例： 如何计算胰岛素序列中的氨基酸频率</a></li>
+<li><a href="#221%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">2.2.1问题描述</a></li>
+<li><a href="#222python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">2.2.2Python会话示例</a></li>
+<li><a href="#23%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">2.3命令的含义</a></li>
+<li><a href="#231%E5%A6%82%E4%BD%95%E6%89%A7%E8%A1%8C%E7%A8%8B%E5%BA%8F">2.3.1如何执行程序</a></li>
+<li><a href="#232%E7%A8%8B%E5%BA%8F%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C">2.3.2程序如何工作</a></li>
+<li><a href="#233%E6%B3%A8%E9%87%8A">2.3.3注释</a></li>
+<li><a href="#234%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%98%E9%87%8F">2.3.4字符串变量</a></li>
+<li><a href="#235%E7%94%A8for%E8%BF%9B%E8%A1%8C%E5%BE%AA%E7%8E%AF">2.3.5用for进行循环</a></li>
+<li><a href="#236%E7%BC%A9%E8%BF%9B">2.3.6缩进</a></li>
+<li><a href="#237%E6%89%93%E5%8D%B0%E8%87%B3%E5%B1%8F%E5%B9%95">2.3.7打印至屏幕</a></li>
+<li><a href="#24%E7%A4%BA%E4%BE%8B">2.4示例</a></li>
+<li><a href="#25%E8%87%AA%E6%B5%8B%E9%A2%98">2.5自测题</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%E5%B0%8F%E7%BB%93">第一部分小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86">第二部分 数据管理</a>
+<ul>
+<li><a href="#%E7%AC%AC3%E7%AB%A0-%E5%88%86%E6%9E%90%E6%95%B0%E6%8D%AE%E5%88%97">第3章 分析数据列</a>
+<ul>
+<li><a href="#31%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">3.1本章知识点</a></li>
+<li><a href="#32%E6%A1%88%E4%BE%8B-%E6%A0%91%E7%AA%81%E9%95%BF%E5%BA%A6">3.2案例： 树突长度</a></li>
+<li><a href="#321%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">3.2.1问题描述</a></li>
+<li><a href="#322python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">3.2.2Python会话示例</a></li>
+<li><a href="#33%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">3.3命令的含义</a></li>
+<li><a href="#331%E8%AF%BB%E5%8F%96%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6">3.3.1读取文本文件</a></li>
+<li><a href="#332%E5%86%99%E5%85%A5%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6">3.3.2写入文本文件</a></li>
+<li><a href="#333%E5%B0%86%E6%95%B0%E6%8D%AE%E6%94%B6%E5%85%A5%E5%88%97%E8%A1%A8">3.3.3将数据收入列表</a></li>
+<li><a href="#334%E5%B0%86%E6%96%87%E6%9C%AC%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%95%B0%E5%AD%97">3.3.4将文本转换为数字</a></li>
+<li><a href="#335%E5%B0%86%E6%95%B0%E5%AD%97%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%96%87%E6%9C%AC">3.3.5将数字转换为文本</a></li>
+<li><a href="#336%E5%B0%86%E6%95%B0%E6%8D%AE%E5%88%97%E5%86%99%E5%85%A5%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6">3.3.6将数据列写入文本文件</a></li>
+<li><a href="#337%E8%AE%A1%E7%AE%97%E6%95%B0%E5%80%BC%E5%88%97%E8%A1%A8">3.3.7计算数值列表</a></li>
+<li><a href="#34%E7%A4%BA%E4%BE%8B">3.4示例</a></li>
+<li><a href="#35%E8%87%AA%E6%B5%8B%E9%A2%98">3.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC4%E7%AB%A0-%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE%E8%AE%B0%E5%BD%95">第4章 解析数据记录</a>
+<ul>
+<li><a href="#41%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">4.1本章知识点</a></li>
+<li><a href="#42%E6%A1%88%E4%BE%8B-%E6%95%B4%E5%90%88%E8%B4%A8%E8%B0%B1%E6%95%B0%E6%8D%AE-%E8%BD%AC%E5%8C%96%E5%88%B0%E4%BB%A3%E8%B0%A2%E9%80%9A%E8%B7%AF%E4%B8%AD">4.2案例： 整合质谱数据， 转化到代谢通路中</a></li>
+<li><a href="#421%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">4.2.1问题描述</a></li>
+<li><a href="#422python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">4.2.2Python会话示例</a></li>
+<li><a href="#43%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">4.3命令的含义</a></li>
+<li><a href="#431ifelifelse%E8%AF%AD%E5%8F%A5">4.3.1if/elif/else语句</a></li>
+<li><a href="#432%E5%88%97%E8%A1%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">4.3.2列表数据结构</a></li>
+<li><a href="#433%E7%AE%80%E6%B4%81%E5%88%97%E8%A1%A8%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F">4.3.3简洁列表创建方式</a></li>
+<li><a href="#44%E7%A4%BA%E4%BE%8B">4.4示例</a></li>
+<li><a href="#45%E8%87%AA%E6%B5%8B%E9%A2%98">4.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC5%E7%AB%A0-%E6%90%9C%E7%B4%A2%E6%95%B0%E6%8D%AE">第5章 搜索数据</a>
+<ul>
+<li><a href="#51%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">5.1本章知识点</a></li>
+<li><a href="#52%E6%A1%88%E4%BE%8B-%E5%B0%86rna%E5%BA%8F%E5%88%97%E7%BF%BB%E8%AF%91%E4%B8%BA%E7%9B%B8%E5%BA%94%E7%9A%84%E8%9B%8B%E7%99%BD%E8%B4%A8%E5%BA%8F%E5%88%97">5.2案例： 将RNA序列翻译为相应的蛋白质序列</a></li>
+<li><a href="#521%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">5.2.1问题描述</a></li>
+<li><a href="#522python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">5.2.2Python会话示例</a></li>
+<li><a href="#53%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">5.3命令的含义</a></li>
+<li><a href="#531%E5%AD%97%E5%85%B8">5.3.1字典</a></li>
+<li><a href="#532while%E8%AF%AD%E5%8F%A5">5.3.2while语句</a></li>
+<li><a href="#533%E7%94%A8while%E5%BE%AA%E7%8E%AF%E6%90%9C%E7%B4%A2">5.3.3用while循环搜索</a></li>
+<li><a href="#534%E5%AD%97%E5%85%B8%E6%90%9C%E7%B4%A2">5.3.4字典搜索</a></li>
+<li><a href="#535%E5%88%97%E8%A1%A8%E6%90%9C%E7%B4%A2">5.3.5列表搜索</a></li>
+<li><a href="#54%E7%A4%BA%E4%BE%8B">5.4示例</a></li>
+<li><a href="#55%E8%87%AA%E6%B5%8B%E9%A2%98">5.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC6%E7%AB%A0-%E8%BF%87%E6%BB%A4%E6%95%B0%E6%8D%AE">第6章 过滤数据</a>
+<ul>
+<li><a href="#61%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">6.1本章知识点</a></li>
+<li><a href="#62%E6%A1%88%E4%BE%8B-%E4%BD%BF%E7%94%A8rnaseq%E8%BE%93%E5%87%BA%E6%95%B0%E6%8D%AE">6.2案例： 使用RNAseq输出数据</a></li>
+<li><a href="#621%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">6.2.1问题描述</a></li>
+<li><a href="#622python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">6.2.2Python会话示例</a></li>
+<li><a href="#63%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">6.3命令的含义</a></li>
+<li><a href="#631%E7%94%A8%E7%AE%80%E5%8D%95%E7%9A%84forif%E7%BB%84%E5%90%88%E8%BF%87%E6%BB%A4">6.3.1用简单的for…if组合过滤</a></li>
+<li><a href="#632%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%95%B0%E6%8D%AE%E9%9B%86">6.3.2合并两个数据集</a></li>
+<li><a href="#633%E4%B8%A4%E7%BB%84%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%97%B4%E7%9A%84%E5%B7%AE%E5%BC%82">6.3.3两组数据之间的差异</a></li>
+<li><a href="#634%E4%BB%8E%E5%88%97%E8%A1%A8-%E5%AD%97%E5%85%B8%E5%92%8C%E6%96%87%E4%BB%B6%E4%B8%AD%E5%88%A0%E9%99%A4%E5%85%83%E7%B4%A0">6.3.4从列表、 字典和文件中删除元素</a></li>
+<li><a href="#635%E4%BF%9D%E6%8C%81%E6%88%96%E4%B8%8D%E4%BF%9D%E6%8C%81%E9%A1%BA%E5%BA%8F%E5%9C%B0%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D">6.3.5保持或不保持顺序地删除重复</a></li>
+<li><a href="#636%E9%9B%86%E5%90%88">6.3.6集合</a></li>
+<li><a href="#64%E7%A4%BA%E4%BE%8B">6.4示例</a></li>
+<li><a href="#65%E8%87%AA%E6%B5%8B%E9%A2%98">6.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC7%E7%AB%A0-%E7%AE%A1%E7%90%86%E8%A1%A8%E6%95%B0%E6%8D%AE">第7章 管理表数据</a>
+<ul>
+<li><a href="#71%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">7.1本章知识点</a></li>
+<li><a href="#72%E6%A1%88%E4%BE%8B-%E7%A1%AE%E5%AE%9A%E8%9B%8B%E7%99%BD%E6%B5%93%E5%BA%A6">7.2案例： 确定蛋白浓度</a></li>
+<li><a href="#721%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">7.2.1问题描述</a></li>
+<li><a href="#722python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">7.2.2Python会话示例</a></li>
+<li><a href="#73%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">7.3命令的含义</a></li>
+<li><a href="#731%E4%BA%8C%E7%BB%B4%E8%A1%A8%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E6%B3%95">7.3.1二维表的表示方法</a></li>
+<li><a href="#732%E8%AE%BF%E9%97%AE%E8%A1%8C%E5%92%8C%E5%8D%95%E5%85%83%E6%A0%BC">7.3.2访问行和单元格</a></li>
+<li><a href="#733%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4%E8%A1%8C">7.3.3插入和删除行</a></li>
+<li><a href="#734%E8%AE%BF%E9%97%AE%E5%88%97">7.3.4访问列</a></li>
+<li><a href="#735%E6%8F%92%E5%85%A5%E5%92%8C%E5%88%A0%E9%99%A4%E5%88%97">7.3.5插入和删除列</a></li>
+<li><a href="#74%E7%A4%BA%E4%BE%8B">7.4示例</a></li>
+<li><a href="#75%E8%87%AA%E6%B5%8B%E9%A2%98">7.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC8%E7%AB%A0-%E6%95%B0%E6%8D%AE%E6%8E%92%E5%BA%8F">第8章 数据排序</a>
+<ul>
+<li><a href="#81%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">8.1本章知识点</a></li>
+<li><a href="#82%E6%A1%88%E4%BE%8B-%E6%95%B0%E6%8D%AE%E8%A1%A8%E6%8E%92%E5%BA%8F">8.2案例： 数据表排序</a></li>
+<li><a href="#821%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">8.2.1问题描述</a></li>
+<li><a href="#822python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">8.2.2Python会话示例</a></li>
+<li><a href="#83%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">8.3命令的含义</a></li>
+<li><a href="#831python%E5%88%97%E8%A1%A8%E6%9C%89%E5%88%A9%E4%BA%8E%E6%8E%92%E5%BA%8F">8.3.1Python列表有利于排序</a></li>
+<li><a href="#832%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0sorted">8.3.2内置函数sorted()</a></li>
+<li><a href="#833%E7%94%A8itemgetter%E6%8E%92%E5%BA%8F">8.3.3用itemgetter排序</a></li>
+<li><a href="#834%E6%8C%89%E5%8D%87%E5%BA%8F%E9%99%8D%E5%BA%8F%E6%8E%92%E5%BA%8F">8.3.4按升序/降序排序</a></li>
+<li><a href="#835%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%85%83%E7%BB%84-%E5%AD%97%E5%85%B8%E6%8E%92%E5%BA%8F">8.3.5数据结构（元组、 字典）排序</a></li>
+<li><a href="#836%E6%8C%89%E9%95%BF%E5%BA%A6%E5%AF%B9%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F">8.3.6按长度对字符串排序</a></li>
+<li><a href="#84%E7%A4%BA%E4%BE%8B">8.4示例</a></li>
+<li><a href="#85%E8%87%AA%E6%B5%8B%E9%A2%98">8.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC9%E7%AB%A0-%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E5%92%8C%E6%96%87%E6%9C%AC%E6%8C%96%E6%8E%98">第9章 模式匹配和文本挖掘</a>
+<ul>
+<li><a href="#91%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">9.1本章知识点</a></li>
+<li><a href="#92%E6%A1%88%E4%BE%8B-%E5%9C%A8%E8%9B%8B%E7%99%BD%E8%B4%A8%E5%BA%8F%E5%88%97%E4%B8%AD%E6%90%9C%E7%B4%A2%E7%A3%B7%E9%85%B8%E5%8C%96%E6%A8%A1%E4%BD%93">9.2案例： 在蛋白质序列中搜索磷酸化模体</a></li>
+<li><a href="#921%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">9.2.1问题描述</a></li>
+<li><a href="#922python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">9.2.2Python会话示例</a></li>
+<li><a href="#93%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">9.3命令的含义</a></li>
+<li><a href="#931%E7%BC%96%E8%AF%91%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">9.3.1编译正则表达式</a></li>
+<li><a href="#932%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D">9.3.2模式匹配</a></li>
+<li><a href="#933%E5%88%86%E7%BB%84">9.3.3分组</a></li>
+<li><a href="#934%E4%BF%AE%E6%94%B9%E5%AD%97%E7%AC%A6%E4%B8%B2">9.3.4修改字符串</a></li>
+<li><a href="#94%E7%A4%BA%E4%BE%8B">9.4示例</a></li>
+<li><a href="#95%E8%87%AA%E6%B5%8B%E9%A2%98%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%E5%B0%8F%E7%BB%93">9.5自测题第二部分小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E6%A8%A1%E5%9D%97%E5%8C%96%E7%BC%96%E7%A8%8B">第三部分 模块化编程</a>
+<ul>
+<li><a href="#%E7%AC%AC10%E7%AB%A0-%E5%B0%86%E7%A8%8B%E5%BA%8F%E5%88%92%E5%88%86%E4%B8%BA%E5%87%BD%E6%95%B0">第10章 将程序划分为函数</a>
+<ul>
+<li><a href="#101%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">10.1本章知识点</a></li>
+<li><a href="#102%E6%A1%88%E4%BE%8B-%E5%A4%84%E7%90%86%E4%B8%89%E7%BB%B4%E5%9D%90%E6%A0%87%E6%96%87%E4%BB%B6">10.2案例： 处理三维坐标文件</a></li>
+<li><a href="#1021%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">10.2.1问题描述</a></li>
+<li><a href="#1022python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">10.2.2Python会话示例</a></li>
+<li><a href="#103%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">10.3命令的含义</a></li>
+<li><a href="#1031%E5%A6%82%E4%BD%95%E5%AE%9A%E4%B9%89%E5%92%8C%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0">10.3.1如何定义和调用函数</a></li>
+<li><a href="#1032%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0">10.3.2函数参数</a></li>
+<li><a href="#1033struct%E6%A8%A1%E5%9D%97">10.3.3struct模块</a></li>
+<li><a href="#104%E7%A4%BA%E4%BE%8B">10.4示例</a></li>
+<li><a href="#105%E8%87%AA%E6%B5%8B%E9%A2%98">10.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC11%E7%AB%A0-%E7%94%A8%E7%B1%BB%E5%8C%96%E7%B9%81%E4%B8%BA%E7%AE%80">第11章 用类化繁为简</a>
+<ul>
+<li><a href="#111%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">11.1本章知识点</a></li>
+<li><a href="#112%E6%A1%88%E4%BE%8B-%E5%AD%9F%E5%BE%B7%E5%B0%94%E9%81%97%E4%BC%A0">11.2案例： 孟德尔遗传</a></li>
+<li><a href="#1121%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">11.2.1问题描述</a></li>
+<li><a href="#1122python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">11.2.2Python会话示例</a></li>
+<li><a href="#113%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">11.3命令的含义</a></li>
+<li><a href="#1131%E7%94%A8%E7%B1%BB%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B">11.3.1用类创建实例</a></li>
+<li><a href="#1132%E7%B1%BB%E4%BB%A5%E5%B1%9E%E6%80%A7%E7%9A%84%E5%BD%A2%E5%BC%8F%E5%8C%85%E5%90%AB%E6%95%B0%E6%8D%AE">11.3.2类以属性的形式包含数据</a></li>
+<li><a href="#1133%E7%B1%BB%E5%8C%85%E5%90%AB%E7%9A%84%E6%96%B9%E6%B3%95">11.3.3类包含的方法</a></li>
+<li><a href="#1134__repr__%E6%96%B9%E6%B3%95%E5%8F%AF%E6%89%93%E5%8D%B0%E7%B1%BB%E5%92%8C%E5%AE%9E%E4%BE%8B">11.3.4__repr__方法可打印类和实例</a></li>
+<li><a href="#1135%E4%BD%BF%E7%94%A8%E7%B1%BB%E6%9C%89%E5%8A%A9%E4%BA%8E%E6%8A%8A%E6%8F%A1%E5%A4%8D%E6%9D%82%E7%A8%8B%E5%BA%8F">11.3.5使用类有助于把握复杂程序</a></li>
+<li><a href="#114%E7%A4%BA%E4%BE%8B">11.4示例</a></li>
+<li><a href="#115%E8%87%AA%E6%B5%8B%E9%A2%98">11.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC12%E7%AB%A0-%E8%B0%83%E8%AF%95">第12章 调试</a>
+<ul>
+<li><a href="#121%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">12.1本章知识点</a></li>
+<li><a href="#122%E6%A1%88%E4%BE%8B-%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BA%94%E8%AF%A5%E6%80%8E%E6%A0%B7%E5%A4%84%E7%90%86">12.2案例： 程序无法运行时应该怎样处理</a></li>
+<li><a href="#1221%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">12.2.1问题描述</a></li>
+<li><a href="#1222python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">12.2.2Python会话示例</a></li>
+<li><a href="#123%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">12.3命令的含义</a></li>
+<li><a href="#1231%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF">12.3.1语法错误</a></li>
+<li><a href="#1232%E8%BF%90%E8%A1%8C%E6%97%B6%E9%94%99%E8%AF%AF">12.3.2运行时错误</a></li>
+<li><a href="#1233%E5%A4%84%E7%90%86%E5%BC%82%E5%B8%B8%E6%83%85%E5%86%B5">12.3.3处理异常情况</a></li>
+<li><a href="#1234%E6%9C%AA%E6%8A%A5%E5%91%8A%E5%87%BA%E9%94%99%E4%BF%A1%E6%81%AF">12.3.4未报告出错信息</a></li>
+<li><a href="#124%E7%A4%BA%E4%BE%8B">12.4示例</a></li>
+<li><a href="#125%E8%87%AA%E6%B5%8B%E9%A2%98">12.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC13%E7%AB%A0-%E4%BD%BF%E7%94%A8%E5%A4%96%E9%83%A8%E6%A8%A1%E5%9D%97-r%E8%AF%AD%E8%A8%80%E7%9A%84python%E8%B0%83%E7%94%A8%E6%8E%A5%E5%8F%A3">第13章 使用外部模块： R语言的Python调用接口</a>
+<ul>
+<li><a href="#131%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">13.1本章知识点</a></li>
+<li><a href="#132%E6%A1%88%E4%BE%8B-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E8%AF%BB%E5%8F%96%E6%95%B0%E6%8D%AE-%E5%B9%B6%E9%80%9A%E8%BF%87python%E4%BD%BF%E7%94%A8r%E8%AE%A1%E7%AE%97%E5%85%B6%E5%B9%B3%E5%9D%87%E5%80%BC">13.2案例： 从文件中读取数据， 并通过Python使用R计算其平均值</a></li>
+<li><a href="#1321%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">13.2.1问题描述</a></li>
+<li><a href="#1322python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">13.2.2Python会话示例</a></li>
+<li><a href="#133%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">13.3命令的含义</a></li>
+<li><a href="#1331rpy2%E5%92%8Cr%E5%AE%9E%E4%BE%8B%E7%9A%84robjects%E5%AF%B9%E8%B1%A1">13.3.1rpy2和r实例的robjects对象</a></li>
+<li><a href="#1332%E4%BB%8Epython%E4%B8%AD%E8%AF%BB%E5%8F%96r%E5%AF%B9%E8%B1%A1">13.3.2从Python中读取R对象</a></li>
+<li><a href="#1333%E5%88%9B%E5%BB%BA%E5%90%91%E9%87%8F">13.3.3创建向量</a></li>
+<li><a href="#1334%E5%88%9B%E5%BB%BA%E7%9F%A9%E9%98%B5">13.3.4创建矩阵</a></li>
+<li><a href="#1335%E5%B0%86python%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%8D%A2%E6%88%90r%E5%AF%B9%E8%B1%A1">13.3.5将Python对象转换成R对象</a></li>
+<li><a href="#1336%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86%E5%8C%85%E5%90%AB%E7%82%B9%E7%9A%84%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0">13.3.6如何处理包含点的函数参数</a></li>
+<li><a href="#134%E7%A4%BA%E4%BE%8B">13.4示例</a></li>
+<li><a href="#135%E8%87%AA%E6%B5%8B%E9%A2%98">13.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC14%E7%AB%A0-%E6%9E%84%E5%BB%BA%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B">第14章 构建程序流程</a>
+<ul>
+<li><a href="#141%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">14.1本章知识点</a></li>
+<li><a href="#142%E6%A1%88%E4%BE%8B-%E6%9E%84%E5%BB%BAngs%E6%B5%81%E7%A8%8B">14.2案例： 构建NGS流程</a></li>
+<li><a href="#1421%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">14.2.1问题描述</a></li>
+<li><a href="#1422python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">14.2.2Python会话示例</a></li>
+<li><a href="#143%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">14.3命令的含义</a></li>
+<li><a href="#1431%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8tophat%E5%92%8Ccufflinks">14.3.1如何使用TopHat和Cufflinks</a></li>
+<li><a href="#1432%E4%BB%80%E4%B9%88%E6%98%AF%E7%A8%8B%E5%BA%8F%E6%B5%81%E7%A8%8B">14.3.2什么是程序流程</a></li>
+<li><a href="#1433%E5%9C%A8%E7%A8%8B%E5%BA%8F%E4%B8%AD%E4%BA%A4%E6%8D%A2%E6%96%87%E4%BB%B6%E5%90%8D%E5%92%8C%E6%95%B0%E6%8D%AE">14.3.3在程序中交换文件名和数据</a></li>
+<li><a href="#1434%E7%BC%96%E5%86%99%E7%A8%8B%E5%BA%8F%E5%8C%85%E8%A3%85%E5%99%A8">14.3.4编写程序包装器</a></li>
+<li><a href="#1435%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6%E6%97%B6%E7%9A%84%E5%BB%B6%E8%BF%9F">14.3.5关闭文件时的延迟</a></li>
+<li><a href="#1436%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0">14.3.6使用命令行参数</a></li>
+<li><a href="#1437%E6%B5%8B%E8%AF%95%E6%A8%A1%E5%9D%97-if__name____main__">14.3.7测试模块： if__name__==＇<strong>main</strong>＇</a></li>
+<li><a href="#1438%E5%A4%84%E7%90%86%E6%96%87%E4%BB%B6%E5%92%8C%E8%B7%AF%E5%BE%84">14.3.8处理文件和路径</a></li>
+<li><a href="#144%E7%A4%BA%E4%BE%8B">14.4示例</a></li>
+<li><a href="#145%E8%87%AA%E6%B5%8B%E9%A2%98">14.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC15%E7%AB%A0-%E7%BC%96%E5%86%99%E8%89%AF%E5%A5%BD%E7%9A%84%E7%A8%8B%E5%BA%8F">第15章 编写良好的程序</a>
+<ul>
+<li><a href="#151%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">15.1本章知识点</a></li>
+<li><a href="#152%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0-%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7">15.2问题描述： 不确定性</a></li>
+<li><a href="#1521%E7%A8%8B%E5%BA%8F%E7%BC%96%E5%86%99%E5%AD%98%E5%9C%A8%E4%B8%8D%E7%A1%AE%E5%AE%9A%E6%80%A7">15.2.1程序编写存在不确定性</a></li>
+<li><a href="#1522%E7%A8%8B%E5%BA%8F%E9%A1%B9%E7%9B%AE%E5%AE%9E%E4%BE%8B">15.2.2程序项目实例</a></li>
+<li><a href="#153%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B">15.3软件工程</a></li>
+<li><a href="#1531%E5%B0%86%E7%BC%96%E7%A8%8B%E9%A1%B9%E7%9B%AE%E5%88%86%E6%88%90%E5%B0%8F%E4%BB%BB%E5%8A%A1">15.3.1将编程项目分成小任务</a></li>
+<li><a href="#1532%E5%B0%86%E7%A8%8B%E5%BA%8F%E5%88%86%E4%B8%BA%E5%87%BD%E6%95%B0%E5%92%8C%E7%B1%BB">15.3.2将程序分为函数和类</a></li>
+<li><a href="#1533%E7%BC%96%E5%86%99%E6%A0%BC%E5%BC%8F%E8%89%AF%E5%A5%BD%E7%9A%84%E4%BB%A3%E7%A0%81">15.3.3编写格式良好的代码</a></li>
+<li><a href="#1534%E4%BD%BF%E7%94%A8%E5%AD%98%E5%82%A8%E5%BA%93%E6%8E%A7%E5%88%B6%E7%A8%8B%E5%BA%8F%E7%89%88%E6%9C%AC">15.3.4使用存储库控制程序版本</a></li>
+<li><a href="#1535%E5%A6%82%E4%BD%95%E5%B0%86%E8%87%AA%E5%B7%B1%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%88%86%E5%8F%91%E7%BB%99%E5%85%B6%E4%BB%96%E4%BA%BA">15.3.5如何将自己的程序分发给其他人</a></li>
+<li><a href="#1536%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E5%91%A8%E6%9C%9F">15.3.6软件开发的周期</a></li>
+<li><a href="#154%E7%A4%BA%E4%BE%8B">15.4示例</a></li>
+<li><a href="#155%E8%87%AA%E6%B5%8B%E9%A2%98%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%E5%B0%8F%E7%BB%93">15.5自测题第三部分小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96">第四部分 数据可视化</a>
+<ul>
+<li><a href="#%E7%AC%AC16%E7%AB%A0-%E5%88%9B%E5%BB%BA%E7%A7%91%E5%AD%A6%E5%9B%BE%E8%A1%A8">第16章 创建科学图表</a>
+<ul>
+<li><a href="#161%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">16.1本章知识点</a></li>
+<li><a href="#162%E6%A1%88%E4%BE%8B-%E6%A0%B8%E7%B3%96%E4%BD%93%E7%9A%84%E6%A0%B8%E8%8B%B7%E9%85%B8%E9%A2%91%E7%8E%87">16.2案例： 核糖体的核苷酸频率</a></li>
+<li><a href="#1621%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">16.2.1问题描述</a></li>
+<li><a href="#1622python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">16.2.2Python会话示例</a></li>
+<li><a href="#163%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">16.3命令的含义</a></li>
+<li><a href="#1631matplotlib%E5%BA%93">16.3.1matplotlib库</a></li>
+<li><a href="#1632%E7%BB%98%E5%88%B6%E7%AB%96%E7%9A%84%E6%9F%B1%E7%8A%B6%E5%9B%BE">16.3.2绘制竖的柱状图</a></li>
+<li><a href="#1633%E4%B8%BAx%E8%BD%B4%E5%92%8Cy%E8%BD%B4%E6%B7%BB%E5%8A%A0%E6%A0%87%E6%B3%A8">16.3.3为x轴和y轴添加标注</a></li>
+<li><a href="#1634%E6%B7%BB%E5%8A%A0%E5%88%BB%E5%BA%A6">16.3.4添加刻度</a></li>
+<li><a href="#1635%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E5%9B%BE%E4%BE%8B%E6%A1%86">16.3.5添加一个图例框</a></li>
+<li><a href="#1636%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%9A%84%E6%A0%87%E9%A2%98">16.3.6添加图的标题</a></li>
+<li><a href="#1637%E8%AE%BE%E7%BD%AE%E5%9B%BE%E8%A1%A8%E7%9A%84%E8%BE%B9%E7%95%8C">16.3.7设置图表的边界</a></li>
+<li><a href="#1638%E4%BB%A5%E4%BD%8E%E5%88%86%E8%BE%A8%E7%8E%87%E5%92%8C%E9%AB%98%E5%88%86%E8%BE%A8%E7%8E%87%E5%AF%BC%E5%87%BA%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%83%8F%E6%96%87%E4%BB%B6">16.3.8以低分辨率和高分辨率导出一个图像文件</a></li>
+<li><a href="#164%E7%A4%BA%E4%BE%8B">16.4示例</a></li>
+<li><a href="#165%E8%87%AA%E6%B5%8B%E9%A2%98">16.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC17%E7%AB%A0-%E4%BD%BF%E7%94%A8pymol%E5%88%9B%E5%BB%BA%E5%88%86%E5%AD%90%E5%9B%BE%E5%83%8F">第17章 使用PyMOL创建分子图像</a>
+<ul>
+<li><a href="#171%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">17.1本章知识点</a></li>
+<li><a href="#172%E7%A4%BA%E4%BE%8B-%E9%94%8C%E6%8C%87">17.2示例： 锌指</a></li>
+<li><a href="#1721%E4%BB%80%E4%B9%88%E6%98%AFpymol">17.2.1什么是PyMOL</a></li>
+<li><a href="#1722pymol%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">17.2.2PyMOL会话示例</a></li>
+<li><a href="#173%E7%94%A8%E4%B8%83%E4%B8%AA%E6%AD%A5%E9%AA%A4%E6%9D%A5%E5%88%9B%E5%BB%BA%E9%AB%98%E5%88%86%E8%BE%A8%E7%8E%87%E7%9A%84%E5%9B%BE%E5%83%8F">17.3用七个步骤来创建高分辨率的图像</a></li>
+<li><a href="#1731%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AApymol%E8%84%9A%E6%9C%AC%E6%96%87%E4%BB%B6">17.3.1创建一个PyMOL脚本文件</a></li>
+<li><a href="#1732%E5%8A%A0%E8%BD%BD%E5%92%8C%E4%BF%9D%E5%AD%98%E5%88%86%E5%AD%90">17.3.2加载和保存分子</a></li>
+<li><a href="#1733%E9%80%89%E5%8F%96%E5%88%86%E5%AD%90%E7%9A%84%E5%B1%80%E9%83%A8">17.3.3选取分子的局部</a></li>
+<li><a href="#1734%E4%B8%BA%E6%AF%8F%E4%B8%AA%E9%80%89%E5%8F%96%E9%80%89%E6%8B%A9%E5%B1%95%E7%8E%B0%E5%BD%A2%E5%BC%8F">17.3.4为每个选取选择展现形式</a></li>
+<li><a href="#1735%E8%AE%BE%E7%BD%AE%E9%A2%9C%E8%89%B2">17.3.5设置颜色</a></li>
+<li><a href="#1736%E8%AE%BE%E7%BD%AE%E6%91%84%E5%BD%B1%E4%BD%8D%E7%BD%AE">17.3.6设置摄影位置</a></li>
+<li><a href="#1737%E5%AF%BC%E5%87%BA%E9%AB%98%E5%88%86%E8%BE%A8%E7%8E%87%E5%9B%BE%E5%83%8F">17.3.7导出高分辨率图像</a></li>
+<li><a href="#174%E7%A4%BA%E4%BE%8B">17.4示例</a></li>
+<li><a href="#175%E8%87%AA%E6%B5%8B%E9%A2%98">17.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC18%E7%AB%A0-%E5%A4%84%E7%90%86%E5%9B%BE%E5%83%8F">第18章 处理图像</a>
+<ul>
+<li><a href="#181%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">18.1本章知识点</a></li>
+<li><a href="#182%E6%A1%88%E4%BE%8B-%E7%94%BB%E4%B8%80%E4%B8%AA%E8%B4%A8%E7%B2%92">18.2案例： 画一个质粒</a></li>
+<li><a href="#1821%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">18.2.1问题描述</a></li>
+<li><a href="#1822python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">18.2.2Python会话示例</a></li>
+<li><a href="#183%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">18.3命令的含义</a></li>
+<li><a href="#1831%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%9B%BE%E5%83%8F">18.3.1创建一个图像</a></li>
+<li><a href="#1832%E8%AF%BB%E5%92%8C%E5%86%99%E5%9B%BE%E5%83%8F">18.3.2读和写图像</a></li>
+<li><a href="#1833%E5%9D%90%E6%A0%87">18.3.3坐标</a></li>
+<li><a href="#1834%E7%BB%98%E5%88%B6%E5%87%A0%E4%BD%95%E5%BD%A2%E7%8A%B6">18.3.4绘制几何形状</a></li>
+<li><a href="#1835%E6%97%8B%E8%BD%AC%E5%9B%BE%E5%83%8F">18.3.5旋转图像</a></li>
+<li><a href="#1836%E6%B7%BB%E5%8A%A0%E6%96%87%E6%9C%AC%E6%A0%87%E8%AE%B0">18.3.6添加文本标记</a></li>
+<li><a href="#1837%E9%A2%9C%E8%89%B2">18.3.7颜色</a></li>
+<li><a href="#1838%E8%BE%85%E5%8A%A9%E5%8F%98%E9%87%8F">18.3.8辅助变量</a></li>
+<li><a href="#184%E7%A4%BA%E4%BE%8B">18.4示例</a></li>
+<li><a href="#185%E8%87%AA%E6%B5%8B%E9%A2%98%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86%E5%B0%8F%E7%BB%93">18.5自测题第四部分小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86-biopython">第五部分 Biopython</a>
+<ul>
+<li><a href="#%E7%AC%AC19%E7%AB%A0-%E4%BD%BF%E7%94%A8%E5%BA%8F%E5%88%97%E6%95%B0%E6%8D%AE">第19章 使用序列数据</a>
+<ul>
+<li><a href="#191%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">19.1本章知识点</a></li>
+<li><a href="#192%E6%A1%88%E4%BE%8B-%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%80%E6%9D%A1dna%E7%BC%96%E7%A0%81%E5%BA%8F%E5%88%97%E7%BF%BB%E8%AF%91%E6%88%90%E5%AF%B9%E5%BA%94%E7%9A%84%E8%9B%8B%E7%99%BD%E8%B4%A8%E5%BA%8F%E5%88%97%E5%B9%B6%E6%8A%8A%E5%AE%83%E5%86%99%E5%85%A5fasta%E6%96%87%E4%BB%B6">19.2案例： 如何将一条DNA编码序列翻译成对应的蛋白质序列并把它写入FASTA文件</a></li>
+<li><a href="#1921%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">19.2.1问题描述</a></li>
+<li><a href="#1922python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">19.2.2Python会话示例</a></li>
+<li><a href="#193%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">19.3命令的含义</a></li>
+<li><a href="#1931seq%E5%AF%B9%E8%B1%A1">19.3.1Seq对象</a></li>
+<li><a href="#1932%E6%8A%8A%E5%BA%8F%E5%88%97%E5%BD%93%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B7%A5%E4%BD%9C">19.3.2把序列当成字符串工作</a></li>
+<li><a href="#1933mutableseq%E5%AF%B9%E8%B1%A1">19.3.3MutableSeq对象</a></li>
+<li><a href="#1934seqrecord%E5%AF%B9%E8%B1%A1">19.3.4SeqRecord对象</a></li>
+<li><a href="#1935seqio%E6%A8%A1%E5%9D%97">19.3.5SeqIO模块</a></li>
+<li><a href="#194%E7%A4%BA%E4%BE%8B">19.4示例</a></li>
+<li><a href="#195%E8%87%AA%E6%B5%8B%E9%A2%98">19.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC20%E7%AB%A0%E4%BB%8E%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90%E4%B8%AD%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AE">第20章从网络资源中检索数据</a>
+<ul>
+<li><a href="#201%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">20.1本章知识点</a></li>
+<li><a href="#202%E6%A1%88%E4%BE%8B-%E5%9C%A8pubmed%E4%B8%AD%E7%94%A8%E5%85%B3%E9%94%AE%E8%AF%8D%E6%90%9C%E7%B4%A2%E6%96%87%E7%8C%AE-%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E6%9E%90%E5%AF%B9%E5%BA%94%E7%9A%84%E8%AE%B0%E5%BD%95">20.2案例： 在PubMed中用关键词搜索文献， 下载并解析对应的记录</a></li>
+<li><a href="#2021%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">20.2.1问题描述</a></li>
+<li><a href="#2022python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">20.2.2Python会话示例</a></li>
+<li><a href="#203%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">20.3命令的含义</a></li>
+<li><a href="#2031entrez%E6%A8%A1%E5%9D%97">20.3.1Entrez模块</a></li>
+<li><a href="#2032medline%E6%A8%A1%E5%9D%97">20.3.2Medline模块</a></li>
+<li><a href="#204%E7%A4%BA%E4%BE%8B">20.4示例</a></li>
+<li><a href="#205%E8%87%AA%E6%B5%8B%E9%A2%98">20.5自测题</a></li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC21%E7%AB%A0%E4%BD%BF%E7%94%A8%E4%B8%89%E7%BB%B4%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE">第21章使用三维结构数据</a>
+<ul>
+<li><a href="#211%E6%9C%AC%E7%AB%A0%E7%9F%A5%E8%AF%86%E7%82%B9">21.1本章知识点</a></li>
+<li><a href="#212%E6%A1%88%E4%BE%8B-%E4%BB%8Epdb%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E5%8E%9F%E5%AD%90%E5%90%8D%E5%8F%8A%E5%85%B6%E4%B8%89%E7%BB%B4%E5%9D%90%E6%A0%87">21.2案例： 从PDB文件中提取原子名及其三维坐标</a></li>
+<li><a href="#2121%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">21.2.1问题描述</a></li>
+<li><a href="#2122python%E4%BC%9A%E8%AF%9D%E7%A4%BA%E4%BE%8B">21.2.2Python会话示例</a></li>
+<li><a href="#213%E5%91%BD%E4%BB%A4%E7%9A%84%E5%90%AB%E4%B9%89">21.3命令的含义</a></li>
+<li><a href="#2131biopdb%E6%A8%A1%E5%9D%97">21.3.1Bio.PDB模块</a></li>
+<li><a href="#2132smcra%E7%BB%93%E6%9E%84%E5%B1%82%E6%AC%A1">21.3.2SMCRA结构层次</a></li>
+<li><a href="#214%E7%A4%BA%E4%BE%8B">21.4示例</a></li>
+<li><a href="#215%E8%87%AA%E6%B5%8B%E9%A2%98%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86%E5%B0%8F%E7%BB%93">21.5自测题第五部分小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E7%AC%AC%E5%85%AD%E9%83%A8%E5%88%86-%E7%BC%96%E7%A8%8B%E7%A7%98%E7%AC%88">第六部分 编程秘笈</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<p>接触 <code>计算机技术(IT)</code> 也已经有些年头了</p>
+<p>计算机技术表现出来的 <code>高效</code> 的生产力着实让人赞叹, 让人愿意参与其中</p>
+<p>如今入了生物的坑, 自然也一直在接触着各种生物和信息技术交融的知识领域</p>
+<p>但是浅尝辄止的兴趣式的游玩, 终究是不太够用的</p>
+<p>倒不如静下心来, 实际地系统地学习一些内容</p>
+<h1><span id="书籍简介">书籍简介 📚</span></h1>
+<p>挑选的书是从 <code>江科大长山校区图书馆</code> 里翻找到的</p>
+<p>位于 <code>自然科学图书第2阅览室</code>, 索书号: <code>Q811.4/51</code></p>
+<blockquote>
+<p>@信息来自<a href="http://lib.just.edu.cn:8080/opac/search_adv.php#/index" target="_blank" rel="noopener">江科大图书馆v5.6书目检索系统</a></p>
+<ul>
+<li>
+<p>题名/责任者: <a href="http://lib.just.edu.cn:8080/opac/openlink.php?title=Python%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86" target="_blank" rel="noopener">Python生物信息学数据管理</a>/(意) Allegra Via, (德) Kristian Rother, (意) Anna Tramontano著 卢宏超, 陈一情, 李绍娟译</p>
+</li>
+<li>
+<p>出版发行项: 北京:电子工业出版社,2017.01</p>
+</li>
+<li>
+<p>ISBN及定价: 978-7-121-30382-1/CNY69.00</p>
+</li>
+<li>
+<p>载体形态项: 17, 318页:图;26cm</p>
+</li>
+<li>
+<p>统一题名: <a href="http://lib.just.edu.cn:8080/opac/openlink.php?title=Managing+your+biological+data+with+Python" target="_blank" rel="noopener">Managing your biological data with Python</a></p>
+</li>
+<li>
+<p>中图法分类号:<a href="http://lib.just.edu.cn:8080/opac/openlink.php?coden=Q811.4-39" target="_blank" rel="noopener">Q811.4-39</a></p>
+</li>
+<li>
+<p>中图法分类号:<a href="http://lib.just.edu.cn:8080/opac/openlink.php?coden=Q811.4" target="_blank" rel="noopener">Q811.4</a></p>
+</li>
+<li>
+<p>版本附注:由Taylor &amp; Francis出版集团旗下，CRC出版公司授权翻译出版</p>
+</li>
+<li>
+<p>提要文摘附注:</p>
+</li>
+</ul>
+<p>本书由六部分组成：Python语言基本介绍，语言所有成分介绍，高级编程，数据可视化，生物信息通用包Biopython，最后给出20个"编程秘笈”，范围涵盖了从二级结构预测、多序列比对到蛋白质三维结构的广泛话题。此外，附录还包括了大量的生物信息常用资源的信息。<br>
+不过找也费了番功夫, 而且发现学校关于<code>生物信息学</code>方面的书还真的不是非常多</p>
+</blockquote>
+<p>可见<code>生物信息学</code>的确还是比较<strong>新</strong>的一门学科</p>
+<h1><span id="说在前面">说在前面 ✍</span></h1>
+<p>此读书笔记会忽略亦或者增加一些内容, 比如</p>
+<ul>
+<li>忽略基础的<code>Python语法</code>: 本书还是使用了大量的例子来讲解Python的基础语法的, 但是对于笔者来说已无必要. 需要补充基础语法的小伙伴可以看这里 =&gt; <a href="https://www.runoob.com/python3/python3-tutorial.html" target="_blank" rel="noopener">Python3 教程 | 菜鸟教程 (runoob.com)</a></li>
+<li>增加一些涉及到的生物学理论细节: 这主要是补充书中的内容, 使得易于理解相关的例子</li>
+</ul>
+<p>当然, 其实主要是什么值得补充就会补充的 :happy:</p>
+<p>本笔记按照原书的目录展开</p>
+<p>本书的代码使用的Python的版本为 <code>Python 2.6.6</code></p>
+<p>笔者使用由 <code>Anaconda</code> 构建的Python版本为 <code>python-2.7.13</code> 的虚拟环境来复现书中的代码</p>
+<p>期间可能会尝试使用 <code>Python3.8</code> 的版本来重构里面的代码</p>
+<p>没有特别说明, 笔记里的Python版本则为 <code>python-2.7.13</code></p>
+<p>标题上带有 <code> *</code> 的章节是没有笔记的</p>
+<h1><span id="故事就此展开">故事就此展开 📖</span></h1>
+<h2><span id="第一部分-入门">第一部分 入门</span></h2>
+<p>本书的作者描述了他希望这本书带给读者什么</p>
+<blockquote>
+<p>我们希望本书能成为帮助读者每天攀登数据之山的地图, 希望读者能让编程为工作提供便利, 而不必先成为一个专业的软件开发者</p>
+</blockquote>
+<p>作者建议像学习德语一样, 学习Python语法, 把<code>Python标准库</code> 当作字典来查</p>
+<p><code>Python标准库</code> :</p>
+<p><a href="https://docs.python.org/zh-cn/3.7/library/index.html" target="_blank" rel="noopener">Python 标准库 — Python 3.7.8 文档</a></p>
+<p><a href="https://docs.python.org/zh-cn/2.7/library/index.html" target="_blank" rel="noopener">Python 标准库 — Python 2.7.18 文档</a></p>
+<h3><span id="第1章-python-shell">第1章 Python shell</span></h3>
+<h4><span id="11-本章知识点">1.1 本章知识点 *</span></h4>
+<h4><span id="12-案例-计算atp水解的δg">1.2 案例： 计算ATP水解的ΔG</span></h4>
+<h4><span id="121-问题描述">1.2.1 问题描述</span></h4>
+<ul>
+<li>吉布斯自由能:</li>
+</ul>
+<p>$$<br>
+ΔG = ΔG^0 + RT<em>ln([ADP]</em>[P_i]/[ATP]) \<br>
+[?]: 指 ? 的摩尔浓度  \<br>
+ΔG :  \<br>
+ΔG^0 :  \<br>
+R :  \<br>
+T :  \<br>
+$$</p>
+<h4><span id="122-python会话示例">1.2.2 Python会话示例</span></h4>
+<p>python的 <code>math</code> 模块:</p>
+<blockquote>
+<p>&gt;&gt;&gt; import math  # 导入数学计算模块</p>
+<p>&gt;&gt;&gt; math.log(…)  # 传入参数, 返回它的自然对数</p>
+</blockquote>
+<h4><span id="13-命令的含义">1.3 命令的含义</span></h4>
+<blockquote>
+<p>&gt;&gt;&gt; dir(math)  # dir()函数可以获取传入的模块的内部的函数<br>
+[’__doc__’, ‘__name__’, ‘__package__’, ‘acos’, ‘acosh’, ‘asin’, ‘asinh’, ‘atan’, ‘atan2’, ‘atanh’, ‘ceil’, ‘cop<br>
+ysign’, ‘cos’, ‘cosh’, ‘degrees’, ‘e’, ‘erf’, ‘erfc’, ‘exp’, ‘expm1’, ‘fabs’, ‘factorial’, ‘floor’, ‘fmod’, ‘fr<br>
+exp’, ‘fsum’, ‘gamma’, ‘hypot’, ‘isinf’, ‘isnan’, ‘ldexp’, ‘lgamma’, ‘log’, ‘log10’, ‘log1p’, ‘modf’, ‘pi’, ‘po<br>
+w’, ‘radians’, ‘sin’, ‘sinh’, ‘sqrt’, ‘tan’, ‘tanh’, ‘trunc’]</p>
+<p>&gt;&gt;&gt; help(math.log)</p>
+<p>Help on built-in function log in module math:</p>
+<p>log(…)<br>
+log(x[, base])</p>
+<p>​    Return the logarithm of x to the given base.<br>
+​    If the base not specified, returns the natural logarithm (base e) of x.</p>
+</blockquote>
+<h4><span id="131-如何在电脑上运行这个例子">1.3.1 如何在电脑上运行这个例子</span></h4>
+<p>可以参考这篇文章 <a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/" title="Anaconda之路">Anaconda之路</a></p>
+<h4><span id="132-变量">1.3.2 变量 *</span></h4>
+<h4><span id="133-导入模块">1.3.3 导入模块 *</span></h4>
+<h4><span id="134-计算">1.3.4 计算</span></h4>
+<p>这里引入一篇博文来补充各种符号的意思</p>
+<p><a href="https://blog.csdn.net/weixin_38981172/article/details/90176525" target="_blank" rel="noopener">python中的各种符号（欢迎补充）_杉木人-CSDN博客</a></p>
+<p>特别之处在Python中, <code>^</code> 符号</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号</th>
+<th style="text-align:center">功能</th>
+<th style="text-align:center">例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">按位异或运算符：当两对应的二进位相异时，结果为1</td>
+<td style="text-align:center">(a ^ b) 输出结果 49 ，二进制解释： 0011 0001</td>
+</tr>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">幂 - 返回x的y次幂</td>
+<td style="text-align:center">a**b 为10的20次方， 输出结果 100000000000000000000</td>
+</tr>
+</tbody>
+</table>
+<p>参见 <code>Python2.7.18文档</code> @<a href="https://docs.python.org/zh-cn/2.7/library/operator.html?highlight=%E8%BF%90%E7%AE%97%E7%AC%A6#mapping-operators-to-functions" target="_blank" rel="noopener">9.9.1. 将运算符映射到函数</a></p>
+<h4><span id="14-示例">1.4 示例 *</span></h4>
+<h4><span id="15-自测题">1.5 自测题 *</span></h4>
+<h3><span id="第2章-第一个python程序">第2章 第一个Python程序</span></h3>
+<h4><span id="21本章知识点">2.1本章知识点</span></h4>
+<h4><span id="22案例-如何计算胰岛素序列中的氨基酸频率">2.2案例： 如何计算胰岛素序列中的氨基酸频率</span></h4>
+<h4><span id="221问题描述">2.2.1问题描述</span></h4>
+<h4><span id="222python会话示例">2.2.2Python会话示例</span></h4>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># insulin [Hom0 sapiens] GI:386828</span></span><br><span class="line"><span class="comment"># extracted 51 amino acids of A+B chain</span></span><br><span class="line">insulin = <span class="string">"GIVEQCCTSICSLYQLENYCNFVNQHLCGSHLVEALYLVCGERGFFYTPKT"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> amino_acid <span class="keyword">in</span> <span class="string">"ACDEFGHIKLMNPQRSTVWY"</span>:</span><br><span class="line">    number = insulin.count(amino_acid)</span><br><span class="line">    <span class="keyword">print</span> amino_acid,number</span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li>
+<p>“字符串1”.count(“字符串2”) : 返回<code>字符串1</code>中含有多少<code>字符串2</code>的数量</p>
+<ul>
+<li>
+<p><a href="https://docs.python.org/zh-cn/2.7/library/string.html?highlight=count#string.count" target="_blank" rel="noopener">7.1. string — 常见的字符串操作 — Python 2.7.18 文档</a></p>
+</li>
+<li>
+<p><code>string.``count</code>(<em>s</em>, <em>sub</em>[, <em>start</em>[, <em>end</em>]])</p>
+<p>Return the number of (non-overlapping) occurrences of substring <em>sub</em> in string <code>s[start:end]</code>. Defaults for <em>start</em> and <em>end</em> and interpretation of negative values are the same as for slices.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>注意缩进错误：IndentationError: unindent does not match any outer indentation level</p>
+</li>
+</ul>
+<p>切不可混用 <code>空格缩进</code>和<code>制表符缩进</code>, 否则你会疯的</p>
+<h4><span id="23命令的含义">2.3命令的含义</span></h4>
+<h4><span id="231如何执行程序">2.3.1如何执行程序</span></h4>
+<h4><span id="232程序如何工作">2.3.2程序如何工作</span></h4>
+<h4><span id="233注释">2.3.3注释</span></h4>
+<h4><span id="234字符串变量">2.3.4字符串变量</span></h4>
+<h4><span id="235用for进行循环">2.3.5用for进行循环</span></h4>
+<h4><span id="236缩进">2.3.6缩进</span></h4>
+<h4><span id="237打印至屏幕">2.3.7打印至屏幕</span></h4>
+<h4><span id="24示例">2.4示例</span></h4>
+<h4><span id="25自测题">2.5自测题</span></h4>
+<h4><span id="第一部分小结">第一部分小结</span></h4>
+<h2><span id="第二部分-数据管理">第二部分 数据管理</span></h2>
+<h3><span id="第3章-分析数据列">第3章 分析数据列</span></h3>
+<h4><span id="31本章知识点">3.1本章知识点</span></h4>
+<h4><span id="32案例-树突长度">3.2案例： 树突长度</span></h4>
+<h4><span id="321问题描述">3.2.1问题描述</span></h4>
+<h4><span id="322python会话示例">3.2.2Python会话示例</span></h4>
+<h4><span id="33命令的含义">3.3命令的含义</span></h4>
+<h4><span id="331读取文本文件">3.3.1读取文本文件</span></h4>
+<h4><span id="332写入文本文件">3.3.2写入文本文件</span></h4>
+<h4><span id="333将数据收入列表">3.3.3将数据收入列表</span></h4>
+<h4><span id="334将文本转换为数字">3.3.4将文本转换为数字</span></h4>
+<h4><span id="335将数字转换为文本">3.3.5将数字转换为文本</span></h4>
+<h4><span id="336将数据列写入文本文件">3.3.6将数据列写入文本文件</span></h4>
+<h4><span id="337计算数值列表">3.3.7计算数值列表</span></h4>
+<h4><span id="34示例">3.4示例</span></h4>
+<h4><span id="35自测题">3.5自测题</span></h4>
+<h3><span id="第4章-解析数据记录">第4章 解析数据记录</span></h3>
+<h4><span id="41本章知识点">4.1本章知识点</span></h4>
+<h4><span id="42案例-整合质谱数据-转化到代谢通路中">4.2案例： 整合质谱数据， 转化到代谢通路中</span></h4>
+<h4><span id="421问题描述">4.2.1问题描述</span></h4>
+<h4><span id="422python会话示例">4.2.2Python会话示例</span></h4>
+<h4><span id="43命令的含义">4.3命令的含义</span></h4>
+<h4><span id="431ifelifelse语句">4.3.1if/elif/else语句</span></h4>
+<h4><span id="432列表数据结构">4.3.2列表数据结构</span></h4>
+<h4><span id="433简洁列表创建方式">4.3.3简洁列表创建方式</span></h4>
+<h4><span id="44示例">4.4示例</span></h4>
+<h4><span id="45自测题">4.5自测题</span></h4>
+<h3><span id="第5章-搜索数据">第5章 搜索数据</span></h3>
+<h4><span id="51本章知识点">5.1本章知识点</span></h4>
+<h4><span id="52案例-将rna序列翻译为相应的蛋白质序列">5.2案例： 将RNA序列翻译为相应的蛋白质序列</span></h4>
+<h4><span id="521问题描述">5.2.1问题描述</span></h4>
+<h4><span id="522python会话示例">5.2.2Python会话示例</span></h4>
+<h4><span id="53命令的含义">5.3命令的含义</span></h4>
+<h4><span id="531字典">5.3.1字典</span></h4>
+<h4><span id="532while语句">5.3.2while语句</span></h4>
+<h4><span id="533用while循环搜索">5.3.3用while循环搜索</span></h4>
+<h4><span id="534字典搜索">5.3.4字典搜索</span></h4>
+<h4><span id="535列表搜索">5.3.5列表搜索</span></h4>
+<h4><span id="54示例">5.4示例</span></h4>
+<h4><span id="55自测题">5.5自测题</span></h4>
+<h3><span id="第6章-过滤数据">第6章 过滤数据</span></h3>
+<h4><span id="61本章知识点">6.1本章知识点</span></h4>
+<h4><span id="62案例-使用rnaseq输出数据">6.2案例： 使用RNAseq输出数据</span></h4>
+<h4><span id="621问题描述">6.2.1问题描述</span></h4>
+<h4><span id="622python会话示例">6.2.2Python会话示例</span></h4>
+<h4><span id="63命令的含义">6.3命令的含义</span></h4>
+<h4><span id="631用简单的forif组合过滤">6.3.1用简单的for…if组合过滤</span></h4>
+<h4><span id="632合并两个数据集">6.3.2合并两个数据集</span></h4>
+<h4><span id="633两组数据之间的差异">6.3.3两组数据之间的差异</span></h4>
+<h4><span id="634从列表-字典和文件中删除元素">6.3.4从列表、 字典和文件中删除元素</span></h4>
+<h4><span id="635保持或不保持顺序地删除重复">6.3.5保持或不保持顺序地删除重复</span></h4>
+<h4><span id="636集合">6.3.6集合</span></h4>
+<h4><span id="64示例">6.4示例</span></h4>
+<h4><span id="65自测题">6.5自测题</span></h4>
+<h3><span id="第7章-管理表数据">第7章 管理表数据</span></h3>
+<h4><span id="71本章知识点">7.1本章知识点</span></h4>
+<h4><span id="72案例-确定蛋白浓度">7.2案例： 确定蛋白浓度</span></h4>
+<h4><span id="721问题描述">7.2.1问题描述</span></h4>
+<h4><span id="722python会话示例">7.2.2Python会话示例</span></h4>
+<h4><span id="73命令的含义">7.3命令的含义</span></h4>
+<h4><span id="731二维表的表示方法">7.3.1二维表的表示方法</span></h4>
+<h4><span id="732访问行和单元格">7.3.2访问行和单元格</span></h4>
+<h4><span id="733插入和删除行">7.3.3插入和删除行</span></h4>
+<h4><span id="734访问列">7.3.4访问列</span></h4>
+<h4><span id="735插入和删除列">7.3.5插入和删除列</span></h4>
+<h4><span id="74示例">7.4示例</span></h4>
+<h4><span id="75自测题">7.5自测题</span></h4>
+<h3><span id="第8章-数据排序">第8章 数据排序</span></h3>
+<h4><span id="81本章知识点">8.1本章知识点</span></h4>
+<h4><span id="82案例-数据表排序">8.2案例： 数据表排序</span></h4>
+<h4><span id="821问题描述">8.2.1问题描述</span></h4>
+<h4><span id="822python会话示例">8.2.2Python会话示例</span></h4>
+<h4><span id="83命令的含义">8.3命令的含义</span></h4>
+<h4><span id="831python列表有利于排序">8.3.1Python列表有利于排序</span></h4>
+<h4><span id="832内置函数sorted">8.3.2内置函数sorted()</span></h4>
+<h4><span id="833用itemgetter排序">8.3.3用itemgetter排序</span></h4>
+<h4><span id="834按升序降序排序">8.3.4按升序/降序排序</span></h4>
+<h4><span id="835数据结构元组-字典排序">8.3.5数据结构（元组、 字典）排序</span></h4>
+<h4><span id="836按长度对字符串排序">8.3.6按长度对字符串排序</span></h4>
+<h4><span id="84示例">8.4示例</span></h4>
+<h4><span id="85自测题">8.5自测题</span></h4>
+<h3><span id="第9章-模式匹配和文本挖掘">第9章 模式匹配和文本挖掘</span></h3>
+<h4><span id="91本章知识点">9.1本章知识点</span></h4>
+<h4><span id="92案例-在蛋白质序列中搜索磷酸化模体">9.2案例： 在蛋白质序列中搜索磷酸化模体</span></h4>
+<h4><span id="921问题描述">9.2.1问题描述</span></h4>
+<h4><span id="922python会话示例">9.2.2Python会话示例</span></h4>
+<h4><span id="93命令的含义">9.3命令的含义</span></h4>
+<h4><span id="931编译正则表达式">9.3.1编译正则表达式</span></h4>
+<h4><span id="932模式匹配">9.3.2模式匹配</span></h4>
+<h4><span id="933分组">9.3.3分组</span></h4>
+<h4><span id="934修改字符串">9.3.4修改字符串</span></h4>
+<h4><span id="94示例">9.4示例</span></h4>
+<h4><span id="95自测题第二部分小结">9.5自测题第二部分小结</span></h4>
+<h2><span id="第三部分-模块化编程">第三部分 模块化编程</span></h2>
+<h3><span id="第10章-将程序划分为函数">第10章 将程序划分为函数</span></h3>
+<h4><span id="101本章知识点">10.1本章知识点</span></h4>
+<h4><span id="102案例-处理三维坐标文件">10.2案例： 处理三维坐标文件</span></h4>
+<h4><span id="1021问题描述">10.2.1问题描述</span></h4>
+<h4><span id="1022python会话示例">10.2.2Python会话示例</span></h4>
+<h4><span id="103命令的含义">10.3命令的含义</span></h4>
+<h4><span id="1031如何定义和调用函数">10.3.1如何定义和调用函数</span></h4>
+<h4><span id="1032函数参数">10.3.2函数参数</span></h4>
+<h4><span id="1033struct模块">10.3.3struct模块</span></h4>
+<h4><span id="104示例">10.4示例</span></h4>
+<h4><span id="105自测题">10.5自测题</span></h4>
+<h3><span id="第11章-用类化繁为简">第11章 用类化繁为简</span></h3>
+<h4><span id="111本章知识点">11.1本章知识点</span></h4>
+<h4><span id="112案例-孟德尔遗传">11.2案例： 孟德尔遗传</span></h4>
+<h4><span id="1121问题描述">11.2.1问题描述</span></h4>
+<h4><span id="1122python会话示例">11.2.2Python会话示例</span></h4>
+<h4><span id="113命令的含义">11.3命令的含义</span></h4>
+<h4><span id="1131用类创建实例">11.3.1用类创建实例</span></h4>
+<h4><span id="1132类以属性的形式包含数据">11.3.2类以属性的形式包含数据</span></h4>
+<h4><span id="1133类包含的方法">11.3.3类包含的方法</span></h4>
+<h4><span id="1134__repr__方法可打印类和实例">11.3.4__repr__方法可打印类和实例</span></h4>
+<h4><span id="1135使用类有助于把握复杂程序">11.3.5使用类有助于把握复杂程序</span></h4>
+<h4><span id="114示例">11.4示例</span></h4>
+<h4><span id="115自测题">11.5自测题</span></h4>
+<h3><span id="第12章-调试">第12章 调试</span></h3>
+<h4><span id="121本章知识点">12.1本章知识点</span></h4>
+<h4><span id="122案例-程序无法运行时应该怎样处理">12.2案例： 程序无法运行时应该怎样处理</span></h4>
+<h4><span id="1221问题描述">12.2.1问题描述</span></h4>
+<h4><span id="1222python会话示例">12.2.2Python会话示例</span></h4>
+<h4><span id="123命令的含义">12.3命令的含义</span></h4>
+<h4><span id="1231语法错误">12.3.1语法错误</span></h4>
+<h4><span id="1232运行时错误">12.3.2运行时错误</span></h4>
+<h4><span id="1233处理异常情况">12.3.3处理异常情况</span></h4>
+<h4><span id="1234未报告出错信息">12.3.4未报告出错信息</span></h4>
+<h4><span id="124示例">12.4示例</span></h4>
+<h4><span id="125自测题">12.5自测题</span></h4>
+<h3><span id="第13章-使用外部模块-r语言的python调用接口">第13章 使用外部模块： R语言的Python调用接口</span></h3>
+<h4><span id="131本章知识点">13.1本章知识点</span></h4>
+<h4><span id="132案例-从文件中读取数据-并通过python使用r计算其平均值">13.2案例： 从文件中读取数据， 并通过Python使用R计算其平均值</span></h4>
+<h4><span id="1321问题描述">13.2.1问题描述</span></h4>
+<h4><span id="1322python会话示例">13.2.2Python会话示例</span></h4>
+<h4><span id="133命令的含义">13.3命令的含义</span></h4>
+<h4><span id="1331rpy2和r实例的robjects对象">13.3.1rpy2和r实例的robjects对象</span></h4>
+<h4><span id="1332从python中读取r对象">13.3.2从Python中读取R对象</span></h4>
+<h4><span id="1333创建向量">13.3.3创建向量</span></h4>
+<h4><span id="1334创建矩阵">13.3.4创建矩阵</span></h4>
+<h4><span id="1335将python对象转换成r对象">13.3.5将Python对象转换成R对象</span></h4>
+<h4><span id="1336如何处理包含点的函数参数">13.3.6如何处理包含点的函数参数</span></h4>
+<h4><span id="134示例">13.4示例</span></h4>
+<h4><span id="135自测题">13.5自测题</span></h4>
+<h3><span id="第14章-构建程序流程">第14章 构建程序流程</span></h3>
+<h4><span id="141本章知识点">14.1本章知识点</span></h4>
+<h4><span id="142案例-构建ngs流程">14.2案例： 构建NGS流程</span></h4>
+<h4><span id="1421问题描述">14.2.1问题描述</span></h4>
+<h4><span id="1422python会话示例">14.2.2Python会话示例</span></h4>
+<h4><span id="143命令的含义">14.3命令的含义</span></h4>
+<h4><span id="1431如何使用tophat和cufflinks">14.3.1如何使用TopHat和Cufflinks</span></h4>
+<h4><span id="1432什么是程序流程">14.3.2什么是程序流程</span></h4>
+<h4><span id="1433在程序中交换文件名和数据">14.3.3在程序中交换文件名和数据</span></h4>
+<h4><span id="1434编写程序包装器">14.3.4编写程序包装器</span></h4>
+<h4><span id="1435关闭文件时的延迟">14.3.5关闭文件时的延迟</span></h4>
+<h4><span id="1436使用命令行参数">14.3.6使用命令行参数</span></h4>
+<h4><span id="1437测试模块-if__name__main">14.3.7测试模块： if__name__==＇<strong>main</strong>＇</span></h4>
+<h4><span id="1438处理文件和路径">14.3.8处理文件和路径</span></h4>
+<h4><span id="144示例">14.4示例</span></h4>
+<h4><span id="145自测题">14.5自测题</span></h4>
+<h3><span id="第15章-编写良好的程序">第15章 编写良好的程序</span></h3>
+<h4><span id="151本章知识点">15.1本章知识点</span></h4>
+<h4><span id="152问题描述-不确定性">15.2问题描述： 不确定性</span></h4>
+<h4><span id="1521程序编写存在不确定性">15.2.1程序编写存在不确定性</span></h4>
+<h4><span id="1522程序项目实例">15.2.2程序项目实例</span></h4>
+<h4><span id="153软件工程">15.3软件工程</span></h4>
+<h4><span id="1531将编程项目分成小任务">15.3.1将编程项目分成小任务</span></h4>
+<h4><span id="1532将程序分为函数和类">15.3.2将程序分为函数和类</span></h4>
+<h4><span id="1533编写格式良好的代码">15.3.3编写格式良好的代码</span></h4>
+<h4><span id="1534使用存储库控制程序版本">15.3.4使用存储库控制程序版本</span></h4>
+<h4><span id="1535如何将自己的程序分发给其他人">15.3.5如何将自己的程序分发给其他人</span></h4>
+<h4><span id="1536软件开发的周期">15.3.6软件开发的周期</span></h4>
+<h4><span id="154示例">15.4示例</span></h4>
+<h4><span id="155自测题第三部分小结">15.5自测题第三部分小结</span></h4>
+<h2><span id="第四部分-数据可视化">第四部分 数据可视化</span></h2>
+<h3><span id="第16章-创建科学图表">第16章 创建科学图表</span></h3>
+<h4><span id="161本章知识点">16.1本章知识点</span></h4>
+<h4><span id="162案例-核糖体的核苷酸频率">16.2案例： 核糖体的核苷酸频率</span></h4>
+<h4><span id="1621问题描述">16.2.1问题描述</span></h4>
+<h4><span id="1622python会话示例">16.2.2Python会话示例</span></h4>
+<h4><span id="163命令的含义">16.3命令的含义</span></h4>
+<h4><span id="1631matplotlib库">16.3.1matplotlib库</span></h4>
+<h4><span id="1632绘制竖的柱状图">16.3.2绘制竖的柱状图</span></h4>
+<h4><span id="1633为x轴和y轴添加标注">16.3.3为x轴和y轴添加标注</span></h4>
+<h4><span id="1634添加刻度">16.3.4添加刻度</span></h4>
+<h4><span id="1635添加一个图例框">16.3.5添加一个图例框</span></h4>
+<h4><span id="1636添加图的标题">16.3.6添加图的标题</span></h4>
+<h4><span id="1637设置图表的边界">16.3.7设置图表的边界</span></h4>
+<h4><span id="1638以低分辨率和高分辨率导出一个图像文件">16.3.8以低分辨率和高分辨率导出一个图像文件</span></h4>
+<h4><span id="164示例">16.4示例</span></h4>
+<h4><span id="165自测题">16.5自测题</span></h4>
+<h3><span id="第17章-使用pymol创建分子图像">第17章 使用PyMOL创建分子图像</span></h3>
+<h4><span id="171本章知识点">17.1本章知识点</span></h4>
+<h4><span id="172示例-锌指">17.2示例： 锌指</span></h4>
+<h4><span id="1721什么是pymol">17.2.1什么是PyMOL</span></h4>
+<h4><span id="1722pymol会话示例">17.2.2PyMOL会话示例</span></h4>
+<h4><span id="173用七个步骤来创建高分辨率的图像">17.3用七个步骤来创建高分辨率的图像</span></h4>
+<h4><span id="1731创建一个pymol脚本文件">17.3.1创建一个PyMOL脚本文件</span></h4>
+<h4><span id="1732加载和保存分子">17.3.2加载和保存分子</span></h4>
+<h4><span id="1733选取分子的局部">17.3.3选取分子的局部</span></h4>
+<h4><span id="1734为每个选取选择展现形式">17.3.4为每个选取选择展现形式</span></h4>
+<h4><span id="1735设置颜色">17.3.5设置颜色</span></h4>
+<h4><span id="1736设置摄影位置">17.3.6设置摄影位置</span></h4>
+<h4><span id="1737导出高分辨率图像">17.3.7导出高分辨率图像</span></h4>
+<h4><span id="174示例">17.4示例</span></h4>
+<h4><span id="175自测题">17.5自测题</span></h4>
+<h3><span id="第18章-处理图像">第18章 处理图像</span></h3>
+<h4><span id="181本章知识点">18.1本章知识点</span></h4>
+<h4><span id="182案例-画一个质粒">18.2案例： 画一个质粒</span></h4>
+<h4><span id="1821问题描述">18.2.1问题描述</span></h4>
+<h4><span id="1822python会话示例">18.2.2Python会话示例</span></h4>
+<h4><span id="183命令的含义">18.3命令的含义</span></h4>
+<h4><span id="1831创建一个图像">18.3.1创建一个图像</span></h4>
+<h4><span id="1832读和写图像">18.3.2读和写图像</span></h4>
+<h4><span id="1833坐标">18.3.3坐标</span></h4>
+<h4><span id="1834绘制几何形状">18.3.4绘制几何形状</span></h4>
+<h4><span id="1835旋转图像">18.3.5旋转图像</span></h4>
+<h4><span id="1836添加文本标记">18.3.6添加文本标记</span></h4>
+<h4><span id="1837颜色">18.3.7颜色</span></h4>
+<h4><span id="1838辅助变量">18.3.8辅助变量</span></h4>
+<h4><span id="184示例">18.4示例</span></h4>
+<h4><span id="185自测题第四部分小结">18.5自测题第四部分小结</span></h4>
+<h2><span id="第五部分-biopython">第五部分 Biopython</span></h2>
+<h3><span id="第19章-使用序列数据">第19章 使用序列数据</span></h3>
+<h4><span id="191本章知识点">19.1本章知识点</span></h4>
+<h4><span id="192案例-如何将一条dna编码序列翻译成对应的蛋白质序列并把它写入fasta文件">19.2案例： 如何将一条DNA编码序列翻译成对应的蛋白质序列并把它写入FASTA文件</span></h4>
+<h4><span id="1921问题描述">19.2.1问题描述</span></h4>
+<h4><span id="1922python会话示例">19.2.2Python会话示例</span></h4>
+<h4><span id="193命令的含义">19.3命令的含义</span></h4>
+<h4><span id="1931seq对象">19.3.1Seq对象</span></h4>
+<h4><span id="1932把序列当成字符串工作">19.3.2把序列当成字符串工作</span></h4>
+<h4><span id="1933mutableseq对象">19.3.3MutableSeq对象</span></h4>
+<h4><span id="1934seqrecord对象">19.3.4SeqRecord对象</span></h4>
+<h4><span id="1935seqio模块">19.3.5SeqIO模块</span></h4>
+<h4><span id="194示例">19.4示例</span></h4>
+<h4><span id="195自测题">19.5自测题</span></h4>
+<h3><span id="第20章从网络资源中检索数据">第20章从网络资源中检索数据</span></h3>
+<h4><span id="201本章知识点">20.1本章知识点</span></h4>
+<h4><span id="202案例-在pubmed中用关键词搜索文献-下载并解析对应的记录">20.2案例： 在PubMed中用关键词搜索文献， 下载并解析对应的记录</span></h4>
+<h4><span id="2021问题描述">20.2.1问题描述</span></h4>
+<h4><span id="2022python会话示例">20.2.2Python会话示例</span></h4>
+<h4><span id="203命令的含义">20.3命令的含义</span></h4>
+<h4><span id="2031entrez模块">20.3.1Entrez模块</span></h4>
+<h4><span id="2032medline模块">20.3.2Medline模块</span></h4>
+<h4><span id="204示例">20.4示例</span></h4>
+<h4><span id="205自测题">20.5自测题</span></h4>
+<h3><span id="第21章使用三维结构数据">第21章使用三维结构数据</span></h3>
+<h4><span id="211本章知识点">21.1本章知识点</span></h4>
+<h4><span id="212案例-从pdb文件中提取原子名及其三维坐标">21.2案例： 从PDB文件中提取原子名及其三维坐标</span></h4>
+<h4><span id="2121问题描述">21.2.1问题描述</span></h4>
+<h4><span id="2122python会话示例">21.2.2Python会话示例</span></h4>
+<h4><span id="213命令的含义">21.3命令的含义</span></h4>
+<h4><span id="2131biopdb模块">21.3.1Bio.PDB模块</span></h4>
+<h4><span id="2132smcra结构层次">21.3.2SMCRA结构层次</span></h4>
+<h4><span id="214示例">21.4示例</span></h4>
+<h4><span id="215自测题第五部分小结">21.5自测题第五部分小结</span></h4>
+<h2><span id="第六部分-编程秘笈">第六部分 编程秘笈</span></h2>
+<p>编程秘笈1: PyCogent库<br>
+编程秘笈2： 反向互补和随机化序列<br>
+编程秘笈3： 用概率创建随机序列<br>
+编程秘笈4： 用Biopython解析多序列联配<br>
+编程秘笈5： 从多序列联配中计算共有序列<br>
+编程秘笈6： 计算系统发生树的节点间的距离<br>
+编程秘笈7： 核苷酸序列的密码子频率<br>
+编程秘笈8： 解析Vienna格式的RNA二级结构<br>
+编程秘笈9： 解析BLAST的XML输出<br>
+编程秘笈10： 解析SBML文件<br>
+编程秘笈11： 运行BLAST<br>
+编程秘笈12： 访问、 下载和读取网页<br>
+编程秘笈13： 解析HTML文件<br>
+编程秘笈14： 将PDB文件分割成PDB链文件<br>
+编程秘笈15： 在PDB结构上找到两个*靠近的Cα原子<br>
+编程秘笈16： 提取两个PDB链间的界面<br>
+编程秘笈17： 用Modeller建立同源模型<br>
+编程秘笈18： 用ModeRNA分析RNA三维同源模型<br>
+编程秘笈19: 从三级结构计算RNA碱基配对<br>
+编程秘笈20： 结构重叠的真实实例： 丝氨酸蛋白酶催化三分子<br>
+附录<br>
+附录A命令概览<br>
+附录BPython资源<br>
+附录C记录样板<br>
+附录D处理目录和用UNIX编程</p>
+<br>
+<br><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-Python%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/" data-id="ckfv9fueb00003wqr3cun08nc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "苑长"
+        },
+        "headline": "读书笔记-Python生物信息学数据管理",
+        "image": "https://yuanz1949.github.io",
+        "keywords": "Python 数据处理",
+        "genre": "科技 生物",
+        "datePublished": "2020-10-04",
+        "dateCreated": "2020-10-04",
+        "dateModified": "2020-10-04",
+        "url": "https://yuanz1949.github.io/科技/生物/读书笔记-Python生物信息学数据管理/",
+        "description": "当生物与Python交织之时
+故事将就此展开
+",
+        "wordCount": 1355
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+<div id="comment-container"></div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="zhihu" href="https://www.zhihu.com/people/WoodYuan" target="_blank" rel="noopener">
+                        <i class="fab fa-zhihu"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/YuanZ1949" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="bilibili" href="https://space.bilibili.com/12549559" target="_blank" rel="noopener">
+                        <i class="fab fa-bimobject"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="fas fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">书签索引</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-Python%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a></p>
+                            <p class="item-title"><a href="/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-Python%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86/" class="title">读书笔记-Python生物信息学数据管理</a></p>
+                            <p class="item-date"><time datetime="2020-10-04T10:00:05.000Z" itemprop="datePublished">2020-10-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/logocat.JPG)" alt="书签索引" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a></p>
+                            <p class="item-title"><a href="/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/" class="title">书签索引</a></p>
+                            <p class="item-date"><time datetime="2020-09-17T14:43:30.947Z" itemprop="datePublished">2020-09-17</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/JUSTScoreSummary-%E4%B8%AA%E4%BA%BA%E6%88%90%E7%BB%A9%E6%A6%82%E8%A7%88/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/JUSTScoreSummary-%E4%B8%AA%E4%BA%BA%E6%88%90%E7%BB%A9%E6%A6%82%E8%A7%88/Features.png)" alt="JUSTScoreSummary-个人成绩概览" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/JUSTScoreSummary-%E4%B8%AA%E4%BA%BA%E6%88%90%E7%BB%A9%E6%A6%82%E8%A7%88/" class="title">JUSTScoreSummary-个人成绩概览</a></p>
+                            <p class="item-date"><time datetime="2020-09-13T11:06:55.000Z" itemprop="datePublished">2020-09-13</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E4%BD%A0%E4%B9%9F%E6%83%B3%E5%81%9A%E5%82%BB%E8%82%A5%E9%B1%BC%E4%B9%88-%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E4%BD%A0%E4%B9%9F%E6%83%B3%E5%81%9A%E5%82%BB%E8%82%A5%E9%B1%BC%E4%B9%88-%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97/design-homepage.png)" alt="你也想做傻肥鱼么-网站模板构建指南" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E4%BD%A0%E4%B9%9F%E6%83%B3%E5%81%9A%E5%82%BB%E8%82%A5%E9%B1%BC%E4%B9%88-%E7%BD%91%E7%AB%99%E6%A8%A1%E6%9D%BF%E6%9E%84%E5%BB%BA%E6%8C%87%E5%8D%97/" class="title">你也想做傻肥鱼么-网站模板构建指南</a></p>
+                            <p class="item-date"><time datetime="2020-07-06T08:12:21.000Z" itemprop="datePublished">2020-07-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/Conda%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%91%BD%E4%BB%A4.png)" alt="Anaconda之路" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/" class="title">Anaconda之路</a></p>
+                            <p class="item-date"><time datetime="2020-07-06T06:23:59.000Z" itemprop="datePublished">2020-07-06</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E8%AE%A4%E7%9F%A5/">认知</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/3D/" style="font-size: 10px;">3D</a> <a href="/tags/Blender/" style="font-size: 10px;">Blender</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Python/" style="font-size: 17.5px;">Python</a> <a href="/tags/VPN/" style="font-size: 12.5px;">VPN</a> <a href="/tags/manim/" style="font-size: 10px;">manim</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E4%B9%A6%E7%AD%BE/" style="font-size: 10px;">书签</a> <a href="/tags/%E4%BB%AA%E5%99%A8/" style="font-size: 10px;">仪器</a> <a href="/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 10px;">关于</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/tags/%E5%8C%96%E5%AD%A6/" style="font-size: 10px;">化学</a> <a href="/tags/%E5%8D%95%E5%8F%8D/" style="font-size: 10px;">单反</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 10px;">图像处理</a> <a href="/tags/%E5%A4%A9%E6%96%87/" style="font-size: 10px;">天文</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/" style="font-size: 10px;">工作流</a> <a href="/tags/%E6%8E%A2%E7%B4%A2/" style="font-size: 10px;">探索</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" style="font-size: 10px;">数据处理</a> <a href="/tags/%E6%96%B9%E5%A4%B4%E4%BA%BA/" style="font-size: 10px;">方头人</a> <a href="/tags/%E6%AF%95%E4%B8%9A/" style="font-size: 10px;">毕业</a> <a href="/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/" style="font-size: 12.5px;">江科大</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%BB%A9%E7%82%B9/" style="font-size: 10px;">绩点</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 12.5px;">网站</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 10px;">自动化</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 12.5px;">视频</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 15px;">计划</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 12.5px;">设计</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://vpn.just.edu.cn" target="_blank" rel="noopener">JSUT-VPN</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://hexo.io" target="_blank" rel="noopener">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2020 苑长</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'ffffe2a96b4c373c1d4d',
+        clientSecret: 'fc0ec8dd07cfb61e09dd06962678251d943bef37',
+        id: '54d1b7025834add7fe6b5f0bea4e7e9f',
+        repo: 'yuanz1949.github.io',
+        owner: 'YuanZ1949',
+        admin: "YuanZ1949"
+    })
+    gitalk.render('comment-container')
+</script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+         <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                showProcessingMessages: false,
+                messageStyle: "none",
+                extensions: ["tex2jax.js"],
+                jax: ["input/TeX", "output/HTML-CSS"],
+                tex2jax: {
+                    inlineMath:  [ ["$", "$"] ],
+                    displayMath: [ ["$$","$$"] ],
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+                    ignoreClass:"comment-content"
+                },
+                "HTML-CSS": {
+                    availableFonts: ["STIX","TeX"],
+                    showMathMenu: true
+                }
+            });
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+         </script>
+         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
