@@ -81,7 +81,7 @@ var _hmt = _hmt || [];
     
 
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
     <div id="wrap">
@@ -301,7 +301,7 @@ var _hmt = _hmt || [];
 <p>好像有了些眉目，首先文件的确是在的，但是没被找到。回过头看报错，可以知道首次触发报错的是一个叫做<code>loader.py</code>的文件。这就有意思了，刚好我们就是导入(装载器，loader)的错误。</p>
 <p><img src="image-20200527183354181.png" alt="犯了错的loader.py(蓝色箭头)"></p>
 <p>打开<code>loader.py</code>文件，检索一下就找到了<code>import pykeentools </code>语句，这正是报错的那条导入模块的语句。</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> .config <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> .install <span class="keyword">import</span> is_installed</span><br><span class="line">__all__ = [<span class="string">'loaded'</span>, <span class="string">'module'</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_do_pkt_shadow_copy</span><span class="params">()</span>:</span> <span class="comment"># 这里是创建着色器的缓存目录</span></span><br><span class="line">    <span class="keyword">import</span> tempfile        <span class="comment"># 创建完后会返回这个缓存目录的地址</span></span><br><span class="line">    <span class="keyword">import</span> shutil          <span class="comment"># 我们的插件也会被复制到这个目录里</span></span><br><span class="line"></span><br><span class="line">    shutil.rmtree(SHADOW_COPIES_DIRECTORY, ignore_errors=<span class="literal">True</span>)</span><br><span class="line">    os.makedirs(SHADOW_COPIES_DIRECTORY, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    shadow_copy_base_dir = tempfile.mkdtemp(dir=SHADOW_COPIES_DIRECTORY)</span><br><span class="line">    shadow_copy_dir = os.path.join(shadow_copy_base_dir, <span class="string">'pykeentools'</span>)</span><br><span class="line"></span><br><span class="line">    shutil.copytree(pkt_installation_dir(), shadow_copy_dir)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> shadow_copy_dir</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_add_pykeentools_to_sys_path</span><span class="params">()</span>:</span>  <span class="comment"># 添加插件到环境变量中</span></span><br><span class="line">    <span class="keyword">if</span> os_name() == <span class="string">'windows'</span>:</span><br><span class="line">        pkt_directory = _do_pkt_shadow_copy()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        pkt_directory = pkt_installation_dir() </span><br><span class="line">    </span><br><span class="line">    pkt_lib_directory = os.path.join(pkt_directory, RELATIVE_LIB_DIRECTORY) <span class="comment"># 获取包的安装目录</span></span><br><span class="line">    <span class="keyword">if</span> pkt_lib_directory <span class="keyword">not</span> <span class="keyword">in</span> sys.path:</span><br><span class="line">        sys.path.append(pkt_lib_directory)  <span class="comment"># 添加包的目录到系统的环境变量里</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">loaded</span><span class="params">()</span>:</span>  <span class="comment"># 判断插件是否在系统的模块里</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'pykeentools'</span> <span class="keyword">in</span> sys.modules</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># TODO add custom exceptions with helpful error message</span></span><br><span class="line"><span class="comment"># TODO check loaded pykeentools version &gt; MIN_VERSION</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">module</span><span class="params">()</span>:</span>  <span class="comment"># 这里是整个文件的核心，会调用上面三个函数来完成缓存目录的创建和插件导入</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    A function to load pykeentools library </span></span><br><span class="line"><span class="string">    :raises ImportError</span></span><br><span class="line"><span class="string">    :return: pykeentools module</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> loaded() <span class="keyword">and</span> is_installed():</span><br><span class="line">        _add_pykeentools_to_sys_path()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> pykeentools  <span class="comment"># 导入pykeentool包</span></span><br><span class="line">    <span class="keyword">return</span> pykeentools</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> .config <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> .install <span class="keyword">import</span> is_installed</span><br><span class="line">__all__ = [<span class="string">'loaded'</span>, <span class="string">'module'</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_do_pkt_shadow_copy</span><span class="params">()</span>:</span> <span class="comment"># 这里是创建着色器的缓存目录</span></span><br><span class="line">    <span class="keyword">import</span> tempfile        <span class="comment"># 创建完后会返回这个缓存目录的地址</span></span><br><span class="line">    <span class="keyword">import</span> shutil          <span class="comment"># 我们的插件也会被复制到这个目录里</span></span><br><span class="line"></span><br><span class="line">    shutil.rmtree(SHADOW_COPIES_DIRECTORY, ignore_errors=<span class="literal">True</span>)</span><br><span class="line">    os.makedirs(SHADOW_COPIES_DIRECTORY, exist_ok=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    shadow_copy_base_dir = tempfile.mkdtemp(dir=SHADOW_COPIES_DIRECTORY)</span><br><span class="line">    shadow_copy_dir = os.path.join(shadow_copy_base_dir, <span class="string">'pykeentools'</span>)</span><br><span class="line"></span><br><span class="line">    shutil.copytree(pkt_installation_dir(), shadow_copy_dir)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> shadow_copy_dir</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_add_pykeentools_to_sys_path</span><span class="params">()</span>:</span>  <span class="comment"># 添加插件到环境变量中</span></span><br><span class="line">    <span class="keyword">if</span> os_name() == <span class="string">'windows'</span>:</span><br><span class="line">        pkt_directory = _do_pkt_shadow_copy()</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        pkt_directory = pkt_installation_dir() </span><br><span class="line">    </span><br><span class="line">    pkt_lib_directory = os.path.join(pkt_directory, RELATIVE_LIB_DIRECTORY) <span class="comment"># 获取包的安装目录</span></span><br><span class="line">    <span class="keyword">if</span> pkt_lib_directory <span class="keyword">not</span> <span class="keyword">in</span> sys.path:</span><br><span class="line">        sys.path.append(pkt_lib_directory)  <span class="comment"># 添加包的目录到系统的环境变量里</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">loaded</span><span class="params">()</span>:</span>  <span class="comment"># 判断插件是否在系统的模块里</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'pykeentools'</span> <span class="keyword">in</span> sys.modules</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># TODO add custom exceptions with helpful error message</span></span><br><span class="line"><span class="comment"># TODO check loaded pykeentools version &gt; MIN_VERSION</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">module</span><span class="params">()</span>:</span>  <span class="comment"># 这里是整个文件的核心，会调用上面三个函数来完成缓存目录的创建和插件导入</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    A function to load pykeentools library </span></span><br><span class="line"><span class="string">    :raises ImportError</span></span><br><span class="line"><span class="string">    :return: pykeentools module</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> loaded() <span class="keyword">and</span> is_installed():</span><br><span class="line">        _add_pykeentools_to_sys_path()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">import</span> pykeentools  <span class="comment"># 导入pykeentool包</span></span><br><span class="line">    <span class="keyword">return</span> pykeentools</span><br></pre></td></tr></table></figure>
 <p>代码不是非常的复杂，大概看一下变量的英文就可知道是如何运转的了。</p>
 <blockquote>
 <p>代码获取插件的安装目录<code>pkt_directory</code>，然后调用系统包<code>os</code>把插件的目录添加到环境变量<code>sys.path.append(pkt_lib_directory)</code>，然后再导入pykeentools包<code>import pykeentools</code></p>
@@ -322,7 +322,7 @@ var _hmt = _hmt || [];
 <p>去瞅瞅！</p>
 <p><img src="%E5%AE%9E%E9%99%85%E7%9A%84%E6%96%87%E4%BB%B6%E6%94%BE%E7%BD%AE.png" alt="Temp文件夹结构"></p>
 <p>可以看到，基本上插件的内容都被复制到这里，和之前的<code>loader.py</code>的代码时相符的。但是仔细一看内部文件夹的地址，咦，好像有些不对劲。</p>
-<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#程序导入系统的环境变量如下：</span><br><span class="line"></span><br><span class="line">C:\\Users\\WOODYUAN\\AppData\\Local\\Temp\\pykeentools_shadow_copies\\tmpu0jh0wpb\\pykeentools\\pykeentools\\pykeentools</span><br><span class="line"></span><br><span class="line">#但是实际的文件夹的构造如下：</span><br><span class="line"></span><br><span class="line">C:\\Users\\WOODYUAN\\AppData\\Local\\Temp\\pykeentools_shadow_copies\\tmpu0jh0wpb\\pykeentools\\pykeentools==_installation==\\pykeentools</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#程序导入系统的环境变量如下：</span><br><span class="line"></span><br><span class="line">C:\\Users\\WOODYUAN\\AppData\\Local\\Temp\\pykeentools_shadow_copies\\tmpu0jh0wpb\\pykeentools\\pykeentools\\pykeentools</span><br><span class="line"></span><br><span class="line">#但是实际的文件夹的构造如下：</span><br><span class="line"></span><br><span class="line">C:\\Users\\WOODYUAN\\AppData\\Local\\Temp\\pykeentools_shadow_copies\\tmpu0jh0wpb\\pykeentools\\pykeentools==_installation==\\pykeentools</span><br></pre></td></tr></table></figure>
 <p>显而易见，你既可以认为是环境变量导入是漏了<code>_installation</code>，也可以认为是文件夹多了<code>_installation</code>。</p>
 <p>这个差异导致系统找不到这个文件夹，自然找不到<code>pykeentools</code>这个包。</p>
 <p>给<code>loader.py</code>的代码添加了<code>print</code>语句来输入变量，也进一步证实了推测，的确少了<code>_installation</code>。</p>
@@ -331,7 +331,7 @@ var _hmt = _hmt || [];
 <ol>
 <li>由于Temp里的文件是从插件目录里复制过来的，我们修改插件目录里的文件夹就好啦。</li>
 </ol>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\WOODYUAN\AppData\Roaming\Blender Foundation\Blender\2.82\scripts\addons\keentools_facebuilder\blender_independent_packages\pykeentools_loader\pykeentools</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\WOODYUAN\AppData\Roaming\Blender Foundation\Blender\2.82\scripts\addons\keentools_facebuilder\blender_independent_packages\pykeentools_loader\pykeentools</span><br></pre></td></tr></table></figure>
 <p>进入上述目录里，把里面的<code>pykeentools_installation</code>文件夹改名成<code>pykeentools</code>，然后重启插件。</p>
 <p>可以快捷键<code>Win+R</code>，然后输入<code>%appdata%</code>，就可以跳转到自己的<code>C:\Users\WOODYUAN\AppData\Roaming\</code>文件夹，然后再按照上面的路径找到插件修改即可）</p>
 <ol start="2">
@@ -344,32 +344,14 @@ var _hmt = _hmt || [];
 <p><img src="%E6%8F%92%E4%BB%B6%E7%95%8C%E9%9D%A21.png" alt="插件界面1"></p>
 <p>点一下<code>Create a new head</code>就会出现一个默认的人头啦。</p>
 <p><img src="Facebuilder.png" alt="默认的人头"></p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/Blender-Facebuilder%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E6%8F%92%E4%BB%B6%E5%AF%BC%E5%85%A5bug%E5%A4%84%E7%90%86/" data-id="ckfva7mhy0039gcqrbl8xc6o7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/Blender-Facebuilder%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E6%8F%92%E4%BB%B6%E5%AF%BC%E5%85%A5bug%E5%A4%84%E7%90%86/" data-id="ckfwqq3tg003pw4qrfqhaa1zz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -450,7 +432,7 @@ var _hmt = _hmt || [];
         "description": "
 Blender 牛~
 ",
-        "wordCount": 900
+        "wordCount": 662
     }
 </script>
 
@@ -513,20 +495,20 @@ Blender 牛~
         
 <nav id="article-nav">
     
-        <a href="/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/PDA%E5%9F%B9%E5%85%BB%E5%9F%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/%E6%88%91%E7%9A%84%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%B7%A5%E4%BD%9C%E6%B5%81/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            PDA培养基
+            我的视频下载工作流
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/Blog%E5%92%95%E5%92%95%E5%92%95/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/PDA%E5%9F%B9%E5%85%BB%E5%9F%BA/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Blog咕咕咕</p>
+        <p class="article-nav-title">PDA培养基</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -628,10 +610,10 @@ Blender 牛~
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/" class="thumbnail">
+                            <a href="/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E9%85%B8%E8%8F%9C%E9%B1%BC%E6%AF%95%E4%B8%9A%E6%8C%87%E5%8D%97/" class="thumbnail">
     
     
-        <span style="background-image:url(/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/Conda%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%91%BD%E4%BB%A4.png)" alt="Anaconda之路" class="thumbnail-image"></span>
+        <span style="background-image:url(/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E9%85%B8%E8%8F%9C%E9%B1%BC%E6%AF%95%E4%B8%9A%E6%8C%87%E5%8D%97/%E4%B8%80%E8%84%B8%E5%A4%A7%E9%97%AE%E5%8F%B7.jpg)" alt="酸菜鱼毕业指南" class="thumbnail-image"></span>
     
     
 </a>
@@ -639,8 +621,8 @@ Blender 牛~
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
-                            <p class="item-title"><a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/" class="title">Anaconda之路</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a></p>
+                            <p class="item-title"><a href="/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E9%85%B8%E8%8F%9C%E9%B1%BC%E6%AF%95%E4%B8%9A%E6%8C%87%E5%8D%97/" class="title">酸菜鱼毕业指南</a></p>
                             <p class="item-date"><time datetime="2020-07-06T06:23:59.000Z" itemprop="datePublished">2020-07-06</time></p>
                         </div>
                     </li>

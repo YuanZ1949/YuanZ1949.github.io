@@ -80,7 +80,7 @@ var _hmt = _hmt || [];
     
 
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
     <div id="wrap">
@@ -219,7 +219,7 @@ var _hmt = _hmt || [];
    <div class="article-counter">
       <i class="fa fa-file-word"></i>
       <span class="post-count-item-text">本文字数: </span>
-      <span class="post-count">2.6k</span>
+      <span class="post-count">2.5k</span>
       <i class="fa fa-clock"></i>
       <span class="post-time-item-text">阅读时长: </span>
       <span class="post-count">9 分钟 </span>
@@ -332,11 +332,11 @@ var _hmt = _hmt || [];
 <p>然后就是请求网页时我们要用的方式了, 当然是用最好用的 <a href="https://requests.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">Requests</a></p>
 <p>它就可以构建<code>post</code>请求, 这样可以帮助我们登录<code>教务系统</code></p>
 <p>也可以构建<code>get</code>请求, 直接获取其他的数据, 就像这样:</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">jwxt_session = session()  <span class="comment"># 创建一个名为jwxt_session的可以持续访问网页的session对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># get请求,content会接收服务器返回的数据</span></span><br><span class="line">content = jwxt_session.get(<span class="string">"http://jwgl.just.edu.cn:8080/jsxsd/"</span>)  </span><br><span class="line"></span><br><span class="line">postUrl = <span class="string">"http://jwgl.just.edu.cn:8080/jsxsd/xk/LoginToXk"</span> <span class="comment"># 请求地址</span></span><br><span class="line">postData = {</span><br><span class="line">    <span class="string">'USERNAME'</span> : account ,</span><br><span class="line">    <span class="string">'PASSWORD'</span> : password }  <span class="comment"># 构建表单</span></span><br><span class="line">content = jwxt_session.post(postUrl, data = postData) <span class="comment"># post请求,content会接收服务器返回的数据</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">jwxt_session = session()  <span class="comment"># 创建一个名为jwxt_session的可以持续访问网页的session对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># get请求,content会接收服务器返回的数据</span></span><br><span class="line">content = jwxt_session.get(<span class="string">"http://jwgl.just.edu.cn:8080/jsxsd/"</span>)  </span><br><span class="line"></span><br><span class="line">postUrl = <span class="string">"http://jwgl.just.edu.cn:8080/jsxsd/xk/LoginToXk"</span> <span class="comment"># 请求地址</span></span><br><span class="line">postData = &#123;</span><br><span class="line">    <span class="string">'USERNAME'</span> : account ,</span><br><span class="line">    <span class="string">'PASSWORD'</span> : password &#125;  <span class="comment"># 构建表单</span></span><br><span class="line">content = jwxt_session.post(postUrl, data = postData) <span class="comment"># post请求,content会接收服务器返回的数据</span></span><br></pre></td></tr></table></figure>
 <p>得到的数据从某种意义上说, 不是人喜欢读的, 那我们还要专门处理这些数据的手段</p>
 <p><code>bs4</code>是一个强大的处理<code>HTML</code>网页数据的第三方软件包, 可以用它来获取页面的数据</p>
 <p>比如这样的</p>
-<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">main_page = login_jwxt(account, password) <span class="comment"># 调用登录网页的函数后得到的数据后传给main_page</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里直接将main_page的数据解码后传给BeautifulSoup,采用lxml解析html, 得到的结果传给左边变量</span></span><br><span class="line">main_page_content = BeautifulSoup(main_page.content.decode(<span class="string">'utf-8'</span>), <span class="string">'lxml'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里就可以调用 .find(class_='???') 方法来查找类名为???的元素,然后获取它的text</span></span><br><span class="line">stu_info = main_page_content.find(class_=<span class="string">'block1text'</span>).text.split(<span class="string">'\n'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">main_page = login_jwxt(account, password) <span class="comment"># 调用登录网页的函数后得到的数据后传给main_page</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里直接将main_page的数据解码后传给BeautifulSoup,采用lxml解析html, 得到的结果传给左边变量</span></span><br><span class="line">main_page_content = BeautifulSoup(main_page.content.decode(<span class="string">'utf-8'</span>), <span class="string">'lxml'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里就可以调用 .find(class_='???') 方法来查找类名为???的元素,然后获取它的text</span></span><br><span class="line">stu_info = main_page_content.find(class_=<span class="string">'block1text'</span>).text.split(<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
 <p>如果是以表格的形式出现的(也就是&lt;\table&gt;标签包裹的数据), 本来也是可以用<code>bs4</code>直接获取然后存入设计好的变量里等待处理的. 不过天降猛男, <code>Pandas</code>就很在行🚀  , 人家有 <code>read_html()</code> 方法~</p>
 <blockquote>
 <p>__pandas.read_html(*args, **kwargs) __</p>
@@ -418,32 +418,14 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
 <p>以下是某位同学的成绩, 这里作为最终的<code>summary</code>文件的样例列出:</p>
 <p><img src="doc/Summary%E6%A0%B7%E5%BC%8F.png" alt="最终效果"></p>
 <br>
-<br><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<br>
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/JUSTScoreSummary-%E4%B8%AA%E4%BA%BA%E6%88%90%E7%BB%A9%E6%A6%82%E8%A7%88/" data-id="ckfva7mi0003agcqr9kg84ic7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/JUSTScoreSummary-%E4%B8%AA%E4%BA%BA%E6%88%90%E7%BB%A9%E6%A6%82%E8%A7%88/" data-id="ckfwqq3tq003xw4qre0fd9u6a" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -526,7 +508,7 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
 就和我一起鼓捣Python吧
 
 当前项目正在咕,敬请期待,所有在咕列表见: Blog咕咕咕",
-        "wordCount": 651
+        "wordCount": 413
     }
 </script>
 
@@ -704,10 +686,10 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/" class="thumbnail">
+                            <a href="/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E9%85%B8%E8%8F%9C%E9%B1%BC%E6%AF%95%E4%B8%9A%E6%8C%87%E5%8D%97/" class="thumbnail">
     
     
-        <span style="background-image:url(/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/Conda%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%91%BD%E4%BB%A4.png)" alt="Anaconda之路" class="thumbnail-image"></span>
+        <span style="background-image:url(/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E9%85%B8%E8%8F%9C%E9%B1%BC%E6%AF%95%E4%B8%9A%E6%8C%87%E5%8D%97/%E4%B8%80%E8%84%B8%E5%A4%A7%E9%97%AE%E5%8F%B7.jpg)" alt="酸菜鱼毕业指南" class="thumbnail-image"></span>
     
     
 </a>
@@ -715,8 +697,8 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
-                            <p class="item-title"><a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Anaconda%E4%B9%8B%E8%B7%AF/" class="title">Anaconda之路</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a></p>
+                            <p class="item-title"><a href="/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E9%85%B8%E8%8F%9C%E9%B1%BC%E6%AF%95%E4%B8%9A%E6%8C%87%E5%8D%97/" class="title">酸菜鱼毕业指南</a></p>
                             <p class="item-date"><time datetime="2020-07-06T06:23:59.000Z" itemprop="datePublished">2020-07-06</time></p>
                         </div>
                     </li>
