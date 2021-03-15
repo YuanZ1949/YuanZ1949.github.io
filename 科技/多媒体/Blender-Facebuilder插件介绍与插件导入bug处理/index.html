@@ -279,17 +279,17 @@ var _hmt = _hmt || [];
 <p>No module named ‘pykeentools’</p>
 </blockquote>
 <p>如果读者们熟悉Python，就可以知道这个其实是Python的语法和报错，说的也很直白，就是<code>没有模块叫做‘pykeentools’</code>。那我们明明安装了插件，为啥没有没找到这个包呢。</p>
-<p>首先我们理一下什么时候会出现这个报错：</p>
+<p>首先我们梳理一下什么时候会出现这个报错：</p>
 <ul>
-<li>你的确没去装这个包（明显我们尝试了，不是这个问题）</li>
+<li>你的确没去装这个包（明显我们尝试安装了，不是这个问题）</li>
 <li>装了没装上或者装错了（这个有可能，我们一般比较菜，可能会操作错误）
 <ul>
 <li>点错了按钮，或者漏装了文件</li>
 </ul>
 </li>
-<li>程序猿代码写错了（也就是默认你没出错，是程序猿的锅）
+<li>程序猿代码写错了（也就是默认你没敲错指令，是程序猿编写的程序的锅）
 <ul>
-<li>包没有放到程序猿想要放到位置，代码写错了</li>
+<li>包没有放到程序猿真正想要放到位置，代码写错了</li>
 </ul>
 </li>
 </ul>
@@ -323,8 +323,8 @@ var _hmt = _hmt || [];
 <p><img src="%E5%AE%9E%E9%99%85%E7%9A%84%E6%96%87%E4%BB%B6%E6%94%BE%E7%BD%AE.png" alt="Temp文件夹结构"></p>
 <p>可以看到，基本上插件的内容都被复制到这里，和之前的<code>loader.py</code>的代码时相符的。但是仔细一看内部文件夹的地址，咦，好像有些不对劲。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#程序导入系统的环境变量如下：</span><br><span class="line"></span><br><span class="line">C:\\Users\\WOODYUAN\\AppData\\Local\\Temp\\pykeentools_shadow_copies\\tmpu0jh0wpb\\pykeentools\\pykeentools\\pykeentools</span><br><span class="line"></span><br><span class="line">#但是实际的文件夹的构造如下：</span><br><span class="line"></span><br><span class="line">C:\\Users\\WOODYUAN\\AppData\\Local\\Temp\\pykeentools_shadow_copies\\tmpu0jh0wpb\\pykeentools\\pykeentools==_installation==\\pykeentools</span><br></pre></td></tr></table></figure>
-<p>显而易见，你既可以认为是环境变量导入是漏了<code>_installation</code>，也可以认为是文件夹多了<code>_installation</code>。</p>
-<p>这个差异导致系统找不到这个文件夹，自然找不到<code>pykeentools</code>这个包。</p>
+<p>显而易见，你既可以认为是地址导入环境变量时漏了<code>_installation</code>，也可以认为是文件夹的名字多了<code>_installation</code>。</p>
+<p>这个差异导致系统在找一个不存在的文件夹，自然找不到<code>pykeentools</code>这个包。</p>
 <p>给<code>loader.py</code>的代码添加了<code>print</code>语句来输入变量，也进一步证实了推测，的确少了<code>_installation</code>。</p>
 <p><img src="%E6%A3%80%E6%9F%A5%E5%AF%BC%E5%85%A5%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F1.png" alt="检查导入的环境变量1"></p>
 <h2><span id="解决">解决</span></h2>
@@ -335,7 +335,7 @@ var _hmt = _hmt || [];
 <p>进入上述目录里，把里面的<code>pykeentools_installation</code>文件夹改名成<code>pykeentools</code>，然后重启插件。</p>
 <p>可以快捷键<code>Win+R</code>，然后输入<code>%appdata%</code>，就可以跳转到自己的<code>C:\Users\WOODYUAN\AppData\Roaming\</code>文件夹，然后再按照上面的路径找到插件修改即可）</p>
 <ol start="2">
-<li>修改代码，由于可能是<code>_installation</code>的下划线被Python处理掉了导致整个字符都没了，而且该处理不在<code>loader.py</code>里，笔者就没有尝试修改代码了，提个给程序员提一个<code>issue</code>让他们自己解决吧。</li>
+<li>修改代码，由于可能是<code>_installation</code>的下划线被Python处理掉了导致整个字符都没了，而且该处理不在<code>loader.py</code>里，笔者就没有尝试修改代码了，给程序员提一个<code>issue</code>让他们自己解决吧。</li>
 </ol>
 <p>如果你先禁用插件再启用，看到了类似这样的版本信息<code>Version 2.0.2, built Apr 30 2020, 17:57:14</code>。</p>
 <p>恭喜你，BUG修复啦。</p>
@@ -351,7 +351,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/Blender-Facebuilder%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E6%8F%92%E4%BB%B6%E5%AF%BC%E5%85%A5bug%E5%A4%84%E7%90%86/" data-id="cki0bkkas004ejwqr9ljb6ru9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/Blender-Facebuilder%E6%8F%92%E4%BB%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E6%8F%92%E4%BB%B6%E5%AF%BC%E5%85%A5bug%E5%A4%84%E7%90%86/" data-id="ckmakwupz0001qgqr7ejm4b5b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -495,20 +495,20 @@ Blender 牛~
         
 <nav id="article-nav">
     
-        <a href="/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/PDA%E5%9F%B9%E5%85%BB%E5%9F%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/%E6%88%91%E7%9A%84%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD%E5%B7%A5%E4%BD%9C%E6%B5%81/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            PDA培养基
+            我的视频下载工作流
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/Blog%E5%92%95%E5%92%95%E5%92%95/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/PDA%E5%9F%B9%E5%85%BB%E5%9F%BA/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">Blog咕咕咕</p>
+        <p class="article-nav-title">PDA培养基</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -526,6 +526,26 @@ Blender 牛~
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%89%E5%AD%90%E8%AE%A1%E5%88%92-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%89%E5%AD%90%E8%AE%A1%E5%88%92-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/vlcsnap-2020-04-02-23h36m34s038.png)" alt="苑长YuanZ-开发记录" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E7%8E%89%E5%AD%90%E8%AE%A1%E5%88%92-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/" class="title">苑长YuanZ-开发记录</a></p>
+                            <p class="item-date"><time datetime="2021-03-15T12:10:13.866Z" itemprop="datePublished">2021-03-15</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -564,26 +584,6 @@ Blender 牛~
                             <p class="item-category"><a class="article-category-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a></p>
                             <p class="item-title"><a href="/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/" class="title">政策索引</a></p>
                             <p class="item-date"><time datetime="2020-12-29T16:00:00.000Z" itemprop="datePublished">2020-12-30</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E8%8B%91%E9%95%BFYuanZ-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
-                            <p class="item-title"><a href="/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E8%8B%91%E9%95%BFYuanZ-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/" class="title">苑长YuanZ-开发记录</a></p>
-                            <p class="item-date"><time datetime="2020-12-06T03:28:46.085Z" itemprop="datePublished">2020-12-06</time></p>
                         </div>
                     </li>
                 
