@@ -6,7 +6,7 @@
   <link href="https://yuanz1949.github.io/atom.xml" rel="self"/>
   
   <link href="https://yuanz1949.github.io/"/>
-  <updated>2021-06-21T12:47:59.784Z</updated>
+  <updated>2022-07-28T13:34:20.934Z</updated>
   <id>https://yuanz1949.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>书签索引</title>
+    <link href="https://yuanz1949.github.io/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/"/>
+    <id>https://yuanz1949.github.io/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/</id>
+    <published>2022-07-28T13:25:46.323Z</published>
+    <updated>2022-07-28T13:34:20.934Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/logocat.JPG&quot; class=&quot;&quot;&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;检索资料，建立索引&lt;/strong&gt;。&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;
+&lt;p&gt;  如你所见，这是苑长的书签，也可以是大家的书签。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="索引" scheme="https://yuanz1949.github.io/categories/%E7%B4%A2%E5%BC%95/"/>
+    
+    <category term="资源索引" scheme="https://yuanz1949.github.io/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/"/>
+    
+    
+    <category term="分享" scheme="https://yuanz1949.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="网站" scheme="https://yuanz1949.github.io/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的IT世界基础设施</title>
+    <link href="https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E6%88%91%E7%9A%84IT%E4%B8%96%E7%95%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/"/>
+    <id>https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E6%88%91%E7%9A%84IT%E4%B8%96%E7%95%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/</id>
+    <published>2022-07-27T16:00:00.000Z</published>
+    <updated>2022-07-28T14:00:26.034Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;信息技术助力美好生活&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;当前项目正在咕,敬请期待,所有在咕列表见&lt;/strong&gt;: &lt;a href=&quot;/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/Blog%E5%92%95%E5%92%95%E5%92%95/&quot; title=&quot;Blog咕咕咕&quot;&gt;Blog咕咕咕&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="https://yuanz1949.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="搞事情吖" scheme="https://yuanz1949.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/"/>
+    
+    
+    <category term="DIY" scheme="https://yuanz1949.github.io/tags/DIY/"/>
+    
+    <category term="设备" scheme="https://yuanz1949.github.io/tags/%E8%AE%BE%E5%A4%87/"/>
+    
+  </entry>
   
   <entry>
     <title>苑长YuanZ-开发记录</title>
@@ -40,52 +91,24 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://yuanz1949.github.io/null/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5%E5%A4%A7%E6%9D%82%E7%83%A9/"/>
-    <id>https://yuanz1949.github.io/null/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5%E5%A4%A7%E6%9D%82%E7%83%A9/</id>
+    <title>信息技术概念大杂烩</title>
+    <link href="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5%E5%A4%A7%E6%9D%82%E7%83%A9/"/>
+    <id>https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%A6%82%E5%BF%B5%E5%A4%A7%E6%9D%82%E7%83%A9/</id>
     <published>2022-02-27T19:59:58.879Z</published>
-    <updated>2021-11-14T15:23:45.255Z</updated>
+    <updated>2022-07-28T13:41:31.822Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;信息技术概念大杂烩&lt;/h1&gt;
-&lt;p&gt;此文主要用于平时碰到的以前未了解过的信息技术概念的汇总与自己对这些概念的了解和探究。&lt;/p&gt;
-&lt;h2 id=&quot;编程&quot;&gt;&lt;a class=&quot;header-anchor&quot; href=&quot;#编程&quot;&gt;¶&lt;/a&gt;编程&lt;/h2&gt;
-&lt;h3</summary>
-        
-      
+    <summary type="html">&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;偶尔不懂 偶尔学习&lt;/strong&gt;&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;</summary>
     
     
     
+    <category term="科技" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/"/>
     
-  </entry>
-  
-  <entry>
-    <title>书签索引</title>
-    <link href="https://yuanz1949.github.io/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/"/>
-    <id>https://yuanz1949.github.io/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/</id>
-    <published>2022-02-27T19:59:58.795Z</published>
-    <updated>2021-06-21T12:48:01.720Z</updated>
+    <category term="信息技术" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/"/>
     
     
-    <summary type="html">&lt;img src=&quot;/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E4%B9%A6%E7%AD%BE%E7%B4%A2%E5%BC%95/logocat.JPG&quot; class=&quot;&quot;&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;检索资料，建立索引&lt;/strong&gt;。&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;
-&lt;p&gt;  如你所见，这是苑长的书签，也可以是大家的书签。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="索引" scheme="https://yuanz1949.github.io/categories/%E7%B4%A2%E5%BC%95/"/>
-    
-    <category term="资源索引" scheme="https://yuanz1949.github.io/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/"/>
-    
-    
-    <category term="分享" scheme="https://yuanz1949.github.io/tags/%E5%88%86%E4%BA%AB/"/>
-    
-    <category term="网站" scheme="https://yuanz1949.github.io/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="IT" scheme="https://yuanz1949.github.io/tags/IT/"/>
     
   </entry>
   
@@ -94,12 +117,12 @@
     <link href="https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/Blog%E5%92%95%E5%92%95%E5%92%95/"/>
     <id>https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/Blog%E5%92%95%E5%92%95%E5%92%95/</id>
     <published>2022-02-27T19:59:58.446Z</published>
-    <updated>2022-03-28T13:29:15.759Z</updated>
+    <updated>2022-07-28T13:58:16.035Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/Blog%E5%92%95%E5%92%95%E5%92%95/%E9%B8%BD%E5%BE%B7.jpg&quot; class=&quot;&quot;&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;咕咕&amp;lt;sub&amp;gt;咕咕咕咕咕&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;​					—— &lt;sub&gt;&lt;/sub&gt;一只鸽子&lt;sub&gt;&lt;/sub&gt;苑长&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;咕咕&lt;sub&gt;咕咕咕&lt;/sub&gt;咕咕&lt;sub&gt;咕咕咕&lt;/sub&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;—— 一只&lt;del&gt;鸽子&lt;/del&gt;苑长&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
@@ -179,10 +202,10 @@
   
   <entry>
     <title>Excel公式学习备忘录</title>
-    <link href="https://yuanz1949.github.io/null/Excel%E5%85%AC%E5%BC%8F%E5%AD%A6%E4%B9%A0%E5%A4%87%E5%BF%98%E5%BD%95/"/>
-    <id>https://yuanz1949.github.io/null/Excel%E5%85%AC%E5%BC%8F%E5%AD%A6%E4%B9%A0%E5%A4%87%E5%BF%98%E5%BD%95/</id>
+    <link href="https://yuanz1949.github.io/%E6%8A%80%E6%9C%AF/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Excel%E5%85%AC%E5%BC%8F%E5%AD%A6%E4%B9%A0%E5%A4%87%E5%BF%98%E5%BD%95/"/>
+    <id>https://yuanz1949.github.io/%E6%8A%80%E6%9C%AF/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/Excel%E5%85%AC%E5%BC%8F%E5%AD%A6%E4%B9%A0%E5%A4%87%E5%BF%98%E5%BD%95/</id>
     <published>2021-05-26T12:57:33.000Z</published>
-    <updated>2021-06-21T12:48:01.757Z</updated>
+    <updated>2022-07-28T14:03:06.035Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;建模这个世界&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
@@ -190,6 +213,12 @@
     
     
     
+    <category term="技术" scheme="https://yuanz1949.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="信息技术" scheme="https://yuanz1949.github.io/categories/%E6%8A%80%E6%9C%AF/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="Excel" scheme="https://yuanz1949.github.io/tags/Excel/"/>
     
   </entry>
   
@@ -212,9 +241,9 @@
     <category term="信息技术" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="VBA" scheme="https://yuanz1949.github.io/tags/VBA/"/>
-    
     <category term="Excel" scheme="https://yuanz1949.github.io/tags/Excel/"/>
+    
+    <category term="VBA" scheme="https://yuanz1949.github.io/tags/VBA/"/>
     
     <category term="自动化" scheme="https://yuanz1949.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
@@ -781,7 +810,7 @@
     <link href="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-Manim%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/"/>
     <id>https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-Manim%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/</id>
     <published>2020-04-29T12:23:34.000Z</published>
-    <updated>2021-06-21T12:48:00.332Z</updated>
+    <updated>2022-07-28T14:14:36.033Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0-Manim%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB/with_subtext.png&quot; class=&quot;&quot;&gt;
@@ -809,12 +838,12 @@
     <link href="https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/%E6%8B%BF%E5%A4%AA%E9%98%B3%E5%81%9A%E5%A3%81%E7%BA%B8-%E7%94%A8Python%E7%9A%84astropy%E5%92%8Cmatplotlib%E5%BA%93%E5%A4%84%E7%90%86FITS%E6%96%87%E4%BB%B6/"/>
     <id>https://yuanz1949.github.io/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/%E6%8B%BF%E5%A4%AA%E9%98%B3%E5%81%9A%E5%A3%81%E7%BA%B8-%E7%94%A8Python%E7%9A%84astropy%E5%92%8Cmatplotlib%E5%BA%93%E5%A4%84%E7%90%86FITS%E6%96%87%E4%BB%B6/</id>
     <published>2020-04-28T01:51:46.000Z</published>
-    <updated>2022-07-26T12:59:16.203Z</updated>
+    <updated>2022-07-28T13:51:46.036Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/%E6%8B%BF%E5%A4%AA%E9%98%B3%E5%81%9A%E5%A3%81%E7%BA%B8-%E7%94%A8Python%E7%9A%84astropy%E5%92%8Cmatplotlib%E5%BA%93%E5%A4%84%E7%90%86FITS%E6%96%87%E4%BB%B6/%E5%A4%AA%E9%98%B3%E5%9B%BE%E7%89%87%E5%BE%AE%E5%8D%9A.jpg&quot; class=&quot;&quot;&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;&amp;lt;span style=&quot;font-size:24px&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;如果你想要&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;span style=&quot;font-size:24px&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;请DIY吧&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;如果你想要&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;请DIY吧&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;</summary>
     
     
@@ -837,7 +866,7 @@
     <link href="https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89%E7%9B%B8%E5%85%B3%E5%82%A8%E5%A4%87/"/>
     <id>https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89%E7%9B%B8%E5%85%B3%E5%82%A8%E5%A4%87/</id>
     <published>2020-04-23T08:52:03.000Z</published>
-    <updated>2022-03-28T13:18:35.651Z</updated>
+    <updated>2022-07-28T14:02:16.050Z</updated>
     
     
     <summary type="html">&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;****&lt;/span&gt;&lt;/p&gt;
@@ -854,31 +883,6 @@
     <category term="工作" scheme="https://yuanz1949.github.io/tags/%E5%B7%A5%E4%BD%9C/"/>
     
     <category term="化学发光" scheme="https://yuanz1949.github.io/tags/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>方头人手册</title>
-    <link href="https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E6%88%91%E7%9A%84IT%E4%B8%96%E7%95%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/"/>
-    <id>https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E6%88%91%E7%9A%84IT%E4%B8%96%E7%95%8C%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD/</id>
-    <published>2020-04-23T08:52:03.000Z</published>
-    <updated>2022-03-28T13:24:42.592Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;信息技术助力美好生活&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;当前项目正在咕,敬请期待,所有在咕列表见&lt;/strong&gt;: &lt;a href=&quot;/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/Blog%E5%92%95%E5%92%95%E5%92%95/&quot; title=&quot;Blog咕咕咕&quot;&gt;Blog咕咕咕&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="生活" scheme="https://yuanz1949.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    <category term="搞事情吖" scheme="https://yuanz1949.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/"/>
-    
-    
-    <category term="设计" scheme="https://yuanz1949.github.io/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
-    <category term="方头人" scheme="https://yuanz1949.github.io/tags/%E6%96%B9%E5%A4%B4%E4%BA%BA/"/>
     
   </entry>
   
@@ -913,7 +917,7 @@
     <link href="https://yuanz1949.github.io/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E5%B8%B8%E7%94%A8%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/"/>
     <id>https://yuanz1949.github.io/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E5%B8%B8%E7%94%A8%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/</id>
     <published>2020-03-22T14:30:20.000Z</published>
-    <updated>2022-03-28T13:14:18.286Z</updated>
+    <updated>2022-07-28T13:39:10.957Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/%E5%B8%B8%E7%94%A8%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/logobird.png&quot; class=&quot;&quot;&gt;
@@ -1018,11 +1022,11 @@
     <link href="https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87TestBlog/"/>
     <id>https://yuanz1949.github.io/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87TestBlog/</id>
     <published>2020-03-15T06:53:03.000Z</published>
-    <updated>2022-07-27T14:53:27.563Z</updated>
+    <updated>2022-07-28T14:13:16.039Z</updated>
     
     
     <summary type="html">&lt;img src=&quot;/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/%E8%BF%99%E6%98%AF%E4%B8%80%E7%AF%87TestBlog/0001-0500_x264%5B00_00_01--00_00_21%5D.gif&quot; class=&quot;&quot;&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;code&gt;&amp;lt;span style=&quot;font-size:24px&quot;&amp;gt;&lt;/code&gt;&lt;strong&gt;任何理论都要不断接受实践的检验&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;任何理论都要不断接受实践的检验&lt;/strong&gt;。&lt;/span&gt;&lt;/p&gt;
 &lt;footer&gt;&lt;strong&gt;胡福明&lt;/strong&gt;&lt;cite&gt;《实践是检验真理的唯一标准》&lt;/cite&gt;&lt;/footer&gt;&lt;/blockquote&gt;
 &lt;!-- toc --&gt;
 &lt;p&gt;[toc]&lt;/p&gt;
