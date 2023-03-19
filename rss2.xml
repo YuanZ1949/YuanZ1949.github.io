@@ -14,9 +14,37 @@
     
     <atom:link href="https://yuanz1949.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
-    <description>Life &amp; Science &amp; Technology 这里是苑长的Index</description>
-    <pubDate>Sun, 19 Feb 2023 07:47:44 GMT</pubDate>
+    <description>这里是苑长的Index</description>
+    <pubDate>Sun, 19 Mar 2023 08:19:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>网络附属存储(NAS)配置指南</title>
+      <link>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/</link>
+      <guid>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/</guid>
+      <pubDate>Thu, 23 Feb 2023 13:05:48 GMT</pubDate>
+      
+      <description>&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;文件实在是太多了&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+      
+      
+      
+      
+      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/">科技</category>
+      
+      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</category>
+      
+      
+      <category domain="https://yuanz1949.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</category>
+      
+      <category domain="https://yuanz1949.github.io/tags/NAS/">NAS</category>
+      
+      <category domain="https://yuanz1949.github.io/tags/%E7%BD%91%E7%BB%9C%E9%99%84%E5%B1%9E%E5%AD%98%E5%82%A8/">网络附属存储</category>
+      
+      
+      <comments>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>书签索引</title>
@@ -254,8 +282,8 @@
     
     <item>
       <title>电子设备选购备忘录</title>
-      <link>https://yuanz1949.github.io/null/dian-zi-she-bei-xuan-gou-bei-wang-lu/</link>
-      <guid>https://yuanz1949.github.io/null/dian-zi-she-bei-xuan-gou-bei-wang-lu/</guid>
+      <link>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/dian-zi-she-bei-xuan-gou-bei-wang-lu/</link>
+      <guid>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/dian-zi-she-bei-xuan-gou-bei-wang-lu/</guid>
       <pubDate>Fri, 18 Jun 2021 06:12:27 GMT</pubDate>
       
       <description>&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;贫穷&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
@@ -264,9 +292,17 @@
       
       
       
+      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/">科技</category>
+      
+      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</category>
       
       
-      <comments>https://yuanz1949.github.io/null/dian-zi-she-bei-xuan-gou-bei-wang-lu/#disqus_thread</comments>
+      <category domain="https://yuanz1949.github.io/tags/%E8%AE%BE%E5%A4%87/">设备</category>
+      
+      <category domain="https://yuanz1949.github.io/tags/%E9%80%89%E8%B4%AD/">选购</category>
+      
+      
+      <comments>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/dian-zi-she-bei-xuan-gou-bei-wang-lu/#disqus_thread</comments>
       
     </item>
     
@@ -331,7 +367,7 @@
       
       <description>&lt;img src=&quot;/ke-ji/sheng-wu/wo-yan-zhong-de-chagas/chagas-ana-ferreira7.jpg&quot; class=&quot;&quot; title=&quot;Credits:Angela_Boatwright/DNDi&quot;&gt;
 &lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;如果不是工作&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;根本不会知道这样的疾苦&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;根本也许从未知晓&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</description>
       
       
@@ -529,7 +565,7 @@
       
       <category domain="https://yuanz1949.github.io/tags/%E7%AC%94%E8%AE%B0/">笔记</category>
       
-      <category domain="https://yuanz1949.github.io/tags/%E6%8A%80%E6%9C%AF/">技术</category>
+      <category domain="https://yuanz1949.github.io/tags/%E7%9E%8E%E9%97%B2%E9%80%9B/">瞎闲逛</category>
       
       
       <comments>https://yuanz1949.github.io/sheng-huo/gao-shi-qing-a/ri-chang-za-ji/#disqus_thread</comments>
@@ -639,40 +675,12 @@
       <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</category>
       
       
-      <category domain="https://yuanz1949.github.io/tags/Python/">Python</category>
-      
       <category domain="https://yuanz1949.github.io/tags/%E5%88%86%E4%BA%AB/">分享</category>
+      
+      <category domain="https://yuanz1949.github.io/tags/Python/">Python</category>
       
       
       <comments>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/anaconda-zhi-lu/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>江科大VPN2探索</title>
-      <link>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/jiang-ke-da-vpn2-tan-suo/</link>
-      <guid>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/jiang-ke-da-vpn2-tan-suo/</guid>
-      <pubDate>Fri, 03 Jul 2020 16:00:00 GMT</pubDate>
-      
-      <description>&lt;img src=&quot;/ke-ji/xin-xi-ji-zhu/jiang-ke-da-vpn2-tan-suo/%E6%B1%9F%E7%A7%91%E5%A4%A7VPN2%E7%9A%84%E7%A5%9E%E7%A7%98%E5%AD%97%E7%AC%A6.png&quot; class=&quot;&quot;&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;学校这操作是要断了白嫖的后路啊&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;当前项目正在咕,敬请期待,所有在咕列表见&lt;/strong&gt;: &lt;a href=&quot;/sheng-huo/gao-shi-qing-a/blog-gu-gu-gu/&quot; title=&quot;Blog咕咕咕&quot;&gt;Blog咕咕咕&lt;/a&gt;&lt;/p&gt;</description>
-      
-      
-      
-      
-      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/">科技</category>
-      
-      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</category>
-      
-      
-      <category domain="https://yuanz1949.github.io/tags/VPN/">VPN</category>
-      
-      <category domain="https://yuanz1949.github.io/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/">江科大</category>
-      
-      
-      <comments>https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/jiang-ke-da-vpn2-tan-suo/#disqus_thread</comments>
       
     </item>
     
@@ -721,9 +729,9 @@
       <category domain="https://yuanz1949.github.io/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</category>
       
       
-      <category domain="https://yuanz1949.github.io/tags/VPN/">VPN</category>
-      
       <category domain="https://yuanz1949.github.io/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/">江科大</category>
+      
+      <category domain="https://yuanz1949.github.io/tags/VPN/">VPN</category>
       
       
       <comments>https://yuanz1949.github.io/sheng-huo/gao-shi-qing-a/jiang-ke-da-vpn-shi-yong-zhi-nan/#disqus_thread</comments>
@@ -862,9 +870,9 @@
       <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</category>
       
       
-      <category domain="https://yuanz1949.github.io/tags/Blender/">Blender</category>
-      
       <category domain="https://yuanz1949.github.io/tags/Python/">Python</category>
+      
+      <category domain="https://yuanz1949.github.io/tags/Blender/">Blender</category>
       
       <category domain="https://yuanz1949.github.io/tags/3D/">3D</category>
       

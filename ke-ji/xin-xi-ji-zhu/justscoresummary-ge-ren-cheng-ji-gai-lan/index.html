@@ -95,6 +95,10 @@ var _hmt = _hmt || [];
                         <a href="/" class="logo"></a>
                     </h1>
                     
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Life &amp; Science &amp; Technology</p>
+                        </h2>
+                    
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -278,7 +282,7 @@ var _hmt = _hmt || [];
 <p>在此感谢17生物技术的各位同学们反馈的各种BUG.</p>
 <p>在各位的帮助下, 得以让此程序拥有更宽广的眼界和胸怀, 而不再面对未知直接崩溃.</p>
 </blockquote>
-<h1><span id="zheng-ru-ti-tu-na-yang">正如题图那样<span class="github-emoji"><span>👩🏫</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f469-1f3eb.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#zheng-ru-ti-tu-na-yang" class="header-anchor">¶</a></h1>
+<h1><span id="zheng-ru-ti-tu-na-yang">正如题图那样<span class="github-emoji"><span>👩🏫</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f469-1f3eb.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#zheng-ru-ti-tu-na-yang" class="header-anchor"> ¶</a></h1>
 <p>总之目前我们需要一款软件,可以实行如下功能:</p>
 <ul>
 <li>获取未通过的课程</li>
@@ -287,10 +291,10 @@ var _hmt = _hmt || [];
 <li>以上信息按学生来汇总</li>
 </ul>
 <p>明显的, 我熟悉的<code>Python</code>做这件事没有任何问题, 那我们开始搞吧</p>
-<h1><span id="xian-tan-tan-lu">先探探路<span class="github-emoji"><span>👣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f463.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#xian-tan-tan-lu" class="header-anchor">¶</a></h1>
+<h1><span id="xian-tan-tan-lu">先探探路<span class="github-emoji"><span>👣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f463.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#xian-tan-tan-lu" class="header-anchor"> ¶</a></h1>
 <p><sub></sub>我只熟悉这个<sub></sub>随意的确定了编程语言后, 我们要确定整个程序的框架.</p>
 <p>比如数据的结构/算法/工作流程…</p>
-<h2><span id="da-kai-liu-lan-qi-kai-shi-ba">打开浏览器开始吧<span class="github-emoji"><span>💻</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#da-kai-liu-lan-qi-kai-shi-ba" class="header-anchor">¶</a></h2>
+<h2><span id="da-kai-liu-lan-qi-kai-shi-ba">打开浏览器开始吧<span class="github-emoji"><span>💻</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#da-kai-liu-lan-qi-kai-shi-ba" class="header-anchor"> ¶</a></h2>
 <p>要确定这些我们肯定要先登录一下教务, 看看正常的登录教务的方式还有成绩获取的方式</p>
 <p>链接在这里: <a target="_blank" rel="noopener" href="http://jwgl.just.edu.cn:8080/jsxsd/">江苏科技大学综合教务管理系统-强智科技</a></p>
 <p>打开映入眼帘的就是登录界面啦(<sub></sub>还好没有验证码<sub></sub>:happy: )</p>
@@ -353,18 +357,18 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
 <p>这里找了个<a target="_blank" rel="noopener" href="https://www.osgeo.cn/openpyxl/index.html">中文的文档</a>. 一通阅读, 基本确定可以满足我的要求</p>
 <p>可以创建<code>Excel</code>填充数据, 也可以修改样式</p>
 <p>几大基本的问题都解决了,汇总一下成果吧</p>
-<h2><span id="ji-zhu-lu-xian">技术路线<span class="github-emoji"><span>🔗</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f517.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#ji-zhu-lu-xian" class="header-anchor">¶</a></h2>
+<h2><span id="ji-zhu-lu-xian">技术路线<span class="github-emoji"><span>🔗</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f517.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#ji-zhu-lu-xian" class="header-anchor"> ¶</a></h2>
 <p>采用 <a target="_blank" rel="noopener" href="https://requests.readthedocs.io/zh_CN/latest/">Requests</a> 登录<code>教务系统</code> 并获取个人信息和成绩源数据</p>
 <p>使用 <a target="_blank" rel="noopener" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/">bs4</a> 按照获取的网页的特定内容</p>
 <p>使用 <a target="_blank" rel="noopener" href="https://pandas.pydata.org/">Pandas</a> 获取成绩页面的<code>&lt;table&gt;</code>标签并转为<code>DataFrame</code></p>
 <p>按照<a target="_blank" rel="noopener" href="http://jwc.just.edu.cn/2018/0328/c5744a51661/page.htm">学校的计分规则</a>自编计算绩点和筛选成绩的函数[^ 函数精度]</p>
 <p>使用 <a target="_blank" rel="noopener" href="http://openpyxl.readthedocs.io/">openpyxl</a> 按照设计的样式和计算的结果生成 <code>Summary</code> 文件</p>
-<h1><span id="requestsyourscore1-0">RequestsYourScore1.0<span class="github-emoji"><span>🙄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f644.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#requestsyourscore1-0" class="header-anchor">¶</a></h1>
+<h1><span id="requestsyourscore1-0">RequestsYourScore1.0<span class="github-emoji"><span>🙄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f644.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span><a href="#requestsyourscore1-0" class="header-anchor"> ¶</a></h1>
 <p>开发自然要有工具, 这里我直接使用<code>Jupyter</code>作为开发这款程序的平台</p>
 <p>得益于内嵌的<code>IPython</code>, <code>Jupyter</code>可以运行<code>Python</code></p>
 <p>同时可以按步调试, 返回程序执行之前的状态</p>
 <p>内容可以以比较美观的形式显示在浏览器上</p>
-<h2><span id="te-xing-features">特性 Features</span><a href="#te-xing-features" class="header-anchor">¶</a></h2>
+<h2><span id="te-xing-features">特性 Features</span><a href="#te-xing-features" class="header-anchor"> ¶</a></h2>
 <ol>
 <li>命令行式界面</li>
 <li>输入账号密码自动生成 <code>Summary</code> 文件</li>
@@ -386,7 +390,7 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
 <li>公选课的识别可能只覆盖了自己班内部的,不够全面</li>
 <li>自动化的<code>Summary</code>文件只统计了需要的几个课程信息不一定是你需要的</li>
 </ul>
-<h2><span id="shi-yong-wo-ba">使用我吧</span><a href="#shi-yong-wo-ba" class="header-anchor">¶</a></h2>
+<h2><span id="shi-yong-wo-ba">使用我吧</span><a href="#shi-yong-wo-ba" class="header-anchor"> ¶</a></h2>
 <p>你可以直接使用打包好的<code>exe可执行文件</code></p>
 <p>这里下载 <a target="_blank" rel="noopener" href="https://github.com/YuanZ1949/JUSTScoreSummary/releases/tag/JUSTScoreSummary">下载请点我</a> , 双击即可运行 <code>Window</code> 系统下直接运行.</p>
 <p>你也可以直接下载源代码使用</p>
@@ -399,13 +403,13 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
 <blockquote>
 <p>python <a target="_blank" rel="noopener" href="http://JUSTScoreSummary.py">JUSTScoreSummary.py</a></p>
 </blockquote>
-<h1><span id="xiao-gong-ju">小工具</span><a href="#xiao-gong-ju" class="header-anchor">¶</a></h1>
+<h1><span id="xiao-gong-ju">小工具</span><a href="#xiao-gong-ju" class="header-anchor"> ¶</a></h1>
 <p>在该仓库的 <code>othertool</code> 里有些小工具</p>
 <ul>
 <li><code>classloop.py</code> : 可以将此py文件放在主要代码的同一目录, 然后在同目录自己创建一个 <code>account.txt</code> 文件, 里面按照<code>学号 密码</code>的形式一行放一位同学的账号, 启动程序后, 就可以按顺序生成不同同学的 <code>Summary</code>文件了.</li>
 <li><code>班级汇总宏(使用我合并文档).xlsm</code> : 得到的 <code>Summary</code> 文件使用这个文档里的<code>宏</code>来合并.</li>
 </ul>
-<h1><span id="yang-li">样例</span><a href="#yang-li" class="header-anchor">¶</a></h1>
+<h1><span id="yang-li">样例</span><a href="#yang-li" class="header-anchor"> ¶</a></h1>
 <p>最后生成的<code>summary</code>文件为<code>xlsx</code>文件, 一个同学一个同名工作表(sheet)</p>
 <p>而且如果有未通过的课程, 工作表的标签颜色将变成红色:</p>
 <p><img src="doc/image-20200913161334986.png" alt="变红的工作表标签"></p>
@@ -419,7 +423,7 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
 
 
 
-    <a data-url="https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/justscoresummary-ge-ren-cheng-ji-gai-lan/" data-id="clebcd4vk000bqwuu768cfi2n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yuanz1949.github.io/ke-ji/xin-xi-ji-zhu/justscoresummary-ge-ren-cheng-ji-gai-lan/" data-id="clffaat5x000dxsuu38vk89x2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -501,7 +505,7 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
 如果你也害怕一个一个手动汇总
 就和我一起鼓捣Python吧
 ",
-        "wordCount": 451
+        "wordCount": 460
     }
 </script>
 
@@ -599,6 +603,26 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/ke-ji/xin-xi-ji-zhu/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/ke-ji/xin-xi-ji-zhu/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/" class="title">网络附属存储(NAS)配置指南</a></p>
+                            <p class="item-date"><time datetime="2023-02-23T13:05:48.000Z" itemprop="datePublished">2023-02-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/suo-yin/zi-yuan-suo-yin/shu-qian-suo-yin/" class="thumbnail">
     
     
@@ -676,26 +700,6 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/ke-ji/xin-xi-ji-zhu/yu-zi-ji-hua-kai-fa-ji-lu/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/ke-ji/xin-xi-ji-zhu/yu-zi-ji-hua-kai-fa-ji-lu/vlcsnap-2020-04-02-23h36m34s038.png)" alt="苑长YuanZ-开发记录" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
-                            <p class="item-title"><a href="/ke-ji/xin-xi-ji-zhu/yu-zi-ji-hua-kai-fa-ji-lu/" class="title">苑长YuanZ-开发记录</a></p>
-                            <p class="item-date"><time datetime="2022-02-27T19:59:59.628Z" itemprop="datePublished">2022-02-28</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -705,7 +709,7 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E8%AE%A4%E7%9F%A5/">认知</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><span class="category-list-count">28</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E8%AE%A4%E7%9F%A5/">认知</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><span class="category-list-count">29</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -715,7 +719,7 @@ that starts with ‘https’ you might try removing the ‘s’.</p>
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/3D/" style="font-size: 10px;">3D</a> <a href="/tags/BT/" style="font-size: 10px;">BT</a> <a href="/tags/Blender/" style="font-size: 10px;">Blender</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Chagas/" style="font-size: 10px;">Chagas</a> <a href="/tags/DIY/" style="font-size: 10px;">DIY</a> <a href="/tags/Excel/" style="font-size: 13.33px;">Excel</a> <a href="/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/IT/" style="font-size: 10px;">IT</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/VBA/" style="font-size: 10px;">VBA</a> <a href="/tags/VPN/" style="font-size: 13.33px;">VPN</a> <a href="/tags/manim/" style="font-size: 10px;">manim</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E4%B9%A6%E7%AD%BE/" style="font-size: 10px;">书签</a> <a href="/tags/%E4%BB%AA%E5%99%A8/" style="font-size: 10px;">仪器</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B1%87%E6%80%BB/" style="font-size: 10px;">信息汇总</a> <a href="/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 10px;">关于</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 16.67px;">分享</a> <a href="/tags/%E5%8C%96%E5%AD%A6/" style="font-size: 10px;">化学</a> <a href="/tags/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89/" style="font-size: 10px;">化学发光</a> <a href="/tags/%E5%8D%95%E5%8F%8D/" style="font-size: 10px;">单反</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 10px;">图像处理</a> <a href="/tags/%E5%A4%A9%E6%96%87/" style="font-size: 10px;">天文</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 10px;">工作</a> <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/" style="font-size: 10px;">工作流</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.33px;">工具</a> <a href="/tags/%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">工程技术</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 13.33px;">开发</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E6%8E%A2%E7%B4%A2/" style="font-size: 10px;">探索</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%94%BF%E7%AD%96/" style="font-size: 10px;">政策</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" style="font-size: 10px;">数据处理</a> <a href="/tags/%E6%96%B9%E5%A4%B4%E4%BA%BA/" style="font-size: 10px;">方头人</a> <a href="/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/" style="font-size: 13.33px;">江科大</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 10px;">版本控制</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%96%BE%E7%97%85/" style="font-size: 10px;">疾病</a> <a href="/tags/%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">程序</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;">笔记</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 10px;">终端</a> <a href="/tags/%E7%BB%A9%E7%82%B9/" style="font-size: 10px;">绩点</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 13.33px;">网站</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 13.33px;">自动化</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 13.33px;">视频</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 13.33px;">计划</a> <a href="/tags/%E8%AE%BE%E5%A4%87/" style="font-size: 10px;">设备</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 13.33px;">设计</a>
+            <a href="/tags/3D/" style="font-size: 10px;">3D</a> <a href="/tags/BT/" style="font-size: 10px;">BT</a> <a href="/tags/Blender/" style="font-size: 10px;">Blender</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Chagas/" style="font-size: 10px;">Chagas</a> <a href="/tags/DIY/" style="font-size: 10px;">DIY</a> <a href="/tags/Excel/" style="font-size: 13.33px;">Excel</a> <a href="/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/IT/" style="font-size: 10px;">IT</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/VBA/" style="font-size: 10px;">VBA</a> <a href="/tags/VPN/" style="font-size: 10px;">VPN</a> <a href="/tags/manim/" style="font-size: 10px;">manim</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E4%B9%A6%E7%AD%BE/" style="font-size: 10px;">书签</a> <a href="/tags/%E4%BB%AA%E5%99%A8/" style="font-size: 10px;">仪器</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B1%87%E6%80%BB/" style="font-size: 10px;">信息汇总</a> <a href="/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 10px;">关于</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 16.67px;">分享</a> <a href="/tags/%E5%8C%96%E5%AD%A6/" style="font-size: 10px;">化学</a> <a href="/tags/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89/" style="font-size: 10px;">化学发光</a> <a href="/tags/%E5%8D%95%E5%8F%8D/" style="font-size: 10px;">单反</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 10px;">图像处理</a> <a href="/tags/%E5%A4%A9%E6%96%87/" style="font-size: 10px;">天文</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 10px;">工作</a> <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/" style="font-size: 10px;">工作流</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.33px;">工具</a> <a href="/tags/%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">工程技术</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 13.33px;">开发</a> <a href="/tags/%E6%8E%A2%E7%B4%A2/" style="font-size: 10px;">探索</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%94%BF%E7%AD%96/" style="font-size: 10px;">政策</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" style="font-size: 10px;">数据处理</a> <a href="/tags/%E6%96%B9%E5%A4%B4%E4%BA%BA/" style="font-size: 10px;">方头人</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">服务器</a> <a href="/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/" style="font-size: 10px;">江科大</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 10px;">版本控制</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%96%BE%E7%97%85/" style="font-size: 10px;">疾病</a> <a href="/tags/%E7%9E%8E%E9%97%B2%E9%80%9B/" style="font-size: 10px;">瞎闲逛</a> <a href="/tags/%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">程序</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;">笔记</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 10px;">终端</a> <a href="/tags/%E7%BB%A9%E7%82%B9/" style="font-size: 10px;">绩点</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 13.33px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E9%99%84%E5%B1%9E%E5%AD%98%E5%82%A8/" style="font-size: 10px;">网络附属存储</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 13.33px;">自动化</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 13.33px;">视频</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 13.33px;">计划</a> <a href="/tags/%E8%AE%BE%E5%A4%87/" style="font-size: 13.33px;">设备</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 13.33px;">设计</a> <a href="/tags/%E9%80%89%E8%B4%AD/" style="font-size: 10px;">选购</a>
         </div>
     </div>
 

@@ -96,6 +96,10 @@ var _hmt = _hmt || [];
                         <a href="/" class="logo"></a>
                     </h1>
                     
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Life &amp; Science &amp; Technology</p>
+                        </h2>
+                    
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -258,14 +262,14 @@ var _hmt = _hmt || [];
 </ul>
 <!-- tocstop -->
 </div>
-<h1><span id="ji-yuan-qiao-he">机缘巧合🍀</span><a href="#ji-yuan-qiao-he" class="header-anchor">¶</a></h1>
+<h1><span id="ji-yuan-qiao-he">机缘巧合🍀</span><a href="#ji-yuan-qiao-he" class="header-anchor"> ¶</a></h1>
 <p>之前网上闲逛的时候，突然想起 <code>Edge for Chrome</code> 浏览器的 <code>网页App功能</code> ，又捣鼓了一番。而我之前就装了微博（主要是看航天的微博），便打开测试一下。</p>
 <p>于是就看到了一篇微博：<a target="_blank" rel="noopener" href="https://weibointl.api.weibo.cn/share/142975013.html?weibo_id=4497720146784132">新科学家杂志上刊登的高清太阳日冕图</a>，一下子就被这篇文章的封面的照片吸引住了。</p>
 <p>配色醒目，细节突出，层次感非常好，而且还是太阳（也许是一种对太阳的特殊感觉,赞美太阳!）。我便想着搞到高清的图片做壁纸，但是一番搜索，并没有找到（原论文也没有）高清的大图。</p>
 <p>由于有这方面的视界，顺其自然地便想着自己着手做了。因为大部分的天文数据都是开放的，一些处理数据的图像软件也是有的。于是和 <code>Bing</code>一起&lt;(￣︶￣)↗[GO!]</p>
-<h1><span id="shu-ju-de-huo-qu">数据的获取📑</span><a href="#shu-ju-de-huo-qu" class="header-anchor">¶</a></h1>
+<h1><span id="shu-ju-de-huo-qu">数据的获取📑</span><a href="#shu-ju-de-huo-qu" class="header-anchor"> ¶</a></h1>
 <p>有了微博的那张图(就是文章开头的那张图啦)作参考，直接搜索引擎就好啦，基本就是先找到新闻源，然后找到这个项目的相关信息，最后下到数据，作图即可。</p>
-<h2><span id="rang-wo-men-xian-bing-yi-xia">让我们先Bing一下⌨️</span><a href="#rang-wo-men-xian-bing-yi-xia" class="header-anchor">¶</a></h2>
+<h2><span id="rang-wo-men-xian-bing-yi-xia">让我们先Bing一下⌨️</span><a href="#rang-wo-men-xian-bing-yi-xia" class="header-anchor"> ¶</a></h2>
 <p>可以得知是新科学家杂志发表的一篇新闻，那么直接检索 <code>新科学家杂志 太阳</code>来看看有没有有用的消息。发现好像并没有太多相关的内容,那毕竟是外网的内容,我们直接英文走起。</p>
 <p>检索 <code>新科学家杂志</code>就可以从百度百科里找到它的英文名 <code>New Scientist</code>(这里建议还是要搜一下的, 毕竟专有名词可能会比较特殊), 直接检索 <code>New Scientist sun</code>我们就可以看到结果啦。</p>
 <p><img src="image-20200628123846286.png" alt="New Scientist sun 检索词结果"></p>
@@ -293,7 +297,7 @@ var _hmt = _hmt || [];
 <video src="/ke-ji/kong-tian/na-tai-yang-zuo-bi-zhi-yong-python-de-astropy-he-matplotlib-ku-chu-li-fits-wen-jian/Hiclaunch-1.mp4" type="video/mp4" controls="controls" width="100%" height="100%">
 </video>
 <p>既然项目找到了，还有了大致的了解了，我们继续吧。</p>
-<h2><span id="na-xia-shu-ju">拿下数据🗄</span><a href="#na-xia-shu-ju" class="header-anchor">¶</a></h2>
+<h2><span id="na-xia-shu-ju">拿下数据🗄</span><a href="#na-xia-shu-ju" class="header-anchor"> ¶</a></h2>
 <p><img src="image-20200527212311642.png" alt="Hi-C项目主页"></p>
 <p>简单地浏览主页的菜单，第二个<strong>一级菜单</strong>就是<a target="_blank" rel="noopener" href="https://hic.msfc.nasa.gov/data_products.html">Hi-C DATA PRODUCTS</a>——<code>Hi-C 数据产品</code>看这名字就知道是我们想要的了。</p>
 <p><strong>二级菜单</strong>介绍：</p>
@@ -319,15 +323,15 @@ var _hmt = _hmt || [];
 <p>相关项目的介绍：</p>
 <p>1.<code>AIA</code>:<a target="_blank" rel="noopener" href="https://sdo.gsfc.nasa.gov/mission/instruments.php">太阳大气成像仪</a>（Atmospheric Imaging Assembly）,为SDO卫星的一个成像部件。</p>
 <p>2.<code>IRIS</code>:<a target="_blank" rel="noopener" href="https://iris.lmsal.com/itn26/introduction.html">表面区域成像光谱仪</a>（the Interface Region Imaging Spectrograph），SMEX卫星。</p>
-<h1><span id="kai-shi-chu-li-ba">开始处理吧</span><a href="#kai-shi-chu-li-ba" class="header-anchor">¶</a></h1>
+<h1><span id="kai-shi-chu-li-ba">开始处理吧</span><a href="#kai-shi-chu-li-ba" class="header-anchor"> ¶</a></h1>
 <p>下载到的格式为 <code>FITS</code>,是个没见过的格式，这个时候又到了 <code>Bing</code>的时候啦。</p>
 <p>不过英文好的话，也可以直接阅读数据库里的英文用户手册，按照上面的做应该也是可以处理的。但是考虑到涉及一些专业的软件，这里我们还是通过搜索引擎来帮助我们，看看有没有更适合小白的方法 :happy:  。</p>
-<h2><span id="zai-bing-yi-xia">再Bing一下🔔</span><a href="#zai-bing-yi-xia" class="header-anchor">¶</a></h2>
+<h2><span id="zai-bing-yi-xia">再Bing一下🔔</span><a href="#zai-bing-yi-xia" class="header-anchor"> ¶</a></h2>
 <p>检索词就 <code>FITS</code>、<code>处理</code>、<code>格式</code>、<code>Python</code>之类的，相信可以得到比较好的结果。</p>
 <p>这是搜到的较详细的 <code>FITS</code>格式的介绍：<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_cfb724900102uz4p.html">在Python中FITS格式文件数据的读取</a></p>
 <p>这篇文章详细的介绍了FITS格式的结构内容，以及一个叫做Astropy的处理天文数据的Python库。</p>
 <p>一个崭新的大门出现了，一个新的世界出现了。</p>
-<h2><span id="astropy-ku">Astropy库🔭</span><a href="#astropy-ku" class="header-anchor">¶</a></h2>
+<h2><span id="astropy-ku">Astropy库🔭</span><a href="#astropy-ku" class="header-anchor"> ¶</a></h2>
 <p>由于是 <code>Python</code>的第三方库，需要安装 <code>Python</code>, 可以参考这篇文章 <a href="/ke-ji/xin-xi-ji-zhu/anaconda-zhi-lu/" title="Anaconda之路">Anaconda之路</a></p>
 <br>
 <p>如果是直接安装的 <code>Python</code>并且加入了环境变量的话, 按 <code>Win+R</code>, 在弹出的框框里输入 <code>cmd</code>，回车,在弹出的 <code>cmd</code>界面输入：</p>
@@ -335,7 +339,7 @@ var _hmt = _hmt || [];
 <p>pip install astropy</p>
 </blockquote>
 <p>安装搞定！</p>
-<h2><span id="ni-hao-tai-yang">你好~太阳☀️</span><a href="#ni-hao-tai-yang" class="header-anchor">¶</a></h2>
+<h2><span id="ni-hao-tai-yang">你好~太阳☀️</span><a href="#ni-hao-tai-yang" class="header-anchor"> ¶</a></h2>
 <p>通过查阅<a target="_blank" rel="noopener" href="https://docs.astropy.org/en/stable/">Astropy的文档</a>，有专门的 <a target="_blank" rel="noopener" href="https://docs.astropy.org/en/stable/io/fits/index.html">FITS 格式的读取模块</a></p>
 <p><code>Win+R</code>,在弹出的框框里输入 <code>cmd</code>后,在弹出的命令提示符界面输入 <code>ipython</code>调出交互式python</p>
 <p>(下面的代码框里的 <code>#</code>后面的字符为注释, <code>CTRL+C</code>时无需复制)</p>
@@ -362,12 +366,12 @@ var _hmt = _hmt || [];
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入opencv库</span></span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="comment"># 保存data</span></span><br><span class="line">cv2.imwrite(<span class="string">"FITS-cv2-out.png"</span>, data)</span><br></pre></td></tr></tbody></table></figure>
 <p>效果：(此为原图，可直接右键保存)</p>
 <p><img src="aia.lev1.2018-05-%E9%BB%91%E7%99%BD.png" alt="OpenCV直接导出的黑白图(原图)"></p>
-<h2><span id="xiu-gai-se-jie">修改色阶🌈</span><a href="#xiu-gai-se-jie" class="header-anchor">¶</a></h2>
+<h2><span id="xiu-gai-se-jie">修改色阶🌈</span><a href="#xiu-gai-se-jie" class="header-anchor"> ¶</a></h2>
 <p><code>cmap</code>其实是 <code>colormap</code>的缩写，指代的意思是色彩映射图。</p>
 <p>有关于不同的 <code>cmap</code>可以参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39580795/article/details/102622004">matplotlib.pyplot——cmap直观理解</a></p>
 <p>通过不同的色阶设置，可以得到各种各样的配色的图片。</p>
 <p><img src="image-20200628172157125.png" alt="各种色阶的不同效果"></p>
-<h2><span id="gimp-chu-li">GIMP处理</span><a href="#gimp-chu-li" class="header-anchor">¶</a></h2>
+<h2><span id="gimp-chu-li">GIMP处理</span><a href="#gimp-chu-li" class="header-anchor"> ¶</a></h2>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://www.gimp.org/">GIMP</a>:the GNU Image Manipulation Program<br>
 GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
@@ -383,7 +387,7 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
 <p><code>默认着色</code>则保留了暗部和亮部的一些细节。</p>
 <p>通过将 <code>黑白着色</code>叠在 <code>默认着色</code>的上面，然后 <code>黑白着色</code>采用 <code>叠加</code>作为图层的模式，就可以较好的保留两者的细节。之后再调节 <code>明度曲线</code>、<code>色相</code>、<code>曝光</code>，优化得到的最后结果啦。</p>
 <p><img src="image-20200628183650999.png" alt="GIMP处理图片"></p>
-<h1><span id="hou-ji">后记</span><a href="#hou-ji" class="header-anchor">¶</a></h1>
+<h1><span id="hou-ji">后记</span><a href="#hou-ji" class="header-anchor"> ¶</a></h1>
 <p>最后的效果就是这样啦！</p>
 <p><img src="aia.lev1.2018-05.png" alt="我处理的AIA拍摄的太阳！"></p>
 <p>前前后后拖了蛮久，时值暑假之际，静下心来把这篇补的差不多了。</p>
@@ -398,7 +402,7 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
 
 
 
-    <a data-url="https://yuanz1949.github.io/ke-ji/kong-tian/na-tai-yang-zuo-bi-zhi-yong-python-de-astropy-he-matplotlib-ku-chu-li-fits-wen-jian/" data-id="clebcd4we001zqwuuho574bap" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://yuanz1949.github.io/ke-ji/kong-tian/na-tai-yang-zuo-bi-zhi-yong-python-de-astropy-he-matplotlib-ku-chu-li-fits-wen-jian/" data-id="clffaat6o0022xsuu49da6bae" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -480,7 +484,7 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
 如果你想要
 请DIY吧
 ——苑长",
-        "wordCount": 2140
+        "wordCount": 2151
     }
 </script>
 
@@ -578,6 +582,26 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/ke-ji/xin-xi-ji-zhu/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/ke-ji/xin-xi-ji-zhu/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/" class="title">网络附属存储(NAS)配置指南</a></p>
+                            <p class="item-date"><time datetime="2023-02-23T13:05:48.000Z" itemprop="datePublished">2023-02-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/suo-yin/zi-yuan-suo-yin/shu-qian-suo-yin/" class="thumbnail">
     
     
@@ -655,26 +679,6 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/ke-ji/xin-xi-ji-zhu/yu-zi-ji-hua-kai-fa-ji-lu/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/ke-ji/xin-xi-ji-zhu/yu-zi-ji-hua-kai-fa-ji-lu/vlcsnap-2020-04-02-23h36m34s038.png)" alt="苑长YuanZ-开发记录" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
-                            <p class="item-title"><a href="/ke-ji/xin-xi-ji-zhu/yu-zi-ji-hua-kai-fa-ji-lu/" class="title">苑长YuanZ-开发记录</a></p>
-                            <p class="item-date"><time datetime="2022-02-27T19:59:59.628Z" itemprop="datePublished">2022-02-28</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -684,7 +688,7 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E8%AE%A4%E7%9F%A5/">认知</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><span class="category-list-count">28</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a><span class="category-list-count">17</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">10</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E8%AE%A4%E7%9F%A5/">认知</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><span class="category-list-count">29</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a><span class="category-list-count">18</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -694,7 +698,7 @@ GNU不是Unix(GNU’s Not Unix) 图像      处理       程序</p>
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/3D/" style="font-size: 10px;">3D</a> <a href="/tags/BT/" style="font-size: 10px;">BT</a> <a href="/tags/Blender/" style="font-size: 10px;">Blender</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Chagas/" style="font-size: 10px;">Chagas</a> <a href="/tags/DIY/" style="font-size: 10px;">DIY</a> <a href="/tags/Excel/" style="font-size: 13.33px;">Excel</a> <a href="/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/IT/" style="font-size: 10px;">IT</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/VBA/" style="font-size: 10px;">VBA</a> <a href="/tags/VPN/" style="font-size: 13.33px;">VPN</a> <a href="/tags/manim/" style="font-size: 10px;">manim</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E4%B9%A6%E7%AD%BE/" style="font-size: 10px;">书签</a> <a href="/tags/%E4%BB%AA%E5%99%A8/" style="font-size: 10px;">仪器</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B1%87%E6%80%BB/" style="font-size: 10px;">信息汇总</a> <a href="/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 10px;">关于</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 16.67px;">分享</a> <a href="/tags/%E5%8C%96%E5%AD%A6/" style="font-size: 10px;">化学</a> <a href="/tags/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89/" style="font-size: 10px;">化学发光</a> <a href="/tags/%E5%8D%95%E5%8F%8D/" style="font-size: 10px;">单反</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 10px;">图像处理</a> <a href="/tags/%E5%A4%A9%E6%96%87/" style="font-size: 10px;">天文</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 10px;">工作</a> <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/" style="font-size: 10px;">工作流</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.33px;">工具</a> <a href="/tags/%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">工程技术</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 13.33px;">开发</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">技术</a> <a href="/tags/%E6%8E%A2%E7%B4%A2/" style="font-size: 10px;">探索</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%94%BF%E7%AD%96/" style="font-size: 10px;">政策</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" style="font-size: 10px;">数据处理</a> <a href="/tags/%E6%96%B9%E5%A4%B4%E4%BA%BA/" style="font-size: 10px;">方头人</a> <a href="/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/" style="font-size: 13.33px;">江科大</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 10px;">版本控制</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%96%BE%E7%97%85/" style="font-size: 10px;">疾病</a> <a href="/tags/%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">程序</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;">笔记</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 10px;">终端</a> <a href="/tags/%E7%BB%A9%E7%82%B9/" style="font-size: 10px;">绩点</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 13.33px;">网站</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 13.33px;">自动化</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 13.33px;">视频</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 13.33px;">计划</a> <a href="/tags/%E8%AE%BE%E5%A4%87/" style="font-size: 10px;">设备</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 13.33px;">设计</a>
+            <a href="/tags/3D/" style="font-size: 10px;">3D</a> <a href="/tags/BT/" style="font-size: 10px;">BT</a> <a href="/tags/Blender/" style="font-size: 10px;">Blender</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Chagas/" style="font-size: 10px;">Chagas</a> <a href="/tags/DIY/" style="font-size: 10px;">DIY</a> <a href="/tags/Excel/" style="font-size: 13.33px;">Excel</a> <a href="/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/IT/" style="font-size: 10px;">IT</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/VBA/" style="font-size: 10px;">VBA</a> <a href="/tags/VPN/" style="font-size: 10px;">VPN</a> <a href="/tags/manim/" style="font-size: 10px;">manim</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E4%B9%A6%E7%AD%BE/" style="font-size: 10px;">书签</a> <a href="/tags/%E4%BB%AA%E5%99%A8/" style="font-size: 10px;">仪器</a> <a href="/tags/%E4%BF%A1%E6%81%AF%E6%B1%87%E6%80%BB/" style="font-size: 10px;">信息汇总</a> <a href="/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 10px;">关于</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 16.67px;">分享</a> <a href="/tags/%E5%8C%96%E5%AD%A6/" style="font-size: 10px;">化学</a> <a href="/tags/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89/" style="font-size: 10px;">化学发光</a> <a href="/tags/%E5%8D%95%E5%8F%8D/" style="font-size: 10px;">单反</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 10px;">博客</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 10px;">图像处理</a> <a href="/tags/%E5%A4%A9%E6%96%87/" style="font-size: 10px;">天文</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 10px;">工作</a> <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/" style="font-size: 10px;">工作流</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.33px;">工具</a> <a href="/tags/%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF/" style="font-size: 10px;">工程技术</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 13.33px;">开发</a> <a href="/tags/%E6%8E%A2%E7%B4%A2/" style="font-size: 10px;">探索</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%94%BF%E7%AD%96/" style="font-size: 10px;">政策</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" style="font-size: 10px;">数据处理</a> <a href="/tags/%E6%96%B9%E5%A4%B4%E4%BA%BA/" style="font-size: 10px;">方头人</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">服务器</a> <a href="/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/" style="font-size: 10px;">江科大</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 10px;">版本控制</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%96%BE%E7%97%85/" style="font-size: 10px;">疾病</a> <a href="/tags/%E7%9E%8E%E9%97%B2%E9%80%9B/" style="font-size: 10px;">瞎闲逛</a> <a href="/tags/%E7%A8%8B%E5%BA%8F/" style="font-size: 10px;">程序</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;">笔记</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 10px;">终端</a> <a href="/tags/%E7%BB%A9%E7%82%B9/" style="font-size: 10px;">绩点</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 13.33px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E9%99%84%E5%B1%9E%E5%AD%98%E5%82%A8/" style="font-size: 10px;">网络附属存储</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 13.33px;">自动化</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 13.33px;">视频</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 13.33px;">计划</a> <a href="/tags/%E8%AE%BE%E5%A4%87/" style="font-size: 13.33px;">设备</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 13.33px;">设计</a> <a href="/tags/%E9%80%89%E8%B4%AD/" style="font-size: 10px;">选购</a>
         </div>
     </div>
 
