@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>Anaconda之路 | 苑长的Index</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="分享,Python" />
+    
+    <meta name="description" content="如果你也怕包冲突,就快来吧  当前项目正在咕,敬请期待,所有在咕列表见: Blog咕咕咕">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anaconda之路">
+<meta property="og:url" content="https://yuanz1949.github.io/post/anaconda-zhi-lu/">
+<meta property="og:site_name" content="苑长的Index">
+<meta property="og:description" content="如果你也怕包冲突,就快来吧  当前项目正在咕,敬请期待,所有在咕列表见: Blog咕咕咕">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuanz1949.github.io/post/anaconda-zhi-lu/Conda%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%91%BD%E4%BB%A4.png">
+<meta property="article:published_time" content="2020-07-06T06:23:59.000Z">
+<meta property="article:modified_time" content="2023-02-19T09:11:27.845Z">
+<meta property="article:author" content="苑长">
+<meta property="article:tag" content="分享">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuanz1949.github.io/post/anaconda-zhi-lu/Conda%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%91%BD%E4%BB%A4.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="苑长的Index" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/all.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?67fc4a038906ef55e9307dac98a80fe2";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Life &amp; Science &amp; Technology</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/suo-yin/zi-yuan-suo-yin/chang-yong-zi-yuan-suo-yin/">常用索引</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/sheng-huo/gao-shi-qing-a/blog-gu-gu-gu/">Blog咕咕咕</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/sheng-huo/about/">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-Anaconda之路" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Anaconda之路
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/post/anaconda-zhi-lu/" class="article-date">
+         <time datetime="2020-07-06T06:23:59.000Z" itemprop="datePublished">2020-07-06</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Python/" rel="tag">Python</a>, <a class="tag-link-link" href="/tags/%E5%88%86%E4%BA%AB/" rel="tag">分享</a>
+    </div>
+
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">2.9k</span>
+      <i class="fa fa-clock"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">11 分钟 </span>
+   </div>
+
+
+            </div>
+        
+        
+        <br>
+        <div class="article-entry" itemprop="articleBody">
+            <img src="/post/anaconda-zhi-lu/Conda%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%91%BD%E4%BB%A4.png" class>
+<blockquote><p><span style="font-size:24px"><strong>如果你也怕包冲突,就快来吧</strong></span></p>
+</blockquote>
+<p><strong>当前项目正在咕,敬请期待,所有在咕列表见</strong>: <a href="/post/blog-gu-gu-gu/" title="Blog咕咕咕">Blog咕咕咕</a></p>
+<span id="more"></span>
+<div class="toc">
+<!-- toc -->
+<ul>
+<li><a href="#shi-me-shi-anaconda-cloud">什么是Anaconda <span class="github-emoji"><span>☁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2601.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a></li>
+<li><a href="#anaconda-de-an-zhuang-diamond-shape-with-a-dot-inside">Anaconda的安装 <span class="github-emoji"><span>💠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a0.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a></li>
+<li><a href="#anaconda-de-shi-yong-rocket">Anaconda的使用 <span class="github-emoji"><span>🚀</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a>
+<ul>
+<li><a href="#qiao-qiao-anaconda-gei-dian-nao-sai-liao-shi-me-file-folder">瞧瞧Anaconda给电脑塞了什么<span class="github-emoji"><span>📁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c1.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a></li>
+<li><a href="#conda-du-you-xie-sha-raised-hand-with-fingers-splayed">conda 都有些啥 <span class="github-emoji"><span>🖐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f590.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a></li>
+<li><a href="#geng-duo-zi-yuan-minidisc">更多资源 <span class="github-emoji"><span>💽</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bd.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+</div>
+<h1><a href="#shi-me-shi-anaconda" class="header-anchor"> ⚓️</a><span id="shi-me-shi-anaconda">什么是Anaconda <span class="github-emoji"><span>☁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/2601.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h1>
+<blockquote>
+<p>@<strong>官网</strong>: <a target="_blank" rel="noopener" href="https://www.anaconda.com/">Anaconda | The World’s Most Popular Data Science Platform</a></p>
+<p>With over 20 million users worldwide, the open-source Individual Edition (Distribution) is the easiest way to perform Python/R data science and machine learning on a single machine. Developed for solo practitioners, it is the toolkit that equips you to work with thousands of open-source packages and libraries.</p>
+<p>@<strong>官方指南</strong>: <a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/">Getting started with Anaconda — Anaconda documentation</a></p>
+</blockquote>
+<p><code>Anaconda</code>是一个可以管理<code>Python包</code>和<code>Python环境</code>的软件</p>
+<p>所谓<code>Python包</code>指的是<strong>别人写</strong>(第三方)的有一定功能的<code>Python代码</code></p>
+<p>所谓<code>Python环境</code>其实就是<code>Python代码</code>运行时调用的具体版本的<code>Python解释器</code></p>
+<p>所谓<code>管理</code>指的就是我们可以通过<code>Anaconda</code>的<code>conda</code>指令, 随意地创建包含有我们指定的<code>Python包</code>的指定版本的<code>Python环境</code>, 这样做的目的是解决兼容性问题(相互依赖问题)</p>
+<p>比如你获得的某段代码采用了<code>Python2</code>时代才有的语法编写的, 自然是不可以用<code>Python3</code>的解释器来运行的.</p>
+<p>那就可以创建一个<code>Python2</code>的环境(相当于划出一部分磁盘空间安装一个<code>Python2</code>版本)来复现代码, 然后再创建一个<code>Python3</code>的环境来重新编写他们(重构)也是没有问题的.</p>
+<h1><a href="#anaconda-de-an-zhuang" class="header-anchor"> ⚓️</a><span id="anaconda-de-an-zhuang">Anaconda的安装 <span class="github-emoji"><span>💠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a0.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h1>
+<p><strong>官方指引</strong>: <a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/install/">Installation — Anaconda documentation</a></p>
+<p>这里只翻译<code>Window</code>版本的安装, 大家也可以直接阅读上面官方的文档</p>
+<br>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.anaconda.com/download/#windows">点击我 下载Anaconda安装器</a>.</li>
+<li>推荐: <a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/install/hashes/">使用 SHA-256 验证程序完整性</a>. 如果想获取更多的哈希(hashes), 见 <a target="_blank" rel="noopener" href="https://conda.io/projects/conda/en/latest/user-guide/install/download.html#cryptographic-hash-verification">What about cryptographic hash verification?</a></li>
+<li>双击下载好的安装器运行.</li>
+</ol>
+<blockquote>
+<p>注意: 如果安装器被下载到了<code>Window</code>的收藏夹文件夹(IE浏览器的数千收藏夹,在你的用户目录里), 请移到其他文件夹运行.<a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/user-guide/troubleshooting/#windows-permission-errors-when-installing-from-favorites-folder">¶</a></p>
+</blockquote>
+<ol start="4">
+<li>点击<code>next(下一步)</code></li>
+<li>阅读协议条款, 同意的话点击<code>I Agree(我同意)</code></li>
+<li>选择<code>Just Me (只为我)</code>,如果是为所有的用户安装选择另一个(这需要管理员权限, 如果弹窗申请权限请确认), 点击<code>next(下一步)</code></li>
+<li>选择一个安装<code>Anaconda</code>的目标文件夹, 点击<code>next(下一步)</code></li>
+</ol>
+<blockquote>
+<p>安装目录路径不可以有空格或者是在7位ASCII字符集以外的Unicode字符,见 <a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/user-guide/faq/#distribution-faq-windows-folder">FAQ</a>.</p>
+</blockquote>
+<ol start="8">
+<li>
+<p>选择是否要添加<code>Anaconda</code>到<code>环境变量(PATH)</code>. 我们推荐不要添加, 因为这可能干扰其他软件. 可以通过使用<code>Anaconda Navigator(Anaconda导航)</code> 或者是 开始菜单里的<code>Anaconda Prompt(Anaconda提示符)</code>  来替代.</p>
+</li>
+<li>
+<p>悬着是否注册<code>Anaconda</code>作为默认的<code>Python</code>, 除非你打算安装多个版本的<code>Anaconda</code>或<code>Python</code>, 可以接受默认设置, 保持勾选.</p>
+</li>
+<li>
+<p>点击<code>install(安装)</code>按钮, 如果你想要看<code>Anaconda</code>安装, 可以点击<code>Show Details(显示细节)</code></p>
+</li>
+<li>
+<p>点击<code>next(下一步)</code></p>
+</li>
+<li>
+<p>可选: 为<code>Anaconda</code>安装<code>PyCharm</code>, 点击链接跳转 <a target="_blank" rel="noopener" href="https://www.anaconda.com/pycharm">https://www.anaconda.com/pycharm</a>. 也可以不安装<code>PyCharm</code>, 直接点击<code>next(下一步)</code></p>
+</li>
+<li>
+<p>在成功安装之后, 你应该可以看到"Thanks for installing Anaconda(感谢安装Anaconda"的对话框</p>
+</li>
+<li>
+<p>如果你想要了解更多关于<code>Anaconda Cloud (Anaconda云服务)</code>以及开始入门<code>Anaconda</code>, 可以勾上复选框 “Learn more about Anaconda Cloud (了解更多Anaconda云服务)” 和 “Learn how to get started with Anaconda (了解如何入门Anaconda)”. 点击<code>Finish(完成)</code></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/install/verify-install/">验证你的安装是否可用</a> (这里的验证可以按照下文的使用操作)</p>
+</li>
+</ol>
+<blockquote>
+<p>注意: 如果你使用的是公司的代理, 你还需要一些额外的设置. 参加如何设置你的<a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/user-guide/tasks/proxy/">代理(proxy)</a></p>
+</blockquote>
+<p>出了问题可以参见 <a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/user-guide/troubleshooting/">troubleshooting (anaconda.com)</a></p>
+<p>入门参见: <a target="_blank" rel="noopener" href="https://docs.anaconda.com/anaconda/user-guide/getting-started/">Getting started with Anaconda</a></p>
+<br>
+<h1><a href="#anaconda-de-shi-yong" class="header-anchor"> ⚓️</a><span id="anaconda-de-shi-yong">Anaconda的使用 <span class="github-emoji"><span>🚀</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h1>
+<h2><a href="#qiao-qiao-anaconda-gei-dian-nao-sai-liao-shi-me" class="header-anchor"> ⚓️</a><span id="qiao-qiao-anaconda-gei-dian-nao-sai-liao-shi-me">瞧瞧Anaconda给电脑塞了什么<span class="github-emoji"><span>📁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4c1.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h2>
+<p>我们点击菜单键调出菜单</p>
+<p><img src="image-20201015001937567.png" alt="image-20201015001937567"></p>
+<p>可以看到<code>Anaconda</code>默认给出了五个<code>快捷方式</code></p>
+<ul>
+<li>Anaconda Navigator (Anaconda3)
+<ul>
+<li>F:\Anaconda3\pythonw.exe F:\Anaconda3\<a target="_blank" rel="noopener" href="http://cwp.py">cwp.py</a> F:\Anaconda3 F:\Anaconda3\pythonw.exe F:\Anaconda3\Scripts\<a target="_blank" rel="noopener" href="http://anaconda-navigator-script.py">anaconda-navigator-script.py</a></li>
+</ul>
+</li>
+<li>Anaconda Navigator
+<ul>
+<li>F:\Anaconda3\pythonw.exe F:\Anaconda3\<a target="_blank" rel="noopener" href="http://cwp.py">cwp.py</a> F:\Anaconda3 F:\Anaconda3\pythonw.exe F:\Anaconda3\Scripts\<a target="_blank" rel="noopener" href="http://anaconda-navigator-script.py">anaconda-navigator-script.py</a></li>
+</ul>
+</li>
+<li>Anaconda Powershell Prompt (Anaconda3)
+<ul>
+<li>%windir%\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy ByPass -NoExit -Command "&amp; ‘F:\Anaconda3\shell\condabin\conda-hook.ps1’ ; conda activate ‘F:\Anaconda3’ "</li>
+</ul>
+</li>
+<li>Anaconda Prompt (Anaconda3)
+<ul>
+<li>%windir%\System32\cmd.exe “/K” F:\Anaconda3\Scripts\activate.bat F:\Anaconda3</li>
+</ul>
+</li>
+<li>Jupyter Notebook (Anaconda3)
+<ul>
+<li>F:\Anaconda3\python.exe F:\Anaconda3\<a target="_blank" rel="noopener" href="http://cwp.py">cwp.py</a> F:\Anaconda3 F:\Anaconda3\python.exe F:\Anaconda3\Scripts\<a target="_blank" rel="noopener" href="http://jupyter-notebook-script.py">jupyter-notebook-script.py</a> “%DESKTOP%”</li>
+</ul>
+</li>
+<li>Spyder (Anaconda3)
+<ul>
+<li>F:\Anaconda3\pythonw.exe F:\Anaconda3\<a target="_blank" rel="noopener" href="http://cwp.py">cwp.py</a> F:\Anaconda3 F:\Anaconda3\pythonw.exe F:\Anaconda3\Scripts\<a target="_blank" rel="noopener" href="http://spyder-script.py">spyder-script.py</a></li>
+</ul>
+</li>
+</ul>
+<h2><a href="#conda-du-you-xie-sha" class="header-anchor"> ⚓️</a><span id="conda-du-you-xie-sha">conda 都有些啥 <span class="github-emoji"><span>🖐</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f590.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h2>
+<p><strong>官方指引</strong>:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html">Getting started with conda — conda 4.8.4. documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html">Conda cheat sheet</a></li>
+</ul>
+<p><sub>*部分翻译自官方文档</sub></p>
+<h3><a href="#link-start" class="header-anchor"> ⚓️</a><span id="link-start">Link start ! <span class="github-emoji"><span>🔗</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f517.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h3>
+<p>如果你的是<code>Windows</code>系统</p>
+<ol>
+<li>
+<p><code>Win</code>+<code>S</code>调出搜索框 或者 按下<code>Win</code>菜单键调出菜单</p>
+</li>
+<li>
+<p>直接输入<code>Anaconda Prompt</code>, 回车即可</p>
+</li>
+</ol>
+<p>如果<code>Anaconda</code>已经加入了你的<code>环境变量</code>,</p>
+<ol>
+<li>直接<code>Win</code>+<code>R</code>调出<code>运行</code></li>
+<li>输入<code>cmd</code>回车, 调出<code>命令提示符</code></li>
+</ol>
+<hr>
+<p>如果你的是<code>Mac</code>系统</p>
+<hr>
+<p>如果你的是<code>Linux</code>系统</p>
+<hr>
+<h3><a href="#xiao-shi-niu-dao" class="header-anchor"> ⚓️</a><span id="xiao-shi-niu-dao">小试牛刀 <span class="github-emoji"><span>🔪</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f52a.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h3>
+<blockquote>
+<p>conda --version</p>
+</blockquote>
+<p>在前面我们打开的终端界面, 输入上面的一串字符, 即可调用上面的命令</p>
+<p>该命令将输出我们安装的<code>conda</code>版本</p>
+<br>
+<blockquote>
+<p>conda update conda</p>
+</blockquote>
+<p>升级现在的<code>conda</code>到最新版本</p>
+<br>
+<p>当<code>conda</code>输出的字符出现下面这一行时</p>
+<blockquote>
+<p>Proceed ([y]/n)?</p>
+</blockquote>
+<p>你可以通过输入<code>y</code>或者<code>n</code>然后回车来表示<code>同意</code>或者<code>拒绝</code></p>
+<br>
+<h3><a href="#creat-chuang-zao-ni-de-shi-jie" class="header-anchor"> ⚓️</a><span id="creat-chuang-zao-ni-de-shi-jie">creat创造你的世界 <span class="github-emoji"><span>🌱</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h3>
+<p><code>conda</code>最棒的的一个功能就是创造各种你想要的同时又会互相冲突的<code>Python环境</code></p>
+<p>试想一下, 如果你在电脑里装了好几个版本的<code>Python解释器</code>并都导入到了电脑的环境变量的这种情况</p>
+<blockquote>
+<p>python</p>
+</blockquote>
+<p>当你在终端里输入上面的命令, 终端将不知道调用哪个版本的<code>Python解释器</code></p>
+<p>而当你使用<code>conda</code>时, 这件事情就变的优雅了许多</p>
+<br>
+<blockquote>
+<p>conda create --name snowflakes biopython</p>
+</blockquote>
+<p>当你在黑漆漆(当然如果你会美化的话将可能是五彩斑斓的:happy:)的终端输入上面的这串代码并回车后</p>
+<p><code>conda</code>将帮你创造一个独立的像下面描述的虚拟环境</p>
+<ul>
+<li>名为<code>snowflakes</code>的 (<code>--name</code>属性后面跟着哪个字符串, 名字就是什么)</li>
+<li>包含有一个和你安装的<code>Anaconda</code>自带的同版本的<code>Python解释器</code></li>
+<li>自动安装有<code>biopython</code>包</li>
+</ul>
+<br>
+<p>那么如何进入我们创建的世界呢</p>
+<blockquote>
+<p>conda activate snowflakes</p>
+</blockquote>
+<p>输入完回车后, 如果看到终端的<code>命令提示符</code>(比如<code>cmd</code>的是<code>&gt;</code>)的前面</p>
+<p>变成了<code>(snowflakes) &gt;</code>这样的状态时</p>
+<p>欢迎你进入<code>snowflakes</code></p>
+<p>当然<code>activate</code>后面还可以跟具体的某个环境的目录</p>
+<p>这在你从某个地方复制了一份虚拟环境时可以直接激活它时使用</p>
+<p>事实上, 不创建新环境, <code>Anaconda</code>也自带了一个名叫<code>base</code>的环境</p>
+<blockquote>
+<p>conda activate</p>
+</blockquote>
+<p>不带名字直接输入激活指令, 默认进入<code>base</code>环境</p>
+<p>这个基础环境的本质就是<code>Anaconda</code>的主目录里的那个<code>python.exe</code></p>
+<p>我们创建的新的环境则都在主目录下面的<code>envs</code>里</p>
+<p>里面也有<code>python.exe</code>, 但是是我们指定的安装的版本</p>
+<br>
+<blockquote>
+<p>conda info --envs</p>
+</blockquote>
+<p>这个命令可以获得所有的目前你拥有的环境的名字和位置</p>
+<p>带有<code>*</code>号的环境就是当前激活的环境</p>
+<p>要切换可以直接输入带有环境名字的激活指令即可</p>
+<p>这样就可以优雅的在多个不同的环境里来回穿梭了</p>
+<br>
+<blockquote>
+<p>conda create --name snakes python=3.5</p>
+</blockquote>
+<p>这里略微的不同是在名字的后面, 指定了要安装的Python的版本</p>
+<p>这样就可以创建不同的Python版本的环境啦</p>
+<br>
+<blockquote>
+<p>conda create --clone ENVNAME --name NEWENV</p>
+</blockquote>
+<p>这样的命令可以按照<code>--clone</code>指定的环境名字, 原样创建一个新的环境</p>
+<br>
+<p>我们自己的环境自己用的顺心, 但是如果你想分享给其他人呢</p>
+<p>好像拿<code>U盘</code>复制或者<code>上传</code>略微有些古怪或者不方便</p>
+<blockquote>
+<p>conda env export --name ENVNAME &gt; envname.yml</p>
+</blockquote>
+<p>运行上面的命令吧, 然后就会生成<code>envname.yml</code>文件</p>
+<p>把这个文件发给你的朋友吧</p>
+<p>如果他的终端的工作目录在<code>envname.yml</code>所在的地方</p>
+<blockquote>
+<p>conda env create</p>
+</blockquote>
+<p>便可以直接安装同样的环境了</p>
+<blockquote>
+<p>conda env create --file envname.yml</p>
+</blockquote>
+<p>也可以直接指定要安装的<code>环境镜像</code>的名字</p>
+<p>另一种方式是生成<code>.txt</code>文件</p>
+<blockquote>
+<p>conda list --explicit &gt; pkgs.txt</p>
+</blockquote>
+<p>这里使用<code>conda list --explicit</code>列出所有包和版本</p>
+<p>然后通过<code>终端</code>的<code>&gt;</code>的方法, 将所有输出导入到<code>pkgs.txt</code>文件</p>
+<blockquote>
+<p>conda create --name NEWENV --file pkgs.txt</p>
+</blockquote>
+<p>然后生成环境时指定这个文件就好啦</p>
+<br>
+<blockquote>
+<p>conda deactivate</p>
+</blockquote>
+<p>退出环境可以直接使用这个命令</p>
+<p>如果没啥可干的, 也可以直接关掉整个终端窗口</p>
+<blockquote>
+<p>conda create --help</p>
+</blockquote>
+<p>这将直接列出所有<code>creat</code>支持的参数</p>
+<br>
+<h3><a href="#env-zhang-kong-shi-jie" class="header-anchor"> ⚓️</a><span id="env-zhang-kong-shi-jie">env掌控世界 <span class="github-emoji"><span>🗺</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f5fa.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h3>
+<h3><a href="#chong-yao-de-config" class="header-anchor"> ⚓️</a><span id="chong-yao-de-config">重要的config <span class="github-emoji"><span>🛠</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f6e0.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h3>
+<p><strong>官方指引</strong>: <a target="_blank" rel="noopener" href="https://conda.io/projects/conda/en/latest/user-guide/configuration/index.html">Configuration — conda 4.8.5.post110+a7bb8d53 documentation</a></p>
+<p>清华镜像: <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">Anaconda-清华镜像使用帮助</a></p>
+<blockquote>
+<p>conda config --show-sources</p>
+</blockquote>
+<p>帮直接帮你列出你的<code>conda</code>设置文件的位置以及内容</p>
+<p>到<code>==&gt;</code>指定的位置, 用<code>记事本</code>打开<code>.condarc</code>即可修改config设置</p>
+<p>实际上, 我们通过<code>conda config ...</code>指令做的修改都会记录在这里</p>
+<br>
+<blockquote>
+<p>conda config --show</p>
+</blockquote>
+<p>显示所有conda设置</p>
+<br>
+<blockquote>
+<p>conda config --show channels</p>
+</blockquote>
+<p>只显示channels变量</p>
+<br>
+<blockquote>
+<p>conda config --set show_channel_urls yes</p>
+</blockquote>
+<p>设定(<code>--set</code>)设置选项<code>show_channel_urls</code>的值为<code>yes</code></p>
+<br>
+<blockquote>
+<p>conda config --add channels CHANNELNAME</p>
+</blockquote>
+<p>为设置选项<code>channels</code>增添(<code>--add</code>)值: <code>CHANNELNAME</code></p>
+<br>
+<blockquote>
+<p>conda config --remove channels https:XXX</p>
+</blockquote>
+<p>删除(<code> --remove</code>)设置选项<code>channels</code>的某个值: <code>https:XXX</code></p>
+<br>
+<blockquote>
+<p>conda clean</p>
+</blockquote>
+<p>-i 清除索引缓存</p>
+<br>
+<h3><a href="#bu-zhi-ru-ci" class="header-anchor"> ⚓️</a><span id="bu-zhi-ru-ci">不止如此 <span class="github-emoji"><span>🎓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f393.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h3>
+<blockquote>
+<p>conda search beautifulsoup4</p>
+</blockquote>
+<p>我们还可以使用<code>search</code>来检索包, 这主要用于我们有时候记不清楚包的名字时可以使用</p>
+<p>如果在后面加上参数<code>--info</code>可以获得详细的描述</p>
+<p>结果会直接输出在窗口上, 找到想要的包的名字后</p>
+<blockquote>
+<p>conda install beautifulsoup4</p>
+</blockquote>
+<p>就可以安装啦</p>
+<p>安装好后</p>
+<blockquote>
+<p>conda list</p>
+</blockquote>
+<p>就可以看到当前环境安装的所有包了</p>
+<br>
+<blockquote>
+<p>conda list --revisions</p>
+</blockquote>
+<p>将会输出当前环境所有包的变动, 可以用<code>--name</code>指定特定的环境</p>
+<blockquote>
+<p>conda install --name ENVNAME --revision REV_NUMBER</p>
+</blockquote>
+<p>上面命令可以将特定环境还原到特定<code>rev</code>版本</p>
+<br>
+<blockquote>
+<p>conda install --yes PKG1 PKG2</p>
+</blockquote>
+<p>无需用户确认, 直接安装<code>PKG1</code>和<code>PKG2</code></p>
+<p>编写<code>脚本</code>来操作<code>conda</code>时好用, 这样<code>conda</code>不会停下来等待用户确认了</p>
+<br>
+<blockquote>
+<p>conda install conda-forge::PKGNAME</p>
+</blockquote>
+<p>从频道<code>conda-forge</code>里安装包<code>PKGNAME</code>到环境</p>
+<br>
+<blockquote>
+<p>conda install PKGNAME==3.1.4</p>
+</blockquote>
+<p>安装指定版本的包到环境</p>
+<br>
+<blockquote>
+<p>conda install “PKGNAME[version=‘3.1.2|3.1.4’]”</p>
+</blockquote>
+<p>安装<code>3.1.2</code>或<code>3.1.4</code>版本的包到环境</p>
+<br>
+<blockquote>
+<p>conda install “PKGNAME&gt;2.5,&lt;3.2”</p>
+</blockquote>
+<p>安装版本号<code>大于2.5</code>并<code>小于3.2</code>的某个版本到环境</p>
+<br>
+<blockquote>
+<p>conda update --all --name ENVNAME</p>
+</blockquote>
+<p>升级<code>ENVNAME</code>环境里的所有包</p>
+<blockquote>
+<p>conda update -n base conda</p>
+</blockquote>
+<p>升级<code>conda</code>到最新版本</p>
+<blockquote>
+<p>conda update anaconda</p>
+</blockquote>
+<p>升级所有包到最新的<code>Anaconda</code>支持的版本</p>
+<p>但是同时会兼顾兼容性和稳定性, 不一定真的是最新的</p>
+<br>
+<blockquote>
+<p>conda uninstall PKGNAME --name ENVNAME</p>
+</blockquote>
+<p>从<code>ENVNAME</code>环境里删掉<code>PKGNAME</code>包</p>
+<br>
+<blockquote>
+<p>conda clean --all</p>
+</blockquote>
+<p>删除所有未被使用的缓存文件(包括没有使用的包)</p>
+<br>
+<blockquote>
+<p>conda remove --name ENVNAME --all</p>
+</blockquote>
+<p>整个删除某个环境</p>
+<br>
+<h3><a href="#condarc-wen-jian-xiang-jie" class="header-anchor"> ⚓️</a><span id="condarc-wen-jian-xiang-jie"><code>.condarc</code> 文件详解 <span class="github-emoji"><span>📑</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4d1.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h3>
+<p><strong>官方指引</strong> : <a target="_blank" rel="noopener" href="https://conda.io/projects/conda/en/latest/user-guide/configuration/use-condarc.html">Using the .condarc conda configuration file — conda 4.8.5.post110+a7bb8d53 documentation</a></p>
+<h2><a href="#geng-duo-zi-yuan" class="header-anchor"> ⚓️</a><span id="geng-duo-zi-yuan">更多资源 <span class="github-emoji"><span>💽</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bd.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h2>
+<ul>
+<li>
+<p><a target="_blank" rel="noopener" href="http://bit.lyconda_list">Free Community Support</a></p>
+</li>
+<li>
+<p><a target="_blank" rel="noopener" href="https://conda.io">Online Documentation</a></p>
+</li>
+<li>
+<p><a href="anaconda.com/support">Paid Support Options</a></p>
+</li>
+<li>
+<p><a href="anaconda.com/training">Anaconda On-Site Training Courses</a></p>
+</li>
+<li>
+<p><a href="anaconda.com/consulting">Anaconda Consulting Services</a></p>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://yuanz1949.github.io/post/anaconda-zhi-lu/" data-id="clkvabqh40000g0uuhsr9bkm2" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "苑长"
+        },
+        "headline": "Anaconda之路",
+        "image": "https://yuanz1949.github.io/post/anaconda-zhi-lu/Conda%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83%E5%91%BD%E4%BB%A4.png",
+        "keywords": "分享 Python",
+        "genre": "科技 信息技术",
+        "datePublished": "2020-07-06",
+        "dateCreated": "2020-07-06",
+        "dateModified": "2023-02-19",
+        "url": "https://yuanz1949.github.io/post/anaconda-zhi-lu/",
+        "description": "
+如果你也怕包冲突,就快来吧
+
+当前项目正在咕,敬请期待,所有在咕列表见: Blog咕咕咕",
+        "wordCount": 577
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+<div id="comment-container"></div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="zhihu" href="https://www.zhihu.com/people/WoodYuan" target="_blank" rel="noopener">
+                        <i class="fab fa-zhihu"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/YuanZ1949" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="bilibili" href="https://space.bilibili.com/12549559" target="_blank" rel="noopener">
+                        <i class="fab fa-bimobject"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="fas fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/post/justscoresummary-ge-ren-cheng-ji-gai-lan/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            JUSTScoreSummary-个人成绩概览
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/post/jiang-ke-da-vpn-shi-yong-zhi-nan/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">江科大VPN使用指南</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/post/di-gui-wei-xing-xing-zuo-xiang-guan-xin-xi-hui-zong/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a></p>
+                            <p class="item-title"><a href="/post/di-gui-wei-xing-xing-zuo-xiang-guan-xin-xi-hui-zong/" class="title">低轨卫星星座相关信息汇总</a></p>
+                            <p class="item-date"><time datetime="2023-07-25T14:38:28.000Z" itemprop="datePublished">2023-07-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/post/ubuntu-wei-hu-bei-wang-lu/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/post/ubuntu-wei-hu-bei-wang-lu/" class="title">Ubuntu维护备忘录</a></p>
+                            <p class="item-date"><time datetime="2023-07-16T10:13:23.000Z" itemprop="datePublished">2023-07-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/post/qbittorrent-xiang-guan/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/post/qbittorrent-xiang-guan/" class="title">Qbittorrent相关</a></p>
+                            <p class="item-date"><time datetime="2023-05-04T12:45:37.000Z" itemprop="datePublished">2023-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/post/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/post/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/" class="title">网络附属存储(NAS)配置指南</a></p>
+                            <p class="item-date"><time datetime="2023-02-23T13:05:48.000Z" itemprop="datePublished">2023-02-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/post/shu-qian-suo-yin/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/post/shu-qian-suo-yin/logocat.JPG)" alt="书签索引" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a></p>
+                            <p class="item-title"><a href="/post/shu-qian-suo-yin/" class="title">书签索引</a></p>
+                            <p class="item-date"><time datetime="2023-02-19T07:47:44.399Z" itemprop="datePublished">2023-02-19</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/3D/" style="font-size: 10px;">3D</a> <a href="/tags/Blender/" style="font-size: 10px;">Blender</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Chagas/" style="font-size: 10px;">Chagas</a> <a href="/tags/DIY/" style="font-size: 10px;">DIY</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/IT/" style="font-size: 10px;">IT</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/VBA/" style="font-size: 10px;">VBA</a> <a href="/tags/VPN/" style="font-size: 10px;">VPN</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E4%B9%A6%E7%AD%BE/" style="font-size: 10px;">书签</a> <a href="/tags/%E4%BB%AA%E5%99%A8/" style="font-size: 10px;">仪器</a> <a href="/tags/%E4%BD%8E%E8%BD%A8%E5%8D%AB%E6%98%9F%E6%98%9F%E5%BA%A7/" style="font-size: 10px;">低轨卫星星座</a> <a href="/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 10px;">关于</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/tags/%E5%8C%96%E5%AD%A6/" style="font-size: 10px;">化学</a> <a href="/tags/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89/" style="font-size: 10px;">化学发光</a> <a href="/tags/%E5%8D%95%E5%8F%8D/" style="font-size: 10px;">单反</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 10px;">图像处理</a> <a href="/tags/%E5%A4%A9%E6%96%87/" style="font-size: 10px;">天文</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 10px;">工作</a> <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/" style="font-size: 10px;">工作流</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.33px;">工具</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 10px;">开发</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%94%BF%E7%AD%96/" style="font-size: 10px;">政策</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" style="font-size: 10px;">数据处理</a> <a href="/tags/%E6%98%9F%E7%BD%91/" style="font-size: 10px;">星网</a> <a href="/tags/%E6%98%9F%E9%93%BE/" style="font-size: 10px;">星链</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">服务器</a> <a href="/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/" style="font-size: 10px;">江科大</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 10px;">版本控制</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%96%BE%E7%97%85/" style="font-size: 10px;">疾病</a> <a href="/tags/%E7%9E%8E%E9%97%B2%E9%80%9B/" style="font-size: 10px;">瞎闲逛</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16.67px;">笔记</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 10px;">终端</a> <a href="/tags/%E7%BB%A9%E7%82%B9/" style="font-size: 10px;">绩点</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 10px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E9%99%84%E5%B1%9E%E5%AD%98%E5%82%A8/" style="font-size: 10px;">网络附属存储</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 13.33px;">自动化</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 10px;">视频</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 10px;">计划</a> <a href="/tags/%E8%AE%BE%E5%A4%87/" style="font-size: 13.33px;">设备</a> <a href="/tags/%E9%80%89%E8%B4%AD/" style="font-size: 10px;">选购</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="/sheng-huo/gao-shi-qing-a/zhe-shi-yi-pian-testblog/">网站测试页</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://lib.just.edu.cn/">江苏科技大学图书馆</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://hexo.io">Hexo官网</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2023 苑长</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'ffffe2a96b4c373c1d4d',
+        clientSecret: 'fc0ec8dd07cfb61e09dd06962678251d943bef37',
+        id: 'e9109526bf7121d5d336c329baf6730f',
+        repo: 'yuanz1949.github.io',
+        owner: 'YuanZ1949',
+        admin: "YuanZ1949"
+    })
+    gitalk.render('comment-container')
+</script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+         <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                showProcessingMessages: false,
+                messageStyle: "none",
+                extensions: ["tex2jax.js"],
+                jax: ["input/TeX", "output/HTML-CSS"],
+                tex2jax: {
+                    inlineMath:  [ ["$", "$"] ],
+                    displayMath: [ ["$$","$$"] ],
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+                    ignoreClass:"comment-content"
+                },
+                "HTML-CSS": {
+                    availableFonts: ["STIX","TeX"],
+                    showMathMenu: true
+                }
+            });
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+         </script>
+         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
