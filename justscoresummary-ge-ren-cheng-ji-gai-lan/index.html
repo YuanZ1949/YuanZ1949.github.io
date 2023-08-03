@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>JUSTScoreSummary-个人成绩概览 | 苑长的Index</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Python,绩点" />
+    
+    <meta name="description" content="如果你也害怕一个一个手动汇总 就和我一起鼓捣Python吧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JUSTScoreSummary-个人成绩概览">
+<meta property="og:url" content="https://yuanz1949.github.io/justscoresummary-ge-ren-cheng-ji-gai-lan/">
+<meta property="og:site_name" content="苑长的Index">
+<meta property="og:description" content="如果你也害怕一个一个手动汇总 就和我一起鼓捣Python吧">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuanz1949.github.io/justscoresummary-ge-ren-cheng-ji-gai-lan/Features.png">
+<meta property="article:published_time" content="2020-09-13T11:06:55.000Z">
+<meta property="article:modified_time" content="2023-08-03T14:47:52.723Z">
+<meta property="article:author" content="苑长">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="绩点">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yuanz1949.github.io/justscoresummary-ge-ren-cheng-ji-gai-lan/Features.png">
+    
+
+    
+        <link rel="alternate" href="/atom.xml" title="苑长的Index" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/all.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+        <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?67fc4a038906ef55e9307dac98a80fe2";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">Life &amp; Science &amp; Technology</p>
+                        </h2>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a></li></ul></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/suo-yin/zi-yuan-suo-yin/chang-yong-zi-yuan-suo-yin/">常用索引</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/sheng-huo/gao-shi-qing-a/blog-gu-gu-gu/">Blog咕咕咕</a>
+                                </li>
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/sheng-huo/about/">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-JUSTScoreSummary-个人成绩概览" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        JUSTScoreSummary-个人成绩概览
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+      <i class="fa fa-calendar"></i>
+      <a href="/justscoresummary-ge-ren-cheng-ji-gai-lan/" class="article-date">
+         <time datetime="2020-09-13T11:06:55.000Z" itemprop="datePublished">2020-09-13</time>
+      </a>
+    </div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Python/" rel="tag">Python</a>, <a class="tag-link-link" href="/tags/%E7%BB%A9%E7%82%B9/" rel="tag">绩点</a>
+    </div>
+
+                
+
+                
+   <div class="article-counter">
+      <i class="fa fa-file-word"></i>
+      <span class="post-count-item-text">本文字数: </span>
+      <span class="post-count">2.5k</span>
+      <i class="fa fa-clock"></i>
+      <span class="post-time-item-text">阅读时长: </span>
+      <span class="post-count">9 分钟 </span>
+   </div>
+
+
+            </div>
+        
+        
+        <br>
+        <div class="article-entry" itemprop="articleBody">
+            <img src="/justscoresummary-ge-ren-cheng-ji-gai-lan/Features.png" class>
+<blockquote><p><span style="font-size:24px"><strong>如果你也害怕一个一个手动汇总</strong></span></p>
+<p><span style="font-size:24px"><strong>就和我一起鼓捣Python吧</strong></span></p>
+</blockquote>
+<span id="more"></span>
+<div class="toc">
+<!-- toc -->
+<ul>
+<li><a href="#zheng-ru-ti-tu-na-yang-woman-teacher">正如题图那样<span class="github-emoji"><span>👩🏫</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f469-1f3eb.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a></li>
+<li><a href="#xian-tan-tan-lu-footprints">先探探路<span class="github-emoji"><span>👣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f463.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a>
+<ul>
+<li><a href="#da-kai-liu-lan-qi-kai-shi-ba-computer">打开浏览器开始吧<span class="github-emoji"><span>💻</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a></li>
+<li><a href="#ji-zhu-lu-xian-link">技术路线<span class="github-emoji"><span>🔗</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f517.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a></li>
+</ul>
+</li>
+<li><a href="#requestsyourscore1-0-roll-eyes">RequestsYourScore1.0<span class="github-emoji"><span>🙄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f644.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></a>
+<ul>
+<li><a href="#te-xing-features">特性 Features</a></li>
+<li><a href="#shi-yong-wo-ba">使用我吧</a></li>
+</ul>
+</li>
+<li><a href="#xiao-gong-ju">小工具</a></li>
+<li><a href="#yang-li">样例</a></li>
+</ul>
+<!-- tocstop -->
+</div>
+<p>时间飞逝,  三年一晃, 这就要大四毕业了<span class="github-emoji"><span>🎓</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f393.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></p>
+<p>时间过得真快, 忙完了手头事</p>
+<p>赶着暑假的小尾巴, 开始着手解决这件事啦</p>
+<p>也许开发程序着实让人觉得好很高大上, 触不可及</p>
+<p>但其实并不是, 至少说简单的, 普通的程序稍微学学就可搞定</p>
+<blockquote>
+<p>很多东西都是曲折着前进的</p>
+<p>活到老, 学到老</p>
+</blockquote>
+<p>我会较为详细的介绍开发的过程以及程序的使用方法,  作为一个记录, 也是一个指引</p>
+<p>接触了你会发现很多有意思的细节(点了按钮发生了什么~), 也会愿意享受自动化的魅力</p>
+<p>而且通过互联网, 互不认识的人相互学习和分享, 同时自己能作为这样的运动的一份子</p>
+<blockquote>
+<p>科学技术是第一生产力~</p>
+</blockquote>
+<p>它连接了你我, 也让很多事从容了起来</p>
+<p>这里也做如下的声明:</p>
+<blockquote>
+<p>此程序主要用于<code>江苏科技大学2017级生物技术班</code>的<strong>成绩统计</strong>使用.</p>
+<p>可以快速把<strong>单个</strong>同学的<code>各学期/学年/总学分绩点</code>,<code>公选课总分/选课</code>,<code>未/已通过课程</code>等信息汇总在 <code>{name}-Summary.xlsx</code> 文件里.</p>
+<p>在此感谢17生物技术的各位同学们反馈的各种BUG.</p>
+<p>在各位的帮助下, 得以让此程序拥有更宽广的眼界和胸怀, 而不再面对未知直接崩溃.</p>
+</blockquote>
+<h1><a href="#zheng-ru-ti-tu-na-yang" class="header-anchor"> ⚓️</a><span id="zheng-ru-ti-tu-na-yang">正如题图那样<span class="github-emoji"><span>👩🏫</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f469-1f3eb.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h1>
+<p>总之目前我们需要一款软件,可以实行如下功能:</p>
+<ul>
+<li>获取未通过的课程</li>
+<li>获取公选课信息</li>
+<li>获取每位同学的绩点</li>
+<li>以上信息按学生来汇总</li>
+</ul>
+<p>明显的, 我熟悉的<code>Python</code>做这件事没有任何问题, 那我们开始搞吧</p>
+<h1><a href="#xian-tan-tan-lu" class="header-anchor"> ⚓️</a><span id="xian-tan-tan-lu">先探探路<span class="github-emoji"><span>👣</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f463.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h1>
+<p><sub></sub>我只熟悉这个<sub></sub>随意的确定了编程语言后, 我们要确定整个程序的框架.</p>
+<p>比如数据的结构/算法/工作流程…</p>
+<h2><a href="#da-kai-liu-lan-qi-kai-shi-ba" class="header-anchor"> ⚓️</a><span id="da-kai-liu-lan-qi-kai-shi-ba">打开浏览器开始吧<span class="github-emoji"><span>💻</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f4bb.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h2>
+<p>要确定这些我们肯定要先登录一下教务, 看看正常的登录教务的方式还有成绩获取的方式</p>
+<p>链接在这里: <a target="_blank" rel="noopener" href="http://jwgl.just.edu.cn:8080/jsxsd/">江苏科技大学综合教务管理系统-强智科技</a></p>
+<p>打开映入眼帘的就是登录界面啦(<sub></sub>还好没有验证码<sub></sub>:happy: )</p>
+<p><img src="%E6%95%99%E5%8A%A1%E7%95%8C%E9%9D%A2.png" alt="教务界面"></p>
+<p>二话不说直接<code>F12</code>打开<code>开发工具</code>, 随便输入一个账号和密码, 点击登录</p>
+<p><img src="%E6%9F%A5%E7%9C%8B%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E7%99%BB%E5%BD%95%E6%95%99%E5%8A%A1%E7%B3%BB%E7%BB%9F%E7%9A%84.png" alt="查看浏览器是如何登录教务系统的"></p>
+<p><code>开发工具</code>很明白的显示了当我们按下<code>登录</code>键后浏览器向服务器发送了一个<code>post</code>请求</p>
+<p>这个请求带着我们的账号发给了在<code>http://jwgl.just.edu.cn</code>这个服务器的<code>8080</code>端口运行的<code>/jsxsd/xk/</code>目录里的<code>LoginToXk</code>, 不过这里我们不搞更复杂的啦, 反正把账号发给他就行了</p>
+<p>同样的, 通过点击按钮后查看开发工具里<code>网络</code>, 得到按了按钮后浏览器发出的数据请求</p>
+<p>我们就可以获取其他的获取信息的<code>post</code>请求啦:</p>
+<blockquote>
+<p>成绩查询:</p>
+<ul>
+<li>请求 URL: <a target="_blank" rel="noopener" href="http://jwgl.just.edu.cn:8080/jsxsd/kscj/cjcx_list">http://jwgl.just.edu.cn:8080/jsxsd/kscj/cjcx_list</a></li>
+<li>post表单: kksj=&amp;kcxz=&amp;kcmc=&amp;xsfs=all  # kksj指开课时间 kcxz指开课学期 …</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>学期理论课表:</p>
+<ul>
+<li>请求 URL: <a target="_blank" rel="noopener" href="http://jwgl.just.edu.cn:8080/jsxsd/xskb/xskb_list.do">http://jwgl.just.edu.cn:8080/jsxsd/xskb/xskb_list.do</a></li>
+<li>请求方法: GET  #这个<code>get</code>方法不需要传数据 只需要请求这个链接就行可以得到数据了</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>个人学业清查:</p>
+<ul>
+<li>请求 URL: <a target="_blank" rel="noopener" href="http://jwgl.just.edu.cn:8080/jsxsd/view/pyfa/pyfazd_grxyqc.jsp">http://jwgl.just.edu.cn:8080/jsxsd/view/pyfa/pyfazd_grxyqc.jsp</a></li>
+<li>请求方法: GET<br>
+…</li>
+</ul>
+</blockquote>
+<p>有了技术, 剩下的就是体力活了<span class="github-emoji"><span>👷</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f477.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> ​ , 要请求什么, 全部搞一遍然后列到文档里备用就行了</p>
+<p>然后就是请求网页时我们要用的方式了, 当然是用最好用的 <a target="_blank" rel="noopener" href="https://requests.readthedocs.io/zh_CN/latest/">Requests</a></p>
+<p>它就可以构建<code>post</code>请求, 这样可以帮助我们登录<code>教务系统</code></p>
+<p>也可以构建<code>get</code>请求, 直接获取其他的数据, 就像这样:</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">jwxt_session = session()  <span class="comment"># 创建一个名为jwxt_session的可以持续访问网页的session对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># get请求,content会接收服务器返回的数据</span></span><br><span class="line">content = jwxt_session.get(<span class="string">"http://jwgl.just.edu.cn:8080/jsxsd/"</span>)  </span><br><span class="line"></span><br><span class="line">postUrl = <span class="string">"http://jwgl.just.edu.cn:8080/jsxsd/xk/LoginToXk"</span> <span class="comment"># 请求地址</span></span><br><span class="line">postData = {</span><br><span class="line">    <span class="string">'USERNAME'</span> : account ,</span><br><span class="line">    <span class="string">'PASSWORD'</span> : password }  <span class="comment"># 构建表单</span></span><br><span class="line">content = jwxt_session.post(postUrl, data = postData) <span class="comment"># post请求,content会接收服务器返回的数据</span></span><br></pre></td></tr></tbody></table></figure>
+<p>得到的数据从某种意义上说, 不是人喜欢读的, 那我们还要专门处理这些数据的手段</p>
+<p><code>bs4</code>是一个强大的处理<code>HTML</code>网页数据的第三方软件包, 可以用它来获取页面的数据</p>
+<p>比如这样的</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">main_page = login_jwxt(account, password) <span class="comment"># 调用登录网页的函数后得到的数据后传给main_page</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里直接将main_page的数据解码后传给BeautifulSoup,采用lxml解析html, 得到的结果传给左边变量</span></span><br><span class="line">main_page_content = BeautifulSoup(main_page.content.decode(<span class="string">'utf-8'</span>), <span class="string">'lxml'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 这里就可以调用 .find(class_='???') 方法来查找类名为???的元素,然后获取它的text</span></span><br><span class="line">stu_info = main_page_content.find(class_=<span class="string">'block1text'</span>).text.split(<span class="string">'\n'</span>)</span><br></pre></td></tr></tbody></table></figure>
+<p>如果是以表格的形式出现的(也就是&lt;\table&gt;标签包裹的数据), 本来也是可以用<code>bs4</code>直接获取然后存入设计好的变量里等待处理的. 不过天降猛男, <code>Pandas</code>就很在行<span class="github-emoji"><span>🚀</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f680.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>  , 人家有 <code>read_html()</code> 方法~</p>
+<blockquote>
+<p>__pandas.read_html(*args, **kwargs) __</p>
+<p>Read HTML tables into a list of DataFrame objects.</p>
+<p><strong>Parameters</strong><br>
+io [str, path object or file-like object] A URL, a file-like object, or a raw string containing<br>
+HTML. Note that lxml only accepts the http, ftp and file url protocols. If you have a URL<br>
+that starts with ‘https’ you might try removing the ‘s’.</p>
+<p>资料来源: <a target="_blank" rel="noopener" href="https://pandas.pydata.org/docs/">pandas : powerful Python data analysis toolkit Release 1.1.2</a></p>
+</blockquote>
+<p>如上, 传入<code>html</code> 的原始数据(raw string containing HTML), 它就可以返回数据帧(DataFrame)</p>
+<p>这就很妙了, 因为得到数据数据只是第一步, 处理数据也是个麻烦事</p>
+<p>而<code>Pandas</code>就是处理数据的能手</p>
+<p>这样直接将<code>&lt;table&gt;</code>转换成数据帧(DataFrame)岂不美哉</p>
+<p>(数据帧是Pandas的基本数据结构, 这样就可以直接用它处理数据了)</p>
+<p>处理数据的问题可以预见基本解决了, <code>Pandas</code>可以满足的</p>
+<p>那还剩下汇总导出的问题, 二话不说直接<code>Bing</code>一下(欢迎大家来用<code>Bing</code>)</p>
+<p>得知有一个叫<code>openpyxl</code>可以操纵Excel, 而且也想起来之前我的群里有樊同学传过这个库的文档</p>
+<p>这里找了个<a target="_blank" rel="noopener" href="https://www.osgeo.cn/openpyxl/index.html">中文的文档</a>. 一通阅读, 基本确定可以满足我的要求</p>
+<p>可以创建<code>Excel</code>填充数据, 也可以修改样式</p>
+<p>几大基本的问题都解决了,汇总一下成果吧</p>
+<h2><a href="#ji-zhu-lu-xian" class="header-anchor"> ⚓️</a><span id="ji-zhu-lu-xian">技术路线<span class="github-emoji"><span>🔗</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f517.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h2>
+<p>采用 <a target="_blank" rel="noopener" href="https://requests.readthedocs.io/zh_CN/latest/">Requests</a> 登录<code>教务系统</code> 并获取个人信息和成绩源数据</p>
+<p>使用 <a target="_blank" rel="noopener" href="https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/">bs4</a> 按照获取的网页的特定内容</p>
+<p>使用 <a target="_blank" rel="noopener" href="https://pandas.pydata.org/">Pandas</a> 获取成绩页面的<code>&lt;table&gt;</code>标签并转为<code>DataFrame</code></p>
+<p>按照<a target="_blank" rel="noopener" href="http://jwc.just.edu.cn/2018/0328/c5744a51661/page.htm">学校的计分规则</a>自编计算绩点和筛选成绩的函数[^ 函数精度]</p>
+<p>使用 <a target="_blank" rel="noopener" href="http://openpyxl.readthedocs.io/">openpyxl</a> 按照设计的样式和计算的结果生成 <code>Summary</code> 文件</p>
+<h1><a href="#requestsyourscore1-0" class="header-anchor"> ⚓️</a><span id="requestsyourscore1-0">RequestsYourScore1.0<span class="github-emoji"><span>🙄</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f644.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></span></h1>
+<p>开发自然要有工具, 这里我直接使用<code>Jupyter</code>作为开发这款程序的平台</p>
+<p>得益于内嵌的<code>IPython</code>, <code>Jupyter</code>可以运行<code>Python</code></p>
+<p>同时可以按步调试, 返回程序执行之前的状态</p>
+<p>内容可以以比较美观的形式显示在浏览器上</p>
+<h2><a href="#te-xing-features" class="header-anchor"> ⚓️</a><span id="te-xing-features">特性 Features</span></h2>
+<ol>
+<li>命令行式界面</li>
+<li>输入账号密码自动生成 <code>Summary</code> 文件</li>
+<li>可将此项目做库导入使用,包含有如下实用函数:
+<ul>
+<li>table_xls(table_df, file_name) : 将得到的DF(DataFrame)表按照输入的文件名导出xls文件</li>
+<li>public_elective(file_name=‘’): 返回<code>公选课</code>DF, 如果导入文件名直接输出xls</li>
+<li>theory_schedule(file_name = ‘’): 返回<code>学期理论课表</code>,~</li>
+<li>now_no_pass(): 返回尚<code>未通过的课程</code></li>
+<li>training_program(file_name = ‘’): 返回<code>培养方案</code>,~</li>
+<li>add_academic_credits(table_df, ignore=True):在传入的表的最右侧加一列<code>学分绩点</code>,并返回 修改过的表/表格内的平均绩点/总学分; <code>ignore</code>参数为在计算平均绩点和总学分的时候是否忽略公选课,体育课和补考通过的课程</li>
+<li>point_summary(): 返回绩点字典,包含 总平均绩点/各学年学期绩点</li>
+<li>…</li>
+</ul>
+</li>
+</ol>
+<p>由于是特定班级使用所以有一定的局限性</p>
+<ul>
+<li>公选课的识别可能只覆盖了自己班内部的,不够全面</li>
+<li>自动化的<code>Summary</code>文件只统计了需要的几个课程信息不一定是你需要的</li>
+</ul>
+<h2><a href="#shi-yong-wo-ba" class="header-anchor"> ⚓️</a><span id="shi-yong-wo-ba">使用我吧</span></h2>
+<p>你可以直接使用打包好的<code>exe可执行文件</code></p>
+<p>这里下载 <a target="_blank" rel="noopener" href="https://github.com/YuanZ1949/JUSTScoreSummary/releases/tag/JUSTScoreSummary">下载请点我</a> , 双击即可运行 <code>Window</code> 系统下直接运行.</p>
+<p>你也可以直接下载源代码使用</p>
+<p>安装<code>Python</code> 或者是 <code>Anaconda</code> 使用这个源代码</p>
+<p>在终端比如  <code>cmd</code> 里,进入该项目文件夹后,使用这个命令:</p>
+<blockquote>
+<p>pip install -r requirements.txt</p>
+</blockquote>
+<p>这样就安装了需要的库, 然后运行:</p>
+<blockquote>
+<p>python <a target="_blank" rel="noopener" href="http://JUSTScoreSummary.py">JUSTScoreSummary.py</a></p>
+</blockquote>
+<h1><a href="#xiao-gong-ju" class="header-anchor"> ⚓️</a><span id="xiao-gong-ju">小工具</span></h1>
+<p>在该仓库的 <code>othertool</code> 里有些小工具</p>
+<ul>
+<li><code>classloop.py</code> : 可以将此py文件放在主要代码的同一目录, 然后在同目录自己创建一个 <code>account.txt</code> 文件, 里面按照<code>学号 密码</code>的形式一行放一位同学的账号, 启动程序后, 就可以按顺序生成不同同学的 <code>Summary</code>文件了.</li>
+<li><code>班级汇总宏(使用我合并文档).xlsm</code> : 得到的 <code>Summary</code> 文件使用这个文档里的<code>宏</code>来合并.</li>
+</ul>
+<h1><a href="#yang-li" class="header-anchor"> ⚓️</a><span id="yang-li">样例</span></h1>
+<p>最后生成的<code>summary</code>文件为<code>xlsx</code>文件, 一个同学一个同名工作表(sheet)</p>
+<p>而且如果有未通过的课程, 工作表的标签颜色将变成红色:</p>
+<p><img src="image-20200913161334986.png" alt="变红的工作表标签"></p>
+<p>以下是某位同学的成绩, 这里作为最终的<code>summary</code>文件的样例列出:</p>
+<p><img src="Summary%E6%A0%B7%E5%BC%8F.png" alt="最终效果"></p>
+<br>
+<br>
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://yuanz1949.github.io/justscoresummary-ge-ren-cheng-ji-gai-lan/" data-id="clkva0d0b0009owuu77lnffze" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "苑长"
+        },
+        "headline": "JUSTScoreSummary-个人成绩概览",
+        "image": "https://yuanz1949.github.io/justscoresummary-ge-ren-cheng-ji-gai-lan/Features.png",
+        "keywords": "Python 绩点",
+        "genre": "科技 信息技术",
+        "datePublished": "2020-09-13",
+        "dateCreated": "2020-09-13",
+        "dateModified": "2023-08-03",
+        "url": "https://yuanz1949.github.io/justscoresummary-ge-ren-cheng-ji-gai-lan/",
+        "description": "
+如果你也害怕一个一个手动汇总
+就和我一起鼓捣Python吧
+",
+        "wordCount": 460
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+<div id="comment-container"></div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="zhihu" href="https://www.zhihu.com/people/WoodYuan" target="_blank" rel="noopener">
+                        <i class="fab fa-zhihu"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/YuanZ1949" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="bilibili" href="https://space.bilibili.com/12549559" target="_blank" rel="noopener">
+                        <i class="fab fa-bimobject"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/atom.xml" target="_blank" rel="noopener">
+                        <i class="fas fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/du-shu-bi-ji-python-sheng-wu-xin-xi-xue-shu-ju-guan-li/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            读书笔记-Python生物信息学数据管理
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/anaconda-zhi-lu/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Anaconda之路</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/di-gui-wei-xing-xing-zuo-xiang-guan-xin-xi-hui-zong/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a></p>
+                            <p class="item-title"><a href="/di-gui-wei-xing-xing-zuo-xiang-guan-xin-xi-hui-zong/" class="title">低轨卫星星座相关信息汇总</a></p>
+                            <p class="item-date"><time datetime="2023-07-25T14:38:28.000Z" itemprop="datePublished">2023-07-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/ubuntu-wei-hu-bei-wang-lu/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/ubuntu-wei-hu-bei-wang-lu/" class="title">Ubuntu维护备忘录</a></p>
+                            <p class="item-date"><time datetime="2023-07-16T10:13:23.000Z" itemprop="datePublished">2023-07-16</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/qbittorrent-xiang-guan/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/qbittorrent-xiang-guan/" class="title">Qbittorrent相关</a></p>
+                            <p class="item-date"><time datetime="2023-05-04T12:45:37.000Z" itemprop="datePublished">2023-05-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a></p>
+                            <p class="item-title"><a href="/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/" class="title">网络附属存储(NAS)配置指南</a></p>
+                            <p class="item-date"><time datetime="2023-02-23T13:05:48.000Z" itemprop="datePublished">2023-02-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/shu-qian-suo-yin/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/shu-qian-suo-yin/logocat.JPG)" alt="书签索引" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a></p>
+                            <p class="item-title"><a href="/shu-qian-suo-yin/" class="title">书签索引</a></p>
+                            <p class="item-date"><time datetime="2023-02-19T07:47:44.399Z" itemprop="datePublished">2023-02-19</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/%E6%90%9E%E4%BA%8B%E6%83%85%E5%90%96/">搞事情吖</a><span class="category-list-count">6</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/">科技</a><span class="category-list-count">22</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">信息技术</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E6%8A%80/%E7%A9%BA%E5%A4%A9/">空天</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/">索引</a><span class="category-list-count">5</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%AE%9E%E6%97%B6%E4%BF%A1%E6%81%AF/">实时信息</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%B4%A2%E5%BC%95/">工作流索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E6%94%BF%E7%AD%96%E7%B4%A2%E5%BC%95/">政策索引</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%B4%A2%E5%BC%95/%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">资源索引</a><span class="category-list-count">2</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/3D/" style="font-size: 10px;">3D</a> <a href="/tags/Blender/" style="font-size: 10px;">Blender</a> <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Chagas/" style="font-size: 10px;">Chagas</a> <a href="/tags/DIY/" style="font-size: 10px;">DIY</a> <a href="/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/IT/" style="font-size: 10px;">IT</a> <a href="/tags/NAS/" style="font-size: 10px;">NAS</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/VBA/" style="font-size: 10px;">VBA</a> <a href="/tags/VPN/" style="font-size: 10px;">VPN</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/%E4%B9%A6%E7%AD%BE/" style="font-size: 10px;">书签</a> <a href="/tags/%E4%BB%AA%E5%99%A8/" style="font-size: 10px;">仪器</a> <a href="/tags/%E4%BD%8E%E8%BD%A8%E5%8D%AB%E6%98%9F%E6%98%9F%E5%BA%A7/" style="font-size: 10px;">低轨卫星星座</a> <a href="/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 10px;">关于</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 20px;">分享</a> <a href="/tags/%E5%8C%96%E5%AD%A6/" style="font-size: 10px;">化学</a> <a href="/tags/%E5%8C%96%E5%AD%A6%E5%8F%91%E5%85%89/" style="font-size: 10px;">化学发光</a> <a href="/tags/%E5%8D%95%E5%8F%8D/" style="font-size: 10px;">单反</a> <a href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" style="font-size: 10px;">命令行</a> <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 10px;">图像处理</a> <a href="/tags/%E5%A4%A9%E6%96%87/" style="font-size: 10px;">天文</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 10px;">工作</a> <a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/" style="font-size: 10px;">工作流</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 13.33px;">工具</a> <a href="/tags/%E5%BC%80%E5%8F%91/" style="font-size: 10px;">开发</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 10px;">摄影</a> <a href="/tags/%E6%94%BF%E7%AD%96/" style="font-size: 10px;">政策</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" style="font-size: 10px;">数据处理</a> <a href="/tags/%E6%98%9F%E7%BD%91/" style="font-size: 10px;">星网</a> <a href="/tags/%E6%98%9F%E9%93%BE/" style="font-size: 10px;">星链</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 10px;">服务器</a> <a href="/tags/%E6%B1%9F%E7%A7%91%E5%A4%A7/" style="font-size: 10px;">江科大</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 10px;">版本控制</a> <a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 10px;">生活</a> <a href="/tags/%E7%96%BE%E7%97%85/" style="font-size: 10px;">疾病</a> <a href="/tags/%E7%9E%8E%E9%97%B2%E9%80%9B/" style="font-size: 10px;">瞎闲逛</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 16.67px;">笔记</a> <a href="/tags/%E7%BB%88%E7%AB%AF/" style="font-size: 10px;">终端</a> <a href="/tags/%E7%BB%A9%E7%82%B9/" style="font-size: 10px;">绩点</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 10px;">网站</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E9%99%84%E5%B1%9E%E5%AD%98%E5%82%A8/" style="font-size: 10px;">网络附属存储</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 13.33px;">自动化</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 10px;">视频</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 10px;">计划</a> <a href="/tags/%E8%AE%BE%E5%A4%87/" style="font-size: 13.33px;">设备</a> <a href="/tags/%E9%80%89%E8%B4%AD/" style="font-size: 10px;">选购</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="/sheng-huo/gao-shi-qing-a/zhe-shi-yi-pian-testblog/">网站测试页</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="https://lib.just.edu.cn/">江苏科技大学图书馆</a>
+                    </li>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://hexo.io">Hexo官网</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2023 苑长</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'ffffe2a96b4c373c1d4d',
+        clientSecret: 'fc0ec8dd07cfb61e09dd06962678251d943bef37',
+        id: 'cd8b979909d0aac2f4fabc173f4ff22f',
+        repo: 'yuanz1949.github.io',
+        owner: 'YuanZ1949',
+        admin: "YuanZ1949"
+    })
+    gitalk.render('comment-container')
+</script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+         <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                showProcessingMessages: false,
+                messageStyle: "none",
+                extensions: ["tex2jax.js"],
+                jax: ["input/TeX", "output/HTML-CSS"],
+                tex2jax: {
+                    inlineMath:  [ ["$", "$"] ],
+                    displayMath: [ ["$$","$$"] ],
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+                    ignoreClass:"comment-content"
+                },
+                "HTML-CSS": {
+                    availableFonts: ["STIX","TeX"],
+                    showMathMenu: true
+                }
+            });
+            MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+         </script>
+         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

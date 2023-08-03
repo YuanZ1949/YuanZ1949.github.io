@@ -89,7 +89,7 @@
 .article-entry ol,
 .widget dl,
 .article-entry dl {
-  line-height: 26px;
+  line-height: 28px;
 }
 .widget ul ul,
 .article-entry ul ul,
@@ -384,7 +384,7 @@ code {
   margin-left: 20px;
 }
 #header-title .subtitle {
-  font-size: 21px;
+  font-size: 20px;
   font-style: italic;
   margin-top: 80px;
   color: rgba(255,255,255,0.7);
@@ -542,7 +542,7 @@ code {
   border: none !important;
   outline: none !important;
   background: none !important;
-  line-height: 26px;
+  line-height: 28px;
   -webkit-transition: 0.2s ease-in;
   -moz-transition: 0.2s ease-in;
   -ms-transition: 0.2s ease-in;
@@ -729,7 +729,7 @@ code {
   margin-bottom: 6px;
 }
 .widget {
-  line-height: 26px;
+  line-height: 28px;
   word-wrap: break-word;
   font-size: 18px;
   color: #777;
@@ -1051,9 +1051,9 @@ code {
   position: relative;
   color: #aaa;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 28px;
   overflow: hidden;
-  height: 104px;
+  height: 112px;
 }
 .article-summary:hover .thumbnail .thumbnail-image {
   opacity: 0.7;
@@ -1078,7 +1078,7 @@ code {
   font-size: 38px;
   letter-spacing: -1px;
   color: #555;
-  line-height: 1.3em;
+  line-height: 1em;
   -webkit-transition: color 0.2s;
   -moz-transition: color 0.2s;
   -ms-transition: color 0.2s;
@@ -1090,7 +1090,7 @@ a.article-title:hover {
 }
 .article-meta {
   zoom: 1;
-  line-height: 26px;
+  line-height: 28px;
 }
 .article-meta:before,
 .article-meta:after {
@@ -1122,7 +1122,7 @@ a.article-title:hover {
   margin-right: 6px;
 }
 .article-summary .article-meta {
-  height: 26px;
+  height: 28px;
   overflow: hidden;
 }
 .article-summary .article-meta a {
@@ -1137,9 +1137,9 @@ a.article-title:hover {
 .article-entry {
   zoom: 1;
   color: #555;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
-  line-height: 26px;
+  line-height: 28px;
 }
 .article-entry:before,
 .article-entry:after {
@@ -1151,7 +1151,7 @@ a.article-title:hover {
 }
 .article-entry p,
 .article-entry table {
-  margin: 26px 0;
+  margin: 28px 0;
 }
 .article-entry h1,
 .article-entry h2,
@@ -1167,8 +1167,8 @@ a.article-title:hover {
 .article-entry h4,
 .article-entry h5,
 .article-entry h6 {
-  line-height: 1.3em;
-  margin: 1.3em 0;
+  line-height: 0em;
+  margin: 2em 0em 0em 0em;
 }
 .article-entry a {
   color: #3b8dbd;
@@ -1183,8 +1183,8 @@ a.article-title:hover {
 .article-entry ul,
 .article-entry ol,
 .article-entry dl {
-  margin-top: 26px;
-  margin-bottom: 26px;
+  margin-top: 28px;
+  margin-bottom: 28px;
   list-style-position: outside;
   padding-left: 1.4em;
 }
@@ -1242,7 +1242,7 @@ a.article-title:hover {
 }
 .article-entry blockquote footer {
   font-size: 20px;
-  margin: 26px 0;
+  margin: 28px 0;
   font-family: Times New Roman;
 }
 .article-entry blockquote footer cite:before {
@@ -1305,9 +1305,9 @@ a.article-title:hover {
 .article-footer {
   zoom: 1;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 28px;
   border-top: 1px solid #c1c1c1;
-  padding-top: 26px;
+  padding-top: 28px;
 }
 .article-footer:before,
 .article-footer:after {
@@ -1461,7 +1461,7 @@ a.article-title:hover {
   background: #000;
   position: relative;
   text-align: center;
-  margin: 26px 0;
+  margin: 28px 0;
 }
 .article-gallery .gallery-item {
   display: none;
@@ -1520,6 +1520,10 @@ a.article-title:hover {
 }
 .lg-outer .lg-thumb-item {
   border-radius: 0 !important;
+}
+a.header-anchor {
+  font-size: 0.6em;
+  color: #005893;
 }
 #comments {
   padding: 30px 30px 20px;
@@ -1581,7 +1585,7 @@ a.article-title:hover {
   -moz-transition: color 0.2s;
   -ms-transition: color 0.2s;
   transition: color 0.2s;
-  line-height: 26px;
+  line-height: 28px;
 }
 .archive-article-title:hover {
   color: #3b8dbd;
@@ -1661,7 +1665,7 @@ a.article-title:hover {
   background: rgba(255,255,255,0);
   margin-top: 60px;
   color: #fff;
-  line-height: 26px;
+  line-height: 28px;
 }
 #footer a {
   color: #3b8dbd;
@@ -1853,10 +1857,10 @@ i.icon:before {
   margin: 0px;
   display: block;
   overflow-x: auto;
-  padding: 15px 20px;
+  padding: 15px 5px;
   font-size: 17px;
   font-family: Consolas;
-  line-height: 26px;
+  line-height: 28px;
   border-radius: 0.5rem;
 }
 .highlight table {
