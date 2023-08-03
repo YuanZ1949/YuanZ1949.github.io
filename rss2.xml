@@ -75,24 +75,6 @@
     </item>
     
     <item>
-      <title>Qbittorrent相关</title>
-      <link>https://yuanz1949.github.io/post/qbittorrent-xiang-guan/</link>
-      <guid>https://yuanz1949.github.io/post/qbittorrent-xiang-guan/</guid>
-      <pubDate>Thu, 04 May 2023 12:45:37 GMT</pubDate>
-      
-      <description>&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;内容&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description>
-      
-      
-      
-      
-      
-      
-      <comments>https://yuanz1949.github.io/post/qbittorrent-xiang-guan/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
       <title>网络附属存储(NAS)配置指南</title>
       <link>https://yuanz1949.github.io/post/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/</link>
       <guid>https://yuanz1949.github.io/post/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/</guid>
@@ -145,30 +127,6 @@
       
       
       <comments>https://yuanz1949.github.io/post/shu-qian-suo-yin/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>界面设计</title>
-      <link>https://yuanz1949.github.io/post/jie-mian-she-ji/</link>
-      <guid>https://yuanz1949.github.io/post/jie-mian-she-ji/</guid>
-      <pubDate>Wed, 31 Aug 2022 13:24:08 GMT</pubDate>
-      
-      <description>&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;门面！&lt;/strong&gt;&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;</description>
-      
-      
-      
-      
-      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/">科技</category>
-      
-      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/">多媒体</category>
-      
-      
-      <category domain="https://yuanz1949.github.io/tags/%E5%BC%80%E5%8F%91/">开发</category>
-      
-      
-      <comments>https://yuanz1949.github.io/post/jie-mian-she-ji/#disqus_thread</comments>
       
     </item>
     
@@ -690,31 +648,6 @@
     </item>
     
     <item>
-      <title>PDA培养基</title>
-      <link>https://yuanz1949.github.io/post/pda-pei-yang-ji/</link>
-      <guid>https://yuanz1949.github.io/post/pda-pei-yang-ji/</guid>
-      <pubDate>Sat, 09 May 2020 03:17:18 GMT</pubDate>
-      
-      <description>&lt;img src=&quot;/post/pda-pei-yang-ji/IMG20181225092952.jpg&quot; class=&quot;&quot;&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;自己动手做，熟能生巧&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;</description>
-      
-      
-      
-      
-      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/">科技</category>
-      
-      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</category>
-      
-      
-      <category domain="https://yuanz1949.github.io/tags/%E5%AE%9E%E9%AA%8C/">实验</category>
-      
-      
-      <comments>https://yuanz1949.github.io/post/pda-pei-yang-ji/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
       <title>Blender-Facebuilder插件介绍与插件导入bug处理</title>
       <link>https://yuanz1949.github.io/post/blender-facebuilder-cha-jian-jie-shao-yu-cha-jian-dao-ru-bug-chu-li/</link>
       <guid>https://yuanz1949.github.io/post/blender-facebuilder-cha-jian-jie-shao-yu-cha-jian-dao-ru-bug-chu-li/</guid>
@@ -740,6 +673,31 @@
       
       
       <comments>https://yuanz1949.github.io/post/blender-facebuilder-cha-jian-jie-shao-yu-cha-jian-dao-ru-bug-chu-li/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>PDA培养基</title>
+      <link>https://yuanz1949.github.io/post/pda-pei-yang-ji/</link>
+      <guid>https://yuanz1949.github.io/post/pda-pei-yang-ji/</guid>
+      <pubDate>Sat, 09 May 2020 03:17:18 GMT</pubDate>
+      
+      <description>&lt;img src=&quot;/post/pda-pei-yang-ji/IMG20181225092952.jpg&quot; class=&quot;&quot;&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;自己动手做，熟能生巧&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;</description>
+      
+      
+      
+      
+      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/">科技</category>
+      
+      <category domain="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/">生物</category>
+      
+      
+      <category domain="https://yuanz1949.github.io/tags/%E5%AE%9E%E9%AA%8C/">实验</category>
+      
+      
+      <comments>https://yuanz1949.github.io/post/pda-pei-yang-ji/#disqus_thread</comments>
       
     </item>
     

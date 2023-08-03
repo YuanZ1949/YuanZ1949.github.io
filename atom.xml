@@ -69,22 +69,6 @@
   </entry>
   
   <entry>
-    <title>Qbittorrent相关</title>
-    <link href="https://yuanz1949.github.io/post/qbittorrent-xiang-guan/"/>
-    <id>https://yuanz1949.github.io/post/qbittorrent-xiang-guan/</id>
-    <published>2023-05-04T12:45:37.000Z</published>
-    <updated>2023-05-04T12:45:37.572Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;内容&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>网络附属存储(NAS)配置指南</title>
     <link href="https://yuanz1949.github.io/post/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/"/>
     <id>https://yuanz1949.github.io/post/wang-luo-fu-shu-cun-chu-nas-pei-zhi-zhi-nan/</id>
@@ -133,28 +117,6 @@
     <category term="分享" scheme="https://yuanz1949.github.io/tags/%E5%88%86%E4%BA%AB/"/>
     
     <category term="网站" scheme="https://yuanz1949.github.io/tags/%E7%BD%91%E7%AB%99/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>界面设计</title>
-    <link href="https://yuanz1949.github.io/post/jie-mian-she-ji/"/>
-    <id>https://yuanz1949.github.io/post/jie-mian-she-ji/</id>
-    <published>2022-08-31T13:24:08.651Z</published>
-    <updated>2022-08-31T14:07:24.000Z</updated>
-    
-    
-    <summary type="html">&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;门面！&lt;/strong&gt;&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="科技" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/"/>
-    
-    <category term="多媒体" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E5%A4%9A%E5%AA%92%E4%BD%93/"/>
-    
-    
-    <category term="开发" scheme="https://yuanz1949.github.io/tags/%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
@@ -638,29 +600,6 @@
   </entry>
   
   <entry>
-    <title>PDA培养基</title>
-    <link href="https://yuanz1949.github.io/post/pda-pei-yang-ji/"/>
-    <id>https://yuanz1949.github.io/post/pda-pei-yang-ji/</id>
-    <published>2020-05-09T03:17:18.000Z</published>
-    <updated>2023-02-19T09:12:33.161Z</updated>
-    
-    
-    <summary type="html">&lt;img src=&quot;/post/pda-pei-yang-ji/IMG20181225092952.jpg&quot; class=&quot;&quot;&gt;
-&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;自己动手做，熟能生巧&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="科技" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/"/>
-    
-    <category term="生物" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/"/>
-    
-    
-    <category term="实验" scheme="https://yuanz1949.github.io/tags/%E5%AE%9E%E9%AA%8C/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Blender-Facebuilder插件介绍与插件导入bug处理</title>
     <link href="https://yuanz1949.github.io/post/blender-facebuilder-cha-jian-jie-shao-yu-cha-jian-dao-ru-bug-chu-li/"/>
     <id>https://yuanz1949.github.io/post/blender-facebuilder-cha-jian-jie-shao-yu-cha-jian-dao-ru-bug-chu-li/</id>
@@ -684,6 +623,29 @@
     <category term="Blender" scheme="https://yuanz1949.github.io/tags/Blender/"/>
     
     <category term="3D" scheme="https://yuanz1949.github.io/tags/3D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PDA培养基</title>
+    <link href="https://yuanz1949.github.io/post/pda-pei-yang-ji/"/>
+    <id>https://yuanz1949.github.io/post/pda-pei-yang-ji/</id>
+    <published>2020-05-09T03:17:18.000Z</published>
+    <updated>2023-02-19T09:12:33.161Z</updated>
+    
+    
+    <summary type="html">&lt;img src=&quot;/post/pda-pei-yang-ji/IMG20181225092952.jpg&quot; class=&quot;&quot;&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-size:24px&quot;&gt;&lt;strong&gt;自己动手做，熟能生巧&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;footer&gt;&lt;strong&gt;——苑长&lt;/strong&gt;&lt;/footer&gt;&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="科技" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/"/>
+    
+    <category term="生物" scheme="https://yuanz1949.github.io/categories/%E7%A7%91%E6%8A%80/%E7%94%9F%E7%89%A9/"/>
+    
+    
+    <category term="实验" scheme="https://yuanz1949.github.io/tags/%E5%AE%9E%E9%AA%8C/"/>
     
   </entry>
   
